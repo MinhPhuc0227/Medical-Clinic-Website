@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Yeseva One", serif;
+  --font-body: "Work Sans", sans-serif;
+}
+
+@layer components {
+  .display-1 {
+    font-family: var(--font-display);
+    font-size: 48px;
+  }
+
+  .display-2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+  }
+  .display-3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .display-4 {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  .title {
+    font-family: var(--font-body);
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .body {
+    font-family: var(--font-body);
+    font-size: 16px;
+  }
+
+  .body-2 {
+    font-family: var(--font-body);
+    font-size: 18px;
+  }
+
+  .button-text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .small {
+    font-family: var(--font-body);
+    font-size: 14px;
+  }
+  .small-1 {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .small-2 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .footer-1 {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .footer-2 {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .contact {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .testi {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .nav {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

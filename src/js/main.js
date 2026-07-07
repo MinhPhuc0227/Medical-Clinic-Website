@@ -1,4 +1,4 @@
-import "./main.css";
+import "../css/main.css";
 
 document.querySelector("#app").innerHTML = `
   <div class="p-10">
