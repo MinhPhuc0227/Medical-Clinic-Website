@@ -1,4 +1,4 @@
-class MyButton extends HTMLElement {
+/* class MyButton extends HTMLElement {
   connectedCallback() {
     const text = this.textContent;
 
@@ -55,32 +55,60 @@ class LinkButton extends HTMLElement {
     `;
   }
 }
+customElements.define("btn-link", LinkButton); */
 
-customElements.define("btn-link", LinkButton);
-
-export function createButton(text, id) {
-  return `
-       <button
-      class="btn-primary footer-2"
-      data-id="${id}"
+export function createButton({
+  text,
+  variant = "filled", // filled | text
+  icon = "none", // none | left | right
+}) {
+  const leftIcon = `
+    <svg
+      width="13"
+      height="12"
+      viewBox="0 0 13 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
+      <path
+        d="M5.78205 1L1.16667 6L5.78205 11M1.16667 6H12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  `;
+
+  const rightIcon = `
+    <svg
+      width="13"
+      height="12"
+      viewBox="0 0 13 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  `;
+
+  return `
+    <button
+      class="btn btn-${variant}"
+    >
+
+      ${icon === "left" ? leftIcon : ""}
+
       <span>${text}</span>
 
-      <svg
-        width="13"
-        height="12"
-        viewBox="0 0 13 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+      ${icon === "right" ? rightIcon : ""}
+
     </button>
   `;
 }

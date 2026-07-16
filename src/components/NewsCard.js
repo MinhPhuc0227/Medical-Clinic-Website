@@ -65,7 +65,7 @@ export function createNewsCard(news) {
       </p>
 
       <!-- Button -->
-      ${createButton("Read More", `/news/${news.id}`)}
+      ${createButton({ text: "Read more", variant: "filled", icon: "right" })}
 
     </article>
   `;

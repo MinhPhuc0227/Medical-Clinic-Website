@@ -17,7 +17,7 @@ const doctor = doctors.find(d => d.specialty === "Cardiology");
 doctorList.innerHTML = doctorCard(doctor);
 */
 
-import { createSmallNews } from "../components/SmallNews.js";
+//import { createSmallNews } from "../components/SmallNews.js";
 
 // const container = document.getElementById("news-container");
 

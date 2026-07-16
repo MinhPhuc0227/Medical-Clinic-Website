@@ -42,5 +42,16 @@
     "views": 267,
     "comments": 31,
     "category": "Health Care"
+  },
+  {
+    "id": 4,
+    "title": "How Regular Exercise Benefits Your Heart",
+    "description": "Experts explain how moderate exercise can significantly reduce the risk of cardiovascular disease.",
+    "image": "/images/News/News4.webp",
+    "author": "Dr. Olivia Green",
+    "date": "Thursday, September 09, 2021",
+    "views": 267,
+    "comments": 31,
+    "category": "Health Care"
   }
 ]

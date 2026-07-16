@@ -103,14 +103,14 @@
     text-transform: uppercase;
   }
 
-  .btn-primary {
+  .btn-filled {
     @apply bg-accent text-primary  px-6 py-3 rounded-full
            hover:bg-primary hover:text-white transition
            
            inline-flex items-center gap-2 self-start;
   }
 
-  .btn-link {
-    @apply flex items-center gap-2 text-secondary hover:text-primary;
+  .btn-text {
+    @apply flex items-center gap-2 text-secondary hover:text-accent;
   }
 }
