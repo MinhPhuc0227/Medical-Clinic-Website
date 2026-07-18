@@ -1,7 +1,7 @@
 import "../css/main.css";
 //nhớ import hàm load
-import { loadNews } from "../pages/News";
-
+import { loadNews } from "../pages/News.js";
+import { loadHome } from "../pages/home.js";
 export async function router() {
   const page = window.location.hash || "#home";
   //nhớ đổi tên hàm load
@@ -10,7 +10,7 @@ export async function router() {
       await loadNews();
       break;
     case "#home":
-      await loadNews();
+      await loadHome();
       break;
     case "#about":
       await loadNews();

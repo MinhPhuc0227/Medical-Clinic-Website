@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "How can I book an appointment?",
+    "answer": "You can book an appointment online through our website, by calling our reception, or by visiting the clinic directly."
+  },
+  {
+    "id": 2,
+    "question": "Do you accept health insurance?",
+    "answer": "Yes. We work with most major insurance providers. Please contact our reception to verify your coverage before your visit."
+  },
+  {
+    "id": 3,
+    "question": "What are your opening hours?",
+    "answer": "We are open Monday to Saturday from 8:00 AM to 8:00 PM. Emergency services are available 24/7."
+  },
+  {
+    "id": 4,
+    "question": "Can I cancel my appointment online?",
+    "answer": "Yes. You can cancel or reschedule your appointment through our online booking system or by contacting our reception."
+  },
+  {
+    "id": 5,
+    "question": "How do I receive my medical reports?",
+    "answer": "Medical reports can be collected at the clinic or sent to your registered email upon request."
+  },
+  {
+    "id": 6,
+    "question": "Is parking available at the clinic?",
+    "answer": "Yes. Free parking is available for all patients during their appointment. es. Free parking is available for all patients during their appointment. es. Free parking is available for all patients during their appointment. es. Free parking is available for all patients during their appointment."
+  }
+]

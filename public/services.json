@@ -1,0 +1,50 @@
+[
+  {
+    "id": "free-checkup",
+    "title": "Free Checkup",
+    "body": "Get a complimentary health assessment to screen for potential risks and maintain your overall well-being.",
+    "image": "phuc/pregnant-anemia-race-main.webp",
+    "smallIcon": "phuc/freecheckup.svg",
+    "link": "#"
+  },
+  {
+    "id": "cardiogram",
+    "title": "Cardiogram",
+    "body": "Quickly measure your heart's electrical activity to monitor cardiac health and detect any irregularities early.",
+    "image": "phuc/1920_finalliverdisparity.webp",
+    "smallIcon": "phuc/cardiogram.svg",
+    "link": "#"
+  },
+  {
+    "id": "dna-testing",
+    "title": "Dna Testing",
+    "body": "Analyze your genetic profile to uncover hereditary health risks and personalized insights about your body.",
+    "image": "phuc/doctors-exam-woolridge.webp",
+    "smallIcon": "phuc/dnatesting.svg",
+    "link": "#"
+  },
+  {
+    "id": "blood-bank",
+    "title": "Blood Bank",
+    "body": "Safe storage and rapid supply of essential blood types, ready to support critical treatments and emergencies.",
+    "image": "phuc/blackdoctors.webp",
+    "smallIcon": "phuc/bloodbank.svg",
+    "link": "#"
+  },
+  {
+    "id": "dermalogy",
+    "title": "Dermalogy",
+    "body": "Professional diagnosis and care for skin conditions, restoring and protecting your skin's health and natural glow.",
+    "image": "phuc/black-women-with-stethoscope.webp",
+    "smallIcon": "phuc/dnatesting.svg",
+    "link": "#"
+  },
+  {
+    "id": "orthopedic",
+    "title": "Orthopedic",
+    "body": "Expert treatment for bone, joint, and muscle issues to restore your strength and comfortable movement.",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
+    "smallIcon": "phuc/dnatesting.svg",
+    "link": "#"
+  }
+]

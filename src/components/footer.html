@@ -1,23 +1,24 @@
 <footer class="bg-primary text-white mt-auto min-h-[120px]">
-  <!-- TOP -->
+  <!-- ========== TOP SECTION: 4 columns ========== -->
   <div
     class="max-w-[1366px] mx-auto px-[187px] pt-[70px] pb-[47px] grid grid-cols-[240px_143px_234px_272px] justify-center gap-x-[35px] items-start"
   >
-    <!-- Logo -->
+    <!-- 1. Logo + Slogan section -->
     <div class="flex flex-col items-start">
-      <a href="#" class="block display-4 uppercase leading-[42px] text-accent">
+      <a
+        href="/index.html"
+        class="block display-4 uppercase leading-[42px] text-accent"
+      >
         MEDDICAL
       </a>
-
       <p class="body-2 leading-[140%] mt-[18px] w-full">
         Leading the Way in Medical Excellence, Trusted Care.
       </p>
     </div>
 
-    <!-- Important Links -->
+    <!-- 2. Important Links section -->
     <div class="flex flex-col items-start w-full">
-      <h3 class="footer-1 leading-[21px] h-[21px]">Important Links</h3>
-
+      <h3 class="footer-1 leading-[21px]">Important Links</h3>
       <ul class="body space-y-[8px] mt-[39px]">
         <li><a href="#">Appointment</a></li>
         <li><a href="#">Doctors</a></li>
@@ -26,10 +27,9 @@
       </ul>
     </div>
 
-    <!-- Contact -->
+    <!-- 3. Contact section -->
     <div class="flex flex-col items-start">
-      <h3 class="footer-1 leading-[21px] h-[21px]">Contact Us</h3>
-
+      <h3 class="footer-1 leading-[21px]">Contact Us</h3>
       <ul class="body space-y-[8px] mt-[39px]">
         <li>Call: (237) 681-812-255</li>
         <li>Email: fildineesoe@gmail.com</li>
@@ -40,21 +40,27 @@
       </ul>
     </div>
 
-    <!-- Newsletter -->
+    <!-- 4. Newsletter section -->
     <div class="flex flex-col items-start">
-      <h3 class="footer-1 leading-[21px] h-[21px]">Newsletter</h3>
+      <h3 class="footer-1 leading-[21px]">Newsletter</h3>
 
-      <div class="flex w-[255px] h-[50px] mt-[39px]">
+      <!-- Newsletter Form -->
+      <form id="newsletterForm" class="flex w-[272px] h-[50px] mt-[39px]">
+        <!-- Newsletter Email (enter email) -->
         <input
+          id="newsletterEmail"
           type="email"
           placeholder="Enter your email address"
-          class="flex-1 px-[10px] body bg-accent text-primary placeholder-primary outline-none rounded-l-[5px]"
+          class="flex-1 px-[10px] body bg-accent text-black placeholder-primary outline-none rounded-l-[5px]"
         />
 
+        <!-- Subscribe button -->
         <button
-          class="w-[56px] px-[10px] flex items-center justify-center bg-accent rounded-r-[5px]"
+          id="subscribeBtn"
+          type="submit"
+          class="w-[56px] px-[10px] flex items-center justify-center bg-accent rounded-r-[5px] hover:bg-gray-400"
         >
-          <!-- SVG -->
+          <!-- SVG icon for button -->
           <svg
             width="23"
             height="23"
@@ -68,24 +74,29 @@
             />
           </svg>
         </button>
-      </div>
+      </form>
+
+      <!-- Newsletter message -->
+      <p id="newsletterMessage" class="body"></p>
     </div>
   </div>
 
-  <!-- Divider -->
+  <!-- ========== DIVIDER ========== -->
   <div class="max-w-[1366px] mx-auto px-[187px]">
     <div class="border-t border-accent"></div>
   </div>
 
-  <!-- Bottom -->
+  <!-- ========== BOTTOM SECTION ========== -->
   <div
     class="max-w-[1366px] mx-auto px-[187px] pt-[46px] pb-[76px] flex justify-between items-center"
   >
+    <!-- Copyright -->
     <p class="footer-2">
       © 2021 Hospital’s name All Rights Reserved by PNTEC-LTD
     </p>
 
-    <div class="flex gap-[16px]">
+    <!-- Contact icons section -->
+    <div class="flex gap-[20px]">
       <!-- LinkedIn -->
       <a href="#">
         <svg

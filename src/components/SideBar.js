@@ -1,8 +1,8 @@
 import "../css/main.css";
-import { createMiniNews } from "../components/MiniNews.js";
-import { fetchJson } from "../js/common";
+import { createMiniNews } from "./MiniNews.js";
+import { fetchJson } from "../js/common.js";
 
-export async function initSlideBar() {
+export async function initSideBar() {
   const newsList = await fetchJson("/News.json");
   const container = document.querySelector(".mini-news-list");
   container.innerHTML = "";

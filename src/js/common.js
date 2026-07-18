@@ -15,19 +15,6 @@ export async function fetchJson(path) {
   return await response.json();
 }
 
-// load subheader
-export async function loadSubHeader(page) {
-  //const response = await fetch("/subheader.json");
-  //const subHeaders = await response.json();
-  //const data = subHeaders[page];
-  // tự dô trang nào thì gọi fetch trang đấy
-  // const subHeaders = await fetchJson("/subheader.json");
-  //loadSubHeader(subHeaders.news);
-  document.getElementById("subheader-title").textContent = page.title;
-  document.getElementById("subheader-breadcrumb").textContent = page.breadcrumb;
-  document.getElementById("subheader-image").src = page.image;
-}
-
 // // set active navigation bar tab
 // export function setActiveNav() {
 //   const currentPage = window.location.pathname.split("/").pop();
