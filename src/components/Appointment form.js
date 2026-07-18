@@ -1,4 +1,4 @@
-function loadDoctors() {
+export function loadDoctors() {
   const doctorSelect = document.getElementById("doctor-select");
 
   // Nếu chưa tìm thấy thẻ html, đợi 100ms rồi thử lại (tránh lỗi render chậm)

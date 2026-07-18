@@ -1,0 +1,49 @@
+{
+  "about": {
+    "title": "About us",
+    "breadcrumb": "Home / About",
+    "image": "phuc/blackdoctors.webp"
+  },
+
+  "services": {
+    "title": "Our Services",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/doctors-exam-woolridge.webp"
+  },
+
+  "single_services": {
+    "title": "Free Checkup",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/pregnant-anemia-race-main.webp"
+  },
+
+  "doctors": {
+    "title": "Our Doctors",
+    "breadcrumb": "Home / Doctors",
+    "image": "phuc/blackdoctors.webp"
+  },
+
+  "contact": {
+    "title": "Our Contacts",
+    "breadcrumb": "Home / Contact",
+    "image": "phuc/hero-doctors-scaled.webp"
+  },
+
+  "appointment": {
+    "title": "Book an Appointment",
+    "breadcrumb": "Home / Appointment",
+    "image": "phuc/bigstock-african-doctor.webp"
+  },
+
+  "news": {
+    "title": "Blog Posts",
+    "breadcrumb": "Home / News",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
+  },
+
+  "single_news": {
+    "title": "A passion for putting patients first.",
+    "breadcrumb": "Home / News",
+    "image": "phuc/1920_finalliverdisparity.webp"
+  }
+}

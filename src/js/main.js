@@ -1,8 +1,14 @@
 import "../css/main.css";
+import { loadComponent, loadSubHeader, setActiveNav } from "./common.js";
 import { router } from "./router.js";
-import { loadComponent } from "./common.js";
 
-await loadComponent("header", "/src/components/header.html");
-await loadComponent("footer", "/src/components/footer.html");
+async function init() {
+  await loadComponent("header", "/src/components/Header.html");
+  await loadComponent("footer", "/src/components/Footer.html");
 
-router();
+  await router();
+  await setActiveNav();
+  window.addEventListener("hashchange", router);
+}
+
+init();
