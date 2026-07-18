@@ -6,7 +6,6 @@ const CHEVRON_UP = "M5 15l7-7 7 7";
 export async function loadFAQ() {
   const container = document.getElementById("faq");
 
-  // Tạo toàn bộ phần HTML của FAQ
   container.innerHTML = `
     <section class="max-w-5xl mx-auto py-20">
 
