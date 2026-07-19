@@ -1,6 +1,6 @@
 export function createSmallNews(news) {
   return `
-    <article class="flex w-[486px] h-[154px] rounded-[5px] bg-white overflow-hidden">
+    <article class="flex w-[486px] h-[154px] rounded-[5px] bg-white ">
 
       <!-- Image -->
       <div class="w-[160px] h-full flex-shrink-0">

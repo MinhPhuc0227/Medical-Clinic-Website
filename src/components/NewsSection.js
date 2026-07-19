@@ -1,10 +1,9 @@
 import "../css/main.css";
-
+import { getNews } from "../js/common.js";
 import { createSmallNews } from "../components/SmallNews.js";
 let news = [];
 export async function initNewsSection() {
-  const response = await fetch("/News.json");
-  news = await response.json();
+  const news = await getNews();
 
   const track = document.getElementById("news-track");
   const dotsContainer = document.getElementById("news-dots");

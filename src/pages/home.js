@@ -4,6 +4,7 @@ import { initTesti } from "../components/Testimonials";
 import { loadFAQ } from "../components/FAQ";
 import { initNewsSection } from "../components/NewsSection";
 import { initAppForm } from "../components/AppointmentForm.js";
+import { loadServices } from "../components/ServiceCard.js";
 
 export async function loadHome() {
   // load layout
@@ -20,4 +21,5 @@ export async function loadHome() {
   await loadFAQ();
   await initNewsSection();
   await initAppForm();
+  await loadServices();
 }

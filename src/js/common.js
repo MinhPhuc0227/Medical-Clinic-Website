@@ -41,3 +41,69 @@ export function setActiveNav() {
     }
   });
 }
+
+function getCategory(title) {
+  const t = title.toLowerCase();
+
+  if (
+    t.includes("surgery") ||
+    t.includes("operation") ||
+    t.includes("transplant")
+  ) {
+    return "Surgery";
+  }
+
+  if (
+    t.includes("doctor") ||
+    t.includes("nurse") ||
+    t.includes("hospital") ||
+    t.includes("clinic")
+  ) {
+    return "Professional";
+  }
+
+  if (
+    t.includes("medicine") ||
+    t.includes("medical") ||
+    t.includes("treatment") ||
+    t.includes("therapy") ||
+    t.includes("patient")
+  ) {
+    return "Medical";
+  }
+
+  return "Health Care";
+}
+
+export async function getNews() {
+  const API_KEY = "393286089051475a92bee89d2e60bea3";
+  const response = await fetch(
+    `https://newsapi.org/v2/top-headlines?category=health&language=en&apiKey=${API_KEY}`,
+  );
+
+  const data = await response.json();
+  const news = data.articles.filter(
+    (article) =>
+      article.urlToImage &&
+      article.title &&
+      article.description &&
+      article.content,
+  );
+  const newsData = news.map((item, index) => ({
+    id: index + 1,
+    title: item.title,
+    author:
+      item.author && !item.author.startsWith("http")
+        ? item.author
+        : "Justin Bieber",
+    description: item.content && item.description,
+    image: item.urlToImage || "/public/han/News1.webp",
+    date: item.publishedAt,
+    content: item.content,
+    url: item.url,
+    views: Math.floor(Math.random() * 5000),
+    comments: Math.floor(Math.random() * 200),
+    category: getCategory(item.title),
+  }));
+  return newsData;
+}

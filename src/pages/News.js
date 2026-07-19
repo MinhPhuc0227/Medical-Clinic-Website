@@ -1,39 +1,7 @@
-import { fetchJson, loadComponent } from "../js/common";
+import { fetchJson, loadComponent, getNews } from "../js/common";
 import { createNewsCard } from "../components/NewsCard";
 import { initSideBar } from "../components/SideBar";
 import { loadSubHeader } from "../components/SubHeader.js";
-function getCategory(title) {
-  const t = title.toLowerCase();
-
-  if (
-    t.includes("surgery") ||
-    t.includes("operation") ||
-    t.includes("transplant")
-  ) {
-    return "Surgery";
-  }
-
-  if (
-    t.includes("doctor") ||
-    t.includes("nurse") ||
-    t.includes("hospital") ||
-    t.includes("clinic")
-  ) {
-    return "Professional";
-  }
-
-  if (
-    t.includes("medicine") ||
-    t.includes("medical") ||
-    t.includes("treatment") ||
-    t.includes("therapy") ||
-    t.includes("patient")
-  ) {
-    return "Medical";
-  }
-
-  return "Health Care";
-}
 
 export async function loadNews() {
   // load layout
@@ -47,25 +15,7 @@ export async function loadNews() {
     "/src/components/ContactsSection.html",
   );
   // lấy dữ liệu
-  const API_KEY = "393286089051475a92bee89d2e60bea3";
-  const response = await fetch(
-    `https://newsapi.org/v2/top-headlines?category=health&language=en&apiKey=${API_KEY}`,
-  );
-
-  const data = await response.json();
-  const newsData = data.articles.map((item, index) => ({
-    id: index + 1,
-    title: item.title,
-    description: item.description,
-    image: item.urlToImage,
-    date: item.publishedAt,
-    content: item.content,
-    url: item.url,
-    views: Math.floor(Math.random() * 5000),
-    comments: Math.floor(Math.random() * 200),
-    category: getCategory(item.title),
-  }));
-  console.log(data);
+  const newsData = await getNews();
   // Pagination
   const newsPerPage = 4;
   let currentPage = 1;
@@ -132,5 +82,5 @@ export async function loadNews() {
     }
   };
 
-  await initSideBar();
+  await initSideBar(newsData);
 }
