@@ -29,8 +29,11 @@ export async function fetchJson(path) {
 // }
 
 export function setActiveNav() {
-  const currentHash = window.location.hash || "#home";
-
+  let currentHash = window.location.hash.split("?")[0] || "#home";
+  // News Detail cũng active menu News
+  if (currentHash === "#/news-detail") {
+    currentHash = "#news";
+  }
   document.querySelectorAll(".nav-link").forEach((link) => {
     // Xóa màu active cũ
     link.classList.remove("text-accent");
@@ -82,13 +85,28 @@ export async function getNews() {
   );
 
   const data = await response.json();
-  const news = data.articles.filter(
+  //lọc bài có đủ thành phần
+  const newsList = data.articles.filter(
     (article) =>
       article.urlToImage &&
       article.title &&
       article.description &&
       article.content,
   );
+  const blockedDomains = [
+    "marthastewart.com",
+    "usatoday.com",
+    "verywellhealth.com",
+    "eatingwell.com",
+  ];
+  //lọc bỏ bài có nguồn chặn ảnh
+  const news = newsList.filter((article) => {
+    if (!article.urlToImage) return false;
+
+    return !blockedDomains.some((domain) =>
+      article.urlToImage.includes(domain),
+    );
+  });
   const newsData = news.map((item, index) => ({
     id: index + 1,
     title: item.title,
@@ -96,7 +114,7 @@ export async function getNews() {
       item.author && !item.author.startsWith("http")
         ? item.author
         : "Justin Bieber",
-    description: item.content && item.description,
+    description: item.description,
     image: item.urlToImage || "/public/han/News1.webp",
     date: item.publishedAt,
     content: item.content,

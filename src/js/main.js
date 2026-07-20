@@ -6,10 +6,13 @@ import { router } from "./router.js";
 async function init() {
   await loadComponent("header", "/src/components/Header.html");
   await setActiveNav();
-  await loadComponent("footer", "/src/components/Footer.html");
   await router();
+  await loadComponent("footer", "/src/components/Footer.html");
   await initNewsletter();
-  window.addEventListener("hashchange", router);
+  window.addEventListener("hashchange", async () => {
+    await router();
+    await initNewsletter();
+  });
 }
 
 init();

@@ -14,13 +14,19 @@ export async function initNewsSection() {
 
   for (let i = 0; i < totalSlides; i++) {
     const slide = document.createElement("div");
-    slide.className =
-      "min-w-full grid grid-cols-2 gap-x-8 gap-y-6 place-items-center";
+    slide.className = "min-w-full flex justify-center";
+
+    const grid = document.createElement("div");
+    grid.className = "w-fit grid grid-cols-2 gap-x-5 gap-y-6";
+
     const start = i * cardsPerSlide;
     const end = start + cardsPerSlide;
+
     news.slice(start, end).forEach((item) => {
-      slide.innerHTML += createSmallNews(item);
+      grid.innerHTML += createSmallNews(item);
     });
+
+    slide.appendChild(grid);
     track.appendChild(slide);
   }
 

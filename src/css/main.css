@@ -104,7 +104,7 @@
   }
 
   .btn-filled {
-    @apply bg-accent text-primary  px-6 py-3 rounded-full
+    @apply bg-accent text-primary  px-[26px] py-[13px] rounded-full
            hover:bg-primary hover:text-white transition
            
            inline-flex items-center gap-2 self-start;

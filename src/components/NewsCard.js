@@ -7,8 +7,9 @@ export function createNewsCard(news) {
     <article class="flex flex-col w-[658px] ">
 
       <img
-        src="${news.image}"
-        alt="${news.title}"
+         src="${news.image}"
+  onerror="this.onerror=null; this.src='/han/News1.webp';"
+  alt="${news.title}"
         class="w-full h-[500px] mb-[24px] object-cover"
       />
 
@@ -56,17 +57,22 @@ export function createNewsCard(news) {
 
       <!-- Title -->
       <h2 class="display-2 mb-[16px] text-primary">
-        ${news.title}
+        ${news.title} 
       </h2>
-
       <!-- Description -->
       <p class="body line-clamp-4 mb-[24px]" >
         ${news.description}
       </p>
 
       <!-- Button -->
-      ${createButton({ text: "Read more", variant: "filled", icon: "right" })}
-
+      <a
+        href="#/news-detail?id=${news.id}"
+    class="btn-filled" >
+    Learn More
+    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ </a>
     </article>
   `;
 }

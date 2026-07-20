@@ -1,21 +1,23 @@
 export function createSmallNews(news) {
   return `
-    <article class="flex w-[486px] h-[154px] rounded-[5px] bg-white ">
+    <article class="flex w-[486px] h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
 
       <!-- Image -->
       <div class="w-[160px] h-full flex-shrink-0">
         <img
-          src="${news.image}"
-          alt="${news.title}"
+            src="${news.image}"
+  alt="${news.title}"
+  onerror="this.onerror=null; this.src='/han/News1.webp';"g
+  
           class="w-full h-full object-cover"
         >
       </div>
 
       <!-- Content -->
-      <div class="flex flex-col flex-1 pl-[20px] pr-[32px] py-[20px]">
+      <div class="flex flex-col flex-1 mb-auto pl-[20px] pr-[32px] py-[20px]">
 
         <!-- Meta -->
-        <p class="small text-secondary pb-[8px] leading-none">
+        <p class="small text-secondary pb-[8px] leading-none  ">
           ${news.date} | ${news.author}
         </p>
 
@@ -25,7 +27,7 @@ export function createSmallNews(news) {
         </h3>
 
         <!-- Footer -->
-        <div class="flex items-center small">
+        <div class="flex items-center small ">
 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.73755 0.75C5.9541 0.75 3.09886 2.361 0.851101 5.58301C0.786942 5.67599 0.751782 5.7859 0.750066 5.89886C0.74835 6.01181 0.780154 6.12274 0.841459 6.21763C2.56853 8.92108 5.38555 11.0353 8.73755 11.0353C12.0531 11.0353 14.928 8.91465 16.6583 6.20513C16.7182 6.1121 16.75 6.00381 16.75 5.89318C16.75 5.78255 16.7182 5.67425 16.6583 5.58122C14.9241 2.90277 12.0281 0.75 8.73755 0.75Z" stroke="#526AE9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.7496 8.74969C10.3275 8.74969 11.6066 7.47056 11.6066 5.89267C11.6066 4.31478 10.3275 3.03564 8.7496 3.03564C7.17171 3.03564 5.89258 4.31478 5.89258 5.89267C5.89258 7.47056 7.17171 8.74969 8.7496 8.74969Z" stroke="#526AE9" stroke-width="1.5" stroke-miterlimit="10"/>
