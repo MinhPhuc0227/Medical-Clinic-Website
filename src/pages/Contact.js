@@ -21,10 +21,20 @@ await initNewsletter();
 
 // ADD-SUBMIT-EVENT FUNCTION (save contact form data in local storage)
 function addSubmitContactFormEvent() {
+  // Validate form
   const form = document.getElementById("contactForm");
-
   if (!form) return;
 
+  // Add press Enter to submit (in contact message)
+  const messageInput = document.getElementById("contactMessage");
+  messageInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      form.requestSubmit();
+    }
+  });
+
+  // Submit event
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -33,9 +43,16 @@ function addSubmitContactFormEvent() {
     const subject = document.getElementById("contactSubject").value.trim();
     const message = document.getElementById("contactMessage").value.trim();
 
-    // Validate
+    // Validate fields
     if (!name || !email || !subject || !message) {
       alert("Please fill in all fields.");
+      return;
+    }
+
+    // Check email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
       return;
     }
 
@@ -55,7 +72,7 @@ function addSubmitContactFormEvent() {
     contacts.push(contact);
 
     // Save
-    localStorage.setItem("contacts", JSON.stringify(contacts));
+    localStorage.setItem("contactFormData", JSON.stringify(contacts));
     alert("Your message has been sent!");
     form.reset();
   });

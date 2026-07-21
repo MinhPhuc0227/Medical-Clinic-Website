@@ -55,14 +55,14 @@ export function initNewsletter() {
 
     // Create
     const newSubscriber = {
-      id: subscribers.length + 1,
+      id: crypto.randomUUID(),
       email: email,
       createdAt: new Date().toLocaleString("vi-VN"),
     };
 
     // Save to localstorage
     subscribers.push(newSubscriber);
-    localStorage.setItem("newsletterSubscribers", JSON.stringify(subscribers));
+    localStorage.setItem("newsLetterData", JSON.stringify(subscribers));
 
     // Show message
     showMessage(
