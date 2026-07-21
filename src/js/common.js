@@ -29,17 +29,14 @@ export async function fetchJson(path) {
 // }
 
 export function setActiveNav() {
-  let currentHash = window.location.hash.split("?")[0] || "#home";
-  // News Detail cũng active menu News
-  if (currentHash === "#/news-detail") {
-    currentHash = "#news";
-  }
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
   document.querySelectorAll(".nav-link").forEach((link) => {
-    // Xóa màu active cũ
     link.classList.remove("text-accent");
 
-    // Nếu href trùng với hash hiện tại thì active
-    if (link.getAttribute("href") === currentHash) {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
       link.classList.add("text-accent");
     }
   });

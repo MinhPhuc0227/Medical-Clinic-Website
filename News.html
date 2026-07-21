@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDDICAL | News</title>
+  </head>
+  <body>
+    <header id="header" class="sticky top-0 z-50 bg-white"></header>
+    <div id="subheader"></div>
+
+    <main
+      id="page-content"
+      class="w-full bg-white max-w-[995px] py-[64px] mx-auto hidden"
+    >
+      <div class="container gap-[20px] flex">
+        <!-- Danh sách bài viết -->
+        <section class="w-[658px]">
+          <div id="news-list" class="flex flex-col gap-10"></div>
+
+          <!-- Pagination -->
+
+          <div class="flex justify-between gap-3 mt-[32px]">
+            <button
+              id="prev"
+              class="btn-text body hover:opacity-30% transition"
+            >
+              <svg
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.6153 1L0.999919 6L5.6153 11M0.999919 6H11.8333"
+                  stroke="#1F2B6C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Previous
+            </button>
+
+            <div id="pagination" class="body"></div>
+
+            <button
+              id="next"
+              class="btn-text body hover:opacity-30% transition"
+            >
+              Next
+              <svg
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
+                  stroke="#1F2B6C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside id="sidebar"></aside>
+      </div>
+      <section id="contact-section"></section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script type="module" src="/src/pages/News.js"></script>
+  </body>
+</html>

@@ -6,6 +6,7 @@ export function createSmallNews(news) {
       <div class="w-[160px] h-full flex-shrink-0">
         <img
             src="${news.image}"
+            loading="lazy"
   alt="${news.title}"
   onerror="this.onerror=null; this.src='/han/News1.webp';"g
   

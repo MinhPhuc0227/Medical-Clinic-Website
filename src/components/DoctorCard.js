@@ -5,6 +5,7 @@ export function createDoctorCard(doctor) {
             <img
                 src="${doctor.image}"
                 alt="${doctor.name}"
+                loading="lazy"
                 class="w-full h-[350px] object-cover"
             >
 

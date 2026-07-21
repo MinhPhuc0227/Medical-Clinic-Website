@@ -14,6 +14,7 @@ export async function loadSubHeader(page) {
       <!-- Background Image -->
       <img
         src="${data.image}"
+        loading="lazy"
         alt="${data.title}"
         class="absolute inset-0 w-full h-full object-cover object-[center_30%]"
       />
@@ -63,6 +64,7 @@ export function loadNewsSubHeader(article) {
       <img
         src="phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
         class="absolute inset-0 w-full h-full object-cover object-[center_30%]"
+        loading="lazy"
       />
 <!-- White Overlay -->
       <div class="absolute inset-0 bg-white/50"></div>
