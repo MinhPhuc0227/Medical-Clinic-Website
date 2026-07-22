@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Neurology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Bones",
+    "icon": "neurology"
+  },
+  {
+    "name": "Oncology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Otorhinolaryngology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Ophthalmology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Cardiovascular",
+    "icon": "neurology"
+  },
+  {
+    "name": "Pulmonology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Renal Medicine",
+    "icon": "neurology"
+  },
+  {
+    "name": "Gastroenterology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Urology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Dermatology",
+    "icon": "neurology"
+  },
+  {
+    "name": "Gynaecology",
+    "icon": "neurology"
+  }
+]

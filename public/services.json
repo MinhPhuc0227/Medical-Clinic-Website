@@ -4,6 +4,7 @@
     "title": "Free Checkup",
     "body": "Get a complimentary health assessment to screen for potential risks and maintain your overall well-being.",
     "image": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
     "normalIcon": "phuc/freecheckup.svg",
     "activeIcon": "phuc/freecheckup-active.svg",
     "detail": {
@@ -27,6 +28,7 @@
     "title": "Cardiogram",
     "body": "Quickly measure your heart's electrical activity to monitor cardiac health and detect any irregularities early.",
     "image": "phuc/1920_finalliverdisparity.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
     "normalIcon": "phuc/cardiogram.svg",
     "activeIcon": "phuc/cardiogram-active.svg",
     "detail": {
@@ -50,6 +52,7 @@
     "title": "Dna Testing",
     "body": "Analyze your genetic profile to uncover hereditary health risks and personalized insights about your body.",
     "image": "phuc/doctors-exam-woolridge.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
     "normalIcon": "phuc/dnatesting.svg",
     "activeIcon": "phuc/dnatesting-active.svg",
     "detail": {
@@ -73,6 +76,7 @@
     "title": "Blood Bank",
     "body": "Safe storage and rapid supply of essential blood types, ready to support critical treatments and emergencies.",
     "image": "phuc/blackdoctors.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
     "normalIcon": "phuc/bloodbank.svg",
     "activeIcon": "phuc/bloodbank-active.svg",
     "detail": {
@@ -96,6 +100,7 @@
     "title": "Dermalogy",
     "body": "Professional diagnosis and care for skin conditions, restoring and protecting your skin's health and natural glow.",
     "image": "phuc/black-women-with-stethoscope.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
     "normalIcon": "phuc/dnatesting.svg",
     "activeIcon": "phuc/dnatesting-active.svg",
     "detail": {
@@ -119,6 +124,7 @@
     "title": "Orthopedic",
     "body": "Expert treatment for bone, joint, and muscle issues to restore your strength and comfortable movement.",
     "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
     "normalIcon": "phuc/dnatesting.svg",
     "activeIcon": "phuc/dnatesting-active.svg",
     "detail": {

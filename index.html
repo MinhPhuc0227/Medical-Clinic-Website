@@ -373,6 +373,83 @@
         </div>
       </section>
 
+      <!-- SERVICES -->
+      <section class="py-24 bg-[#FCFEFE]">
+        <div class="max-w-[1366px] mx-auto px-6">
+          <!-- Heading -->
+          <div class="text-center mb-14">
+            <p class="caption text-secondary">CARE YOU CAN BELIEVE IN</p>
+
+            <h2 class="display-2 text-primary mt-2">Our Services</h2>
+          </div>
+
+          <div
+            class="max-w-[992px] mx-auto grid grid-cols-[160px_1fr_330px] gap-10"
+          >
+            <!-- LEFT -->
+            <div
+              id="service-tabs"
+              class="border border-primary rounded overflow-hidden"
+            ></div>
+
+            <!-- CENTER -->
+            <div id="service-detail"></div>
+
+            <!-- RIGHT -->
+            <div id="service-images"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPECIALITIES -->
+      <section class="max-w-[992px] mx-auto py-24">
+        <!-- Heading -->
+        <div class="text-center mb-16">
+          <p class="caption text-secondary mb-[8px]">ALWAYS CARING</p>
+
+          <h2 class="display-2 text-primary">Our Specialties</h2>
+        </div>
+
+        <!-- Render cards from home.js -->
+        <div id="specialties-grid" class="grid grid-cols-4"></div>
+      </section>
+
+      <!-- APPOINTMENT -->
+      <section class="relative h-[573px] overflow-hidden">
+        <!-- Background Image -->
+        <img
+          src="/phuc/hero-doctors-scaled.webp"
+          alt="Doctor"
+          class="absolute inset-0 w-full h-full object-cover scale-x-[-1]"
+        />
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-white/80"></div>
+
+        <!-- Content: left box + right box -->
+        <div
+          class="relative max-w-[1366px] h-full mx-auto px-[187px] flex justify-between items-center"
+        >
+          <!-- Left box: heading + description -->
+          <div class="max-w-[407px]">
+            <!-- Title -->
+            <h2 class="display-2 text-secondary mb-[16px]">
+              Book an Appointment
+            </h2>
+
+            <!-- Description -->
+            <p class="body text-black leading-[140%]">
+              Schedule your appointment with our experienced medical team. We
+              are committed to providing compassionate care, accurate diagnosis,
+              and personalized treatment to support your health every step of
+              the way.
+            </p>
+          </div>
+          <!-- Right box: form -->
+          <div id="appointmentForm"></div>
+        </div>
+      </section>
+
       <!-- DOCTORS SECTION -->
       <section id="doctorsSection"></section>
 
