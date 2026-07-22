@@ -3,9 +3,11 @@ import { fetchJson, loadComponent, getNews, setActiveNav } from "../js/common";
 import { createNewsCard } from "../components/NewsCard";
 import { initSideBar } from "../components/SideBar";
 import { loadSubHeader } from "../components/SubHeader.js";
+import { initNewsletter } from "../components/NewsLetter.js";
 
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
+initNewsletter();
 await loadSubHeader("news");
 
 // load sidebar
@@ -16,8 +18,7 @@ await loadComponent("contact-section", "/src/components/ContactsSection.html");
 console.time("news");
 
 const newsData = await getNews();
-
-console.timeEnd("news");
+localStorage.setItem("newsData", JSON.stringify(newsData));
 // Pagination
 const newsPerPage = 4;
 let currentPage = 1;
@@ -83,8 +84,12 @@ document.getElementById("next").onclick = () => {
     renderNews();
   }
 };
-
 await initSideBar(newsData);
+// kéo lên đầu trang khi chuyển bài
+window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+});
 // Hiện trang
 document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");

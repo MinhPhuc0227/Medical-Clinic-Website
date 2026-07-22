@@ -2,28 +2,26 @@ import "../css/main.css";
 import { getNews, loadComponent, setActiveNav } from "../js/common.js";
 import { initSideBar } from "../components/SideBar";
 import { loadNewsSubHeader } from "../components/SubHeader.js";
+import { initNewsletter } from "../components/NewsLetter.js";
 
 await loadComponent("header", "/src/components/header.html");
-await setActiveNav();
-await loadComponent("footer", "/src/components/footer.html");
+setActiveNav();
+initNewsletter();
+
 const news = await getNews();
+
 await loadComponent("sidebar", "/src/components/SideBar.html");
 await loadComponent("contact-section", "/src/components/ContactsSection.html");
 await initSideBar(news);
 
 // Lấy id từ URL
-const params = new URLSearchParams(window.location.hash.split("?")[1]);
+const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
 // Tìm bài viết
 const currentIndex = news.findIndex((item) => item.id === id);
 const article = news[currentIndex];
 await loadNewsSubHeader(article);
-if (!article) {
-  document.getElementById("news-detail").innerHTML = `
-      <h2 class="display-2 text-primary">Article not found</h2>
-    `;
-  return;
-}
+
 // Render bài viết
 document.getElementById("detail-image").src = article.image;
 
@@ -39,13 +37,14 @@ const nextBtn = document.getElementById("next-btn");
 prevBtn.addEventListener("click", () => {
   if (currentIndex > 0) {
     const prevArticle = news[currentIndex - 1];
-    location.hash = `#/news-detail?id=${prevArticle.id}`;
+    location.href = `NewsDetail.html?id=${prevArticle.id}`;
   }
 });
+
 nextBtn.addEventListener("click", () => {
   if (currentIndex < news.length - 1) {
     const nextArticle = news[currentIndex + 1];
-    location.hash = `#/news-detail?id=${nextArticle.id}`;
+    location.href = `NewsDetail.html?id=${nextArticle.id}`;
   }
 });
 //ẩn button nếu không có bài viết trước hoặc sau
@@ -58,3 +57,10 @@ if (prevBtn.disabled) {
 if (nextBtn.disabled) {
   nextBtn.classList.add("opacity-50", "cursor-not-allowed");
 }
+// kéo lên đầu trang khi chuyển bài
+window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+});
+document.getElementById("page-content").classList.remove("hidden");
+await loadComponent("footer", "/src/components/footer.html");

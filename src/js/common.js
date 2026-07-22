@@ -29,8 +29,11 @@ export async function fetchJson(path) {
 // }
 
 export function setActiveNav() {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
+  let currentPage = window.location.pathname.split("/").pop() || "index.html";
+  // Nếu đang ở trang News Detail thì vẫn active menu News
+  if (currentPage === "NewsDetail.html") {
+    currentPage = "News.html";
+  }
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.classList.remove("text-accent");
 
@@ -95,30 +98,31 @@ export async function getNews() {
     "usatoday.com",
     "verywellhealth.com",
     "eatingwell.com",
+    "floridatoday.com",
   ];
   //lọc bỏ bài có nguồn chặn ảnh
-  const news = newsList.filter((article) => {
-    if (!article.urlToImage) return false;
+  const newsData = newsList.map((item, index) => {
+    const useDefaultImage =
+      !item.urlToImage ||
+      blockedDomains.some((domain) => item.urlToImage.includes(domain));
 
-    return !blockedDomains.some((domain) =>
-      article.urlToImage.includes(domain),
-    );
+    return {
+      id: index + 1,
+      title: item.title,
+      author:
+        item.author && !item.author.startsWith("http")
+          ? item.author
+          : "Justin Bieber",
+      description: item.description,
+      image: useDefaultImage ? "/han/News1.webp" : item.urlToImage,
+      date: item.publishedAt,
+      content: item.content,
+      url: item.url,
+      views: Math.floor(Math.random() * 5000),
+      comments: Math.floor(Math.random() * 200),
+      category: getCategory(item.title),
+    };
   });
-  const newsData = news.map((item, index) => ({
-    id: index + 1,
-    title: item.title,
-    author:
-      item.author && !item.author.startsWith("http")
-        ? item.author
-        : "Justin Bieber",
-    description: item.description,
-    image: item.urlToImage || "/public/han/News1.webp",
-    date: item.publishedAt,
-    content: item.content,
-    url: item.url,
-    views: Math.floor(Math.random() * 5000),
-    comments: Math.floor(Math.random() * 200),
-    category: getCategory(item.title),
-  }));
+
   return newsData;
 }

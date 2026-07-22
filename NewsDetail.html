@@ -15,9 +15,12 @@
     <title>MEDDICAL | News |</title>
   </head>
   <body>
-    <header></header>
-    <div id="newsSubheader" class="sticky top-0 z-50 bg-white"></div>
-    <main class="w-full bg-white max-w-[995px] py-[64px] mx-auto">
+    <header id="header" class="sticky top-0 z-50 bg-white"></header>
+    <div id="newsSubheader"></div>
+    <main
+      id="page-content"
+      class="w-full bg-white max-w-[995px] py-[64px] mx-auto hidden"
+    >
       <div class="container gap-[20px] flex">
         <!-- Danh sách bài viết -->
         <section class="w-[658px]">
@@ -71,7 +74,7 @@
       </div>
       <div id="contact-section"></div>
     </main>
-    <footer></footer>
+    <footer id="footer"></footer>
     <script type="module" src="/src/pages/NewsDetail.js"></script>
   </body>
 </html>

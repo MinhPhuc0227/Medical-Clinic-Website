@@ -67,7 +67,7 @@ export function createNewsCard(news) {
 
       <!-- Button -->
       <a
-        href="#/news-detail?id=${news.id}"
+        href="./NewsDetail.html?id=${news.id}"
     class="btn-filled" >
     Learn More
     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,6 @@
 import "../css/main.css";
 import { loadComponent, setActiveNav } from "../js/common.js";
+import { initNewsletter } from "../components/NewsLetter.js";
 import { initDoctorSection } from "../components/DoctorSection.js";
 import { initTesti } from "../components/Testimonials.js";
 import { loadFAQ } from "../components/FAQ.js";
@@ -8,7 +9,8 @@ import { initAppForm } from "../components/AppointmentForm.js";
 import { loadServices } from "../components/ServiceCard.js";
 
 await loadComponent("header", "/src/components/header.html");
-await setActiveNav();
+setActiveNav();
+initNewsletter();
 await loadComponent("footer", "/src/components/footer.html");
 await loadComponent("app-form", "/src/components/AppointmentForm.html");
 await loadComponent("mapview", "/src/components/MapView.html");
