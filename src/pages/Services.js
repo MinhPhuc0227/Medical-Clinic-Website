@@ -8,9 +8,9 @@ import { initNewsletter } from "../components/NewsLetter.js";
 await loadComponent("header", "/src/components/header.html");
 await setActiveNav();
 await loadSubHeader("services");
-// Show main page content (service section)
-document.getElementById("page-content").classList.remove("hidden");
 await loadServices();
 await loadComponent("contactsSection", "/src/components/ContactsSection.html");
+// Show main page content (service section)
+document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");
 await initNewsletter();

@@ -10,12 +10,12 @@ await loadComponent("header", "/src/components/header.html");
 await setActiveNav();
 await loadSubHeader("contact");
 await loadComponent("mapview", "/src/components/mapview.html");
-// Show main page content (contact form)
-document.getElementById("page-content").classList.remove("hidden");
-addSubmitContactFormEvent();
+await addSubmitContactFormEvent();
 await loadComponent("newssection", "/src/components/NewsSection.html");
 await initNewsSection();
 await loadFAQ();
+// Show main page content (contact form)
+document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");
 await initNewsletter();
 
