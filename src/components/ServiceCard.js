@@ -26,7 +26,7 @@ export async function loadServices() {
             class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-all duration-300 group-hover:opacity-100"
           >
             <img
-              src="${service.smallIcon}"
+              src="${service.activeIcon}"
               class="w-[48px] h-[48px]"
               alt="${service.title}"
             />
@@ -39,7 +39,7 @@ export async function loadServices() {
           class="absolute right-[20px] top-[260px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary transition-all duration-300 group-hover:opacity-0"
         >
           <img
-            src="${service.smallIcon}"
+            src="${service.activeIcon}"
             class="w-[26px] h-[26px]"
             alt="${service.title}"
           />
@@ -60,7 +60,7 @@ export async function loadServices() {
 
           <!-- Link -->  
           <a
-            href="/single-service.html?id=${service.id}"
+            href="ServiceDetail.html?id=${service.id}"
             class="body mt-[16px] inline-flex items-center gap-[10px] text-secondary transition-colors hover:text-primary"
           >
             Learn More
