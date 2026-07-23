@@ -6,8 +6,17 @@ import { initDoctorSection } from "../components/DoctorSection.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initAppForm } from "../components/AppointmentForm.js";
 
+const grid = document.getElementById("specialties-grid");
+const tabs = document.getElementById("service-tabs");
+const detail = document.getElementById("service-detail");
+const images = document.getElementById("service-images");
+let services = [];
+let current = 0;
+
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
+await loadServices();
+await loadSpecialties();
 await loadComponent("appointmentForm", "/src/components/AppointmentForm.html");
 await initAppForm();
 await loadComponent("doctorsSection", "/src/components/DoctorSection.html");
@@ -17,23 +26,26 @@ await initNewsSection();
 await loadComponent("contactsSection", "/src/components/ContactsSection.html");
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
+if (location.hash) {
+  const target = document.querySelector(location.hash);
+
+  if (target) {
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}
 await loadComponent("footer", "/src/components/footer.html");
 initNewsletter();
 
-// ======================================================================================
-// SPECIALTIES RENDER
-// ======================================================================================
-const grid = document.getElementById("specialties-grid");
-loadSpecialties();
-
-// Load specialties
+// ========== RENDER SPECIALTIES ==========
 async function loadSpecialties() {
   try {
     const response = await fetch("/specialties.json");
     const specialties = await response.json();
 
     renderSpecialties(specialties);
-    initActiveCard();
   } catch (error) {
     console.error(error);
   }
@@ -43,69 +55,24 @@ function renderSpecialties(data) {
   grid.innerHTML = data
     .map(
       (item) => `
-<a
-    href="SpecialtyDetail.html?id=${item.id}"
-    class="
-        group
-        specialty-card
-        border-[0.15px]
-        border-black/19
-        rounded-[5px]
-        h-[172px]
-        flex
-        flex-col
-        justify-center
-        items-center
-        gap-[8px]
-        cursor-pointer
-        transition-all
-        duration-300
-        hover:bg-primary
-    "
-
->
-    <div
-        class="
-            specialty-icon
-            text-secondary
-            transition-colors
-            duration-300
-            group-hover:text-accent
-        "
+    <a
+        href="SpecialtyDetail.html?id=${item.id}"
+        class="group border-[0.15px] border-black/19 rounded-[5px] h-[172px] flex flex-col justify-center items-center gap-[8px] cursor-pointer transition-all duration-300 hover:bg-primary"
     >
-        ${icons[item.icon]}
-    </div>
+        <div class="text-secondary transition-colors duration-300 group-hover:text-accent">
+            ${icons[item.icon]}
+        </div>
 
-    <p
-        class="
-            specialty-name
-            footer-2
-            text-black
-            transition-colors
-            duration-300
-            group-hover:text-accent
-        "
-    >
-        ${item.name}
-    </p>
-
-</a>
+        <p class="footer-2 text-black transition-colors duration-300 group-hover:text-accent">
+            ${item.name}
+        </p>
+    </a>
 `,
     )
     .join("");
 }
 
-// ======================================================================================
-// SERVICES RENDER
-// ======================================================================================
-const tabs = document.getElementById("service-tabs");
-const detail = document.getElementById("service-detail");
-const images = document.getElementById("service-images");
-let services = [];
-let current = 0;
-loadServices();
-
-// Load services
+// ========== RENDER SERVICES ==========
 async function loadServices() {
   try {
     const response = await fetch("/services.json");
@@ -137,35 +104,17 @@ function renderServices() {
 function renderTabs() {
   tabs.innerHTML = "";
   const serviceTabs = services.slice(0, 4);
-
   serviceTabs.forEach((service, index) => {
     const active = index === current;
-
     tabs.innerHTML += `
-            <button
-                class="
-                    service-tab
-                    w-full
-                    h-[106px]
-                    flex
-                    flex-col
-                    justify-center
-                    items-center
-                    gap-[8px]
-                    transition
-                    ${active ? "bg-primary text-accent" : "bg-white text-black"}
-                "
+            <button class="
+                service-tab w-full h-[106px] flex flex-col justify-center items-center gap-[8px] transition
+                ${active ? "bg-primary text-accent" : "bg-white text-black"}"
                 data-index="${index}"
             >
-
                 <!-- Icon -->
                 <div
-                    class="
-                        service-icon
-                        w-[32px]
-                        h-[32px]
-                        ${active ? "text-accent" : "text-secondary"}
-                    "
+                    class="service-icon w-[32px] h-[32px] ${active ? "text-accent" : "text-secondary"}"
                 >
                     ${icons[service.icon]}
                 </div>
@@ -174,7 +123,6 @@ function renderTabs() {
                 <span class="body text-center">
                     ${service.title}
                 </span>
-
             </button>
         `;
   });
@@ -199,19 +147,13 @@ function renderDetail() {
         </h3>
 
         <!-- Keywords -->
-        <div
-            class="max-w-[414px] grid grid-cols-[auto_auto] justify-between gap-y-[16px] mb-[32px]"
-        >
+        <div class="max-w-[414px] grid grid-cols-[auto_auto] justify-between gap-y-[16px] mb-[32px]">
             ${service.detail.keywords
               .map(
                 (item) => `
                     <div class="flex items-center gap-[10px]">
-                        <div
-                            class="w-[16px] h-[16px] rounded-full bg-secondary"
-                        ></div>
-                        <span class="body-2 text-black">
-                            ${item}
-                        </span>
+                        <div class="w-[16px] h-[16px] rounded-full bg-secondary"></div>
+                        <span class="body-2 text-black">${item}</span>
                     </div>
                 `,
               )
@@ -222,11 +164,8 @@ function renderDetail() {
         <div class="space-y-[8px]">
             ${service.detail.description
               .map(
-                (text) => `
-                    <p class="body text-black leading-[140%]">
-                        ${text}
-                    </p>
-                `,
+                (text) =>
+                  `<p class="body text-black leading-[140%]">${text}</p>`,
               )
               .join("")}
         </div>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <!-- Google Fonts -->
@@ -20,7 +20,7 @@
 
     <!-- ================================================================================ -->
     <!-- PAGE CONTENT -->
-    <main id="page-content" class="w-full bg-white hidden">
+    <main id="page-content" class="bg-white hidden">
       <!-- LARGE BANNER -->
       <section class="relative h-[550px] overflow-hidden">
         <!-- Background image -->
@@ -67,9 +67,9 @@
             </h1>
 
             <!-- Button -->
-            <button href="Services.html" class="btn-filled footer-2 px-[35px]">
+            <a href="Services.html" class="btn-filled footer-2 px-[35px]">
               Our Services
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -78,7 +78,8 @@
       <section class="relative -mt-[50px] z-40">
         <div class="max-w-[995px] mx-auto grid grid-cols-3 gap-[22px]">
           <!-- Book an Appointment -->
-          <div
+          <a
+            href="#appointmentSection"
             class="h-[100px] bg-primary rounded-[5px] px-[20px] flex items-center justify-between"
           >
             <!-- Text -->
@@ -194,10 +195,11 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </div>
+          </a>
 
           <!-- Our Doctors -->
-          <div
+          <a
+            href="#doctorsSection"
             class="h-[100px] bg-accent rounded-[5px] px-[58px] flex items-center justify-between"
           >
             <!-- Text -->
@@ -229,10 +231,11 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </div>
+          </a>
 
           <!-- Our Specialities -->
-          <div
+          <a
+            href="#specialtiesSection"
             class="h-[100px] bg-secondary rounded-[5px] px-[44px] flex items-center justify-between"
           >
             <!-- Text -->
@@ -297,12 +300,12 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </div>
+          </a>
         </div>
       </section>
 
       <!-- TEXT SECTION -->
-      <section class="py-[96px]">
+      <section class="py-[64px]">
         <div class="max-w-[658px] mx-auto text-center">
           <!-- Caption -->
           <p class="caption text-secondary mb-[8px]">Welcome to Meddical</p>
@@ -405,7 +408,7 @@
       </section>
 
       <!-- SPECIALTIES -->
-      <section class="max-w-[992px] mx-auto py-24">
+      <section id="specialtiesSection" class="max-w-[992px] mx-auto py-[64px]">
         <!-- Heading -->
         <div class="text-center mb-16">
           <p class="caption text-secondary mb-[8px]">ALWAYS CARING</p>
@@ -418,7 +421,10 @@
       </section>
 
       <!-- APPOINTMENT -->
-      <section class="relative h-[573px] overflow-hidden">
+      <section
+        id="appointmentSection"
+        class="relative h-[573px] overflow-hidden"
+      >
         <!-- Background Image -->
         <img
           src="/phuc/hero-doctors-scaled.webp"
@@ -454,13 +460,13 @@
       </section>
 
       <!-- DOCTORS SECTION -->
-      <section id="doctorsSection"></section>
+      <section id="doctorsSection" class="py-[64px]"></section>
 
       <!-- NEWS SECTION -->
       <section id="newsSection"></section>
 
       <!-- CONTACTS SECTION -->
-      <section id="contactsSection"></section>
+      <section id="contactsSection" class="mt-[64px]"></section>
     </main>
 
     <!-- ================================================================================ -->

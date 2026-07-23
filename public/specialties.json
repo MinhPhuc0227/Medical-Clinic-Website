@@ -4,83 +4,83 @@
     "name": "Neurology",
     "icon": "neurology",
     "description": "Diagnosis and treatment of disorders affecting the brain, spinal cord, nerves, and muscles. Our neurology specialists provide comprehensive care for conditions such as stroke, epilepsy, Parkinson’s disease, migraines, and other neurological disorders using advanced diagnostic and treatment approaches.",
-    "image": "phuc/1920_finalliverdisparity.webp"
+    "image": "phuc/pregnant-anemia-race-main.webp"
   },
   {
     "id": "bones",
     "name": "Bones",
     "icon": "neurology",
     "description": "Comprehensive care for bone, joint, and musculoskeletal conditions. Our orthopedic specialists help patients recover from fractures, arthritis, sports injuries, and chronic bone disorders through modern treatment and rehabilitation.",
-    "image": "/phuc/bones.webp"
+    "image": "phuc/1920_finalliverdisparity.webp"
   },
   {
     "id": "oncology",
     "name": "Oncology",
     "icon": "neurology",
     "description": "Specialized cancer care focused on prevention, diagnosis, treatment, and long-term follow-up. We provide personalized treatment plans using the latest medical technologies and evidence-based therapies.",
-    "image": "/phuc/oncology.webp"
+    "image": "phuc/doctors-exam-woolridge.webp"
   },
   {
     "id": "otorhinolaryngology",
     "name": "Otorhinolaryngology",
     "icon": "neurology",
     "description": "Expert care for conditions affecting the ear, nose, throat, head, and neck. Our ENT specialists diagnose and treat hearing problems, sinus disorders, allergies, voice disorders, and other related conditions.",
-    "image": "/phuc/otorhinolaryngology.webp"
+    "image": "phuc/blackdoctors.webp"
   },
   {
     "id": "ophthalmology",
     "name": "Ophthalmology",
     "icon": "neurology",
     "description": "Complete eye care services including routine examinations, diagnosis, treatment, and surgery for various vision and eye diseases. We are committed to preserving and improving your eyesight.",
-    "image": "/phuc/ophthalmology.webp"
+    "image": "phuc/black-women-with-stethoscope.webp"
   },
   {
     "id": "cardiovascular",
     "name": "Cardiovascular",
     "icon": "neurology",
     "description": "Comprehensive cardiovascular care for heart and blood vessel diseases. Our specialists provide preventive screenings, advanced diagnostics, and personalized treatment for hypertension, heart failure, coronary artery disease, and other cardiac conditions.",
-    "image": "/phuc/cardiovascular.webp"
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
   },
   {
     "id": "pulmonology",
     "name": "Pulmonology",
     "icon": "neurology",
     "description": "Diagnosis and management of lung and respiratory diseases including asthma, chronic obstructive pulmonary disease (COPD), pneumonia, and sleep-related breathing disorders.",
-    "image": "/phuc/pulmonology.webp"
+    "image": "phuc/pregnant-anemia-race-main.webp"
   },
   {
     "id": "renal-medicine",
     "name": "Renal Medicine",
     "icon": "neurology",
     "description": "Dedicated kidney care for acute and chronic kidney diseases. Our nephrology team provides comprehensive evaluation, dialysis support, and treatment plans to maintain optimal kidney health.",
-    "image": "/phuc/renalmedicine.webp"
+    "image": "phuc/1920_finalliverdisparity.webp"
   },
   {
     "id": "gastroenterology",
     "name": "Gastroenterology",
     "icon": "neurology",
     "description": "Expert diagnosis and treatment of digestive system disorders involving the stomach, intestines, liver, pancreas, and gallbladder. We provide advanced endoscopic procedures and personalized digestive healthcare.",
-    "image": "/phuc/gastroenterology.webp"
+    "image": "phuc/doctors-exam-woolridge.webp"
   },
   {
     "id": "urology",
     "name": "Urology",
     "icon": "neurology",
     "description": "Specialized care for urinary tract and male reproductive system conditions. Our urologists diagnose and treat kidney stones, urinary infections, prostate diseases, and other urological disorders.",
-    "image": "/phuc/urology.webp"
+    "image": "phuc/blackdoctors.webp"
   },
   {
     "id": "dermatology",
     "name": "Dermatology",
     "icon": "neurology",
     "description": "Professional skin care services for both medical and cosmetic dermatology. We diagnose and treat acne, eczema, psoriasis, skin infections, and other conditions while promoting healthy skin.",
-    "image": "/phuc/dermatology.webp"
+    "image": "phuc/black-women-with-stethoscope.webp"
   },
   {
     "id": "gynaecology",
     "name": "Gynaecology",
     "icon": "neurology",
     "description": "Comprehensive women's healthcare including preventive examinations, reproductive health, pregnancy care, and treatment of gynecological conditions with compassionate, patient-centered care.",
-    "image": "/phuc/gynaecology.webp"
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
   }
 ]

@@ -4,7 +4,7 @@
     "title": "Free Checkup",
     "body": "Get a complimentary health assessment to screen for potential risks and maintain your overall well-being.",
     "image": "phuc/pregnant-anemia-race-main.webp",
-    "subImage": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/blackdoctors.webp",
     "icon": "freeCheckup",
     "detail": {
       "heading": "A passion for putting patients first",
@@ -27,7 +27,7 @@
     "title": "Cardiogram",
     "body": "Quickly measure your heart's electrical activity to monitor cardiac health and detect any irregularities early.",
     "image": "phuc/1920_finalliverdisparity.webp",
-    "subImage": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/black-women-with-stethoscope.webp",
     "icon": "cardiogram",
     "detail": {
       "heading": "Advanced heart care you can trust",
@@ -50,7 +50,7 @@
     "title": "Dna Testing",
     "body": "Analyze your genetic profile to uncover hereditary health risks and personalized insights about your body.",
     "image": "phuc/doctors-exam-woolridge.webp",
-    "subImage": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
     "icon": "dnaTesting",
     "detail": {
       "heading": "Unlock the story written in your DNA",
@@ -96,7 +96,7 @@
     "title": "Dermalogy",
     "body": "Professional diagnosis and care for skin conditions, restoring and protecting your skin's health and natural glow.",
     "image": "phuc/black-women-with-stethoscope.webp",
-    "subImage": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/1920_finalliverdisparity.webp",
     "icon": "dermalogy",
     "detail": {
       "heading": "Healthy skin starts with expert care",
@@ -119,7 +119,7 @@
     "title": "Orthopedic",
     "body": "Expert treatment for bone, joint, and muscle issues to restore your strength and comfortable movement.",
     "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
-    "subImage": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/doctors-exam-woolridge.webp",
     "icon": "orthopedic",
     "detail": {
       "heading": "Helping you move with strength again",

@@ -5,12 +5,13 @@ import { initNewsletter } from "../components/NewsLetter.js";
 
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
-loadSpecialty();
+await loadSpecialty();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");
 initNewsletter();
 
+// Xác định id của trang và load dữ liệu
 async function loadSpecialty() {
   try {
     // Get specialty id from url
@@ -42,45 +43,57 @@ async function loadSpecialty() {
   }
 }
 
+// Render specialty
 function renderSpecialty(specialty) {
   const container = document.getElementById("specialty-detail");
 
   container.innerHTML = `
-    <div class="grid grid-cols-2 items-center gap-[64px]">
+    <div class="grid grid-cols-2 items-start gap-[64px]">
 
       <!-- Left -->
       <div>
-
         <a
-          href="Specialties.html"
+          href="index.html#specialtiesSection"
           class="btn-text mb-[40px]"
         >
-          ← Quay lại
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 12H5" />
+            <path d="M12 19l-7-7 7-7" />
+          </svg>
+          <span>Quay lại</span>
         </a>
 
         <h1 class="display-1 text-primary mb-[24px]">
           ${specialty.name}
         </h1>
 
-        <p class="body text-black leading-[170%] mb-[40px]">
+        <p class="body text-black leading-[140%] mb-[40px]">
           ${specialty.description}
         </p>
 
-        <button class="btn-filled">
+        <a href="index.html#appointmentSection" class="btn-filled">
           Book an Appointment
-        </button>
-
+        </a>
       </div>
 
-      <!-- Right -->
+      <!-- Image -->
       <div>
         <img
           src="${specialty.image}"
           alt="${specialty.name}"
-          class="w-full h-[520px] object-cover rounded-[8px]"
+          class="w-full h-[520px] object-cover rounded-[5px]"
         />
       </div>
-
     </div>
   `;
 }

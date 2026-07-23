@@ -7,17 +7,17 @@ import { initNewsletter } from "../components/NewsLetter.js";
 
 // Load layout
 await loadComponent("header", "/src/components/header.html");
-await setActiveNav();
+setActiveNav();
 await loadSubHeader("contact");
 await loadComponent("mapview", "/src/components/mapview.html");
-await addSubmitContactFormEvent();
+addSubmitContactFormEvent();
 await loadComponent("newssection", "/src/components/NewsSection.html");
-await initNewsSection();
+initNewsSection();
 await loadFAQ();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");
-await initNewsletter();
+initNewsletter();
 
 // ADD-SUBMIT-EVENT FUNCTION (save contact form data in local storage)
 function addSubmitContactFormEvent() {
@@ -57,7 +57,7 @@ function addSubmitContactFormEvent() {
     }
 
     // Read old data
-    const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    const contacts = JSON.parse(localStorage.getItem("contactFormData")) || [];
 
     // New object
     const contact = {

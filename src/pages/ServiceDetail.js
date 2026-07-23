@@ -7,7 +7,7 @@ import { initDoctorSection } from "../components/DoctorSection.js";
 
 // load layout
 await loadComponent("header", "/src/components/header.html");
-await setActiveNav();
+setActiveNav();
 await initMainContent();
 await loadComponent("doctorsSection", "/src/components/DoctorSection.html");
 await initDoctorSection();
@@ -15,7 +15,7 @@ await loadComponent("contactsSection", "/src/components/ContactsSection.html");
 // Show main page content (service section)
 document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");
-await initNewsletter();
+initNewsletter();
 
 // INIT MAIN CONTENT FUNCTION
 async function initMainContent() {
