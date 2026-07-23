@@ -34,11 +34,13 @@ export function createDoctorCard(doctor) {
 
                 </div>
             </div>
-
-            <button
-                class="bg-primary text-accent w-full py-[12px] ">
-                View Profile
-            </button>
+            <!-- Button -->
+               <a
+  href="./DoctorDetail.html?id=${doctor.id}"
+  class="flex items-center justify-center w-full h-[56px] bg-primary text-accent hover:underline body transition-colors duration-300"
+>
+  View Profile
+</a>
         </div>
     `;
 }

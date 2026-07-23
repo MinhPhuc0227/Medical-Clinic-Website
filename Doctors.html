@@ -18,6 +18,71 @@
     <header id="header" class="sticky top-0 z-50 bg-white"></header>
     <main>
       <div id="subheader"></div>
+      <!-- Lọc bác sĩ -->
+      <section class="max-w-[992px] mx-auto my-[64px]">
+        <!-- Select -->
+        <div class="flex flex-row-reverse">
+          <select
+            id="specialty-filter"
+            class="h-[64px] border border-gray-300 rounded-lg px-5 outline-none focus:border-primary"
+          >
+            <option value="all">All Specialties</option>
+          </select>
+        </div>
+      </section>
+      <section class="max-w-[992px] my-[64px] flex flex-col mx-auto">
+        <div
+          id="doctor-track"
+          class="grid grid-cols-3 gap-8 content-start min-h-[1072px]"
+        ></div>
+
+        <!-- prev next -->
+        <div class="grid grid-cols-3 items-center mt-[64px]">
+          <div class="flex justify-start">
+            <button id="doctor-prev" class="btn-filled">
+              <svg
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.61555 1L1.00016 6L5.61555 11M1.00016 6H11.8335"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Previous
+            </button>
+          </div>
+
+          <div id="doctor-dots" class="flex justify-center gap-2"></div>
+
+          <div class="flex justify-end">
+            <button id="doctor-next" class="btn-filled">
+              Next
+              <svg
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
       <div id="testi" class="mt-[64px]"></div>
       <div id="newsSection"></div>
       <div id="contactSection" class="my-[64px]"></div>

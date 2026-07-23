@@ -37,6 +37,9 @@ export function setActiveNav() {
   if (currentPage === "ServiceDetail.html") {
     currentPage = "Services.html";
   }
+  if (currentPage === "DoctorDetail.html") {
+    currentPage = "Doctors.html";
+  }
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.classList.remove("text-accent");
 

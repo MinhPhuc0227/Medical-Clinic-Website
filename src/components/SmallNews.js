@@ -1,5 +1,9 @@
 export function createSmallNews(news) {
   return `
+  <a
+      href="/NewsDetail.html?id=${news.id}"
+      class="flex w-full gap-4 rounded-lg hover:shadow-lg transition"
+    >
     <article class="flex w-[486px] h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
 
       <!-- Image -->
@@ -50,5 +54,6 @@ export function createSmallNews(news) {
       </div>
 
     </article>
+    </a>
   `;
 }

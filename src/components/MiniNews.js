@@ -1,6 +1,10 @@
 export function createMiniNews(news) {
   return `
-    <div class="flex items-center gap-[10px] w-[274px] h-[60px]">
+  <a
+      href="/NewsDetail.html?id=${news.id}"
+      class="flex w-full gap-4 rounded-lg hover:shadow-lg transition"
+    >  
+  <div class="flex items-center gap-[10px] w-[274px] h-[60px]">
       <img
    src="${news.image}"
    loading="lazy"
@@ -19,5 +23,6 @@ export function createMiniNews(news) {
         </h3>
       </div>
     </div>
+    </a>
   `;
 }

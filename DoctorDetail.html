@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDDICAL | Doctors</title>
+  </head>
+  <body>
+    <header id="header" class="sticky top-0 z-50 bg-white"></header>
+    <main>
+      <div id="subheader"></div>
+      <section class="flex gap-[48px] w-[992px] mx-auto my-[64px]">
+        <sidebar class="w-[300px] shrink-0 items-center">
+          <img id="doctor-image" />
+          <h1
+            id="doctor-name"
+            class="display-2 text-primary text-center leading-tight mt-[24px]"
+          ></h1>
+          <p
+            id="doctor-specialty"
+            class="caption text-center text-secondary"
+          ></p>
+        </sidebar>
+        <div class="flex-1">
+          <h2 class="display-3 text-primary">Introduction</h2>
+          <p id="doctor-introduction" class="my-[16px]"></p>
+          <p class="mt-[16px]">
+            <span class="font-bold">Years of Experience:</span>
+            <span id="doctor-experienceYears"></span> Years
+          </p>
+          <p class="mt-[16px]">
+            <strong>Experience</strong>
+          </p>
+          <ul id="doctor-experience" class="list-disc pl-6 mt-2 space-y-2"></ul>
+          <p class="mt-[16px]">
+            <strong>Career</strong>
+          </p>
+          <ul id="doctor-career" class="list-disc pl-6 mt-2 space-y-2"></ul>
+        </div>
+      </section>
+      <button id="back-btn" class="btn-filled flex mx-auto items-center gap-2">
+        <svg
+          width="13"
+          height="12"
+          viewBox="0 0 13 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.61555 1L1.00016 6L5.61555 11M1.00016 6H11.8335"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Back
+      </button>
+      <div id="testi" class="mt-[64px]"></div>
+      <div id="newsSection"></div>
+      <div id="contactSection" class="my-[64px]"></div>
+    </main>
+    <footer id="footer"></footer>
+    <script type="module" src="/src/pages/DoctorDetail.js"></script>
+  </body>
+</html>
