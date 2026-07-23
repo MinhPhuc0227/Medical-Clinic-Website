@@ -1,4 +1,5 @@
 import "../css/main.css";
+import { icons } from "../js/icons.js";
 import { loadComponent, setActiveNav } from "../js/common";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
@@ -66,12 +67,18 @@ async function initMainContent() {
         }"
       >
         
-         <!-- Service Icon -->
-        <img
-          src="${item.id === service.id ? item.activeIcon : item.normalIcon}"
-          class="w-[32px] h-[32px]"
+        <!-- Service Icon -->
+        <div
+            class="
+                service-icon
+                w-[32px]
+                h-[32px]
+                ${item.id === service.id ? "text-accent" : "text-secondary"}
+            "
         >
-        
+            ${icons[item.icon]}
+        </div>
+
         <!-- Service Title -->
         <span class="body whitespace-nowrap">
           ${item.title}

@@ -5,16 +5,15 @@
     "body": "Get a complimentary health assessment to screen for potential risks and maintain your overall well-being.",
     "image": "phuc/pregnant-anemia-race-main.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
-    "normalIcon": "phuc/freecheckup.svg",
-    "activeIcon": "phuc/freecheckup-active.svg",
+    "icon": "freeCheckup",
     "detail": {
       "heading": "A passion for putting patients first",
       "keywords": [
         "A Passion for Healing",
         "5-Star Care",
+        "All our best",
+        "Believe in Us",
         "A Legacy of Excellence",
-        "Preventive Checkups",
-        "Trusted Medical Team",
         "Always Caring"
       ],
       "description": [
@@ -29,8 +28,7 @@
     "body": "Quickly measure your heart's electrical activity to monitor cardiac health and detect any irregularities early.",
     "image": "phuc/1920_finalliverdisparity.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
-    "normalIcon": "phuc/cardiogram.svg",
-    "activeIcon": "phuc/cardiogram-active.svg",
+    "icon": "cardiogram",
     "detail": {
       "heading": "Advanced heart care you can trust",
       "keywords": [
@@ -53,8 +51,7 @@
     "body": "Analyze your genetic profile to uncover hereditary health risks and personalized insights about your body.",
     "image": "phuc/doctors-exam-woolridge.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
-    "normalIcon": "phuc/dnatesting.svg",
-    "activeIcon": "phuc/dnatesting-active.svg",
+    "icon": "dnaTesting",
     "detail": {
       "heading": "Unlock the story written in your DNA",
       "keywords": [
@@ -77,8 +74,7 @@
     "body": "Safe storage and rapid supply of essential blood types, ready to support critical treatments and emergencies.",
     "image": "phuc/blackdoctors.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
-    "normalIcon": "phuc/bloodbank.svg",
-    "activeIcon": "phuc/bloodbank-active.svg",
+    "icon": "bloodBank",
     "detail": {
       "heading": "Reliable blood support when every second matters",
       "keywords": [
@@ -101,8 +97,7 @@
     "body": "Professional diagnosis and care for skin conditions, restoring and protecting your skin's health and natural glow.",
     "image": "phuc/black-women-with-stethoscope.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
-    "normalIcon": "phuc/dnatesting.svg",
-    "activeIcon": "phuc/dnatesting-active.svg",
+    "icon": "dermalogy",
     "detail": {
       "heading": "Healthy skin starts with expert care",
       "keywords": [
@@ -125,8 +120,7 @@
     "body": "Expert treatment for bone, joint, and muscle issues to restore your strength and comfortable movement.",
     "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
-    "normalIcon": "phuc/dnatesting.svg",
-    "activeIcon": "phuc/dnatesting-active.svg",
+    "icon": "orthopedic",
     "detail": {
       "heading": "Helping you move with strength again",
       "keywords": [
