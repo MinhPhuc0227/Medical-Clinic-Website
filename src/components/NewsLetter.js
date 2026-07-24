@@ -39,7 +39,7 @@ export function initNewsletter() {
 
     // Read localStorage
     const subscribers =
-      JSON.parse(localStorage.getItem("newsletterSubscribers")) || [];
+      JSON.parse(localStorage.getItem("newsLetterData")) || [];
 
     // Check email existed or not (in local storage)
     const existed = subscribers.some(

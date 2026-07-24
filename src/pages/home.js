@@ -5,6 +5,7 @@ import { initNewsletter } from "../components/NewsLetter.js";
 import { initDoctorSection } from "../components/DoctorSection.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initAppForm } from "../components/AppointmentForm.js";
+import { loadFAQ } from "../components/FAQ.js";
 
 const grid = document.getElementById("specialties-grid");
 const tabs = document.getElementById("service-tabs");
@@ -24,6 +25,7 @@ await initDoctorSection();
 await loadComponent("newsSection", "/src/components/NewsSection.html");
 await initNewsSection();
 await loadComponent("contactsSection", "/src/components/ContactsSection.html");
+await loadFAQ();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
 if (location.hash) {
