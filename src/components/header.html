@@ -1,8 +1,10 @@
 <header class="bg-white">
   <!-- Flex Container: Logo + Info -->
-  <div class="max-w-[1366px] mx-auto flex items-center px-[186px] py-[20px]">
+  <div
+    class="max-w-[1366px] mx-auto flex flex-wrap items-center justify-center px-[186px] py-[20px] lg:flex-nowrap lg:justify-between"
+  >
     <!-- 1.Logo -->
-    <div class="flex items-center">
+    <div class="hidden md:block flex items-center">
       <a href="#" class="display-4 text-[36px] leading-[36px] uppercase">
         <span class="text-primary">MED</span
         ><span class="text-secondary">DICAL</span>
@@ -10,9 +12,13 @@
     </div>
 
     <!-- 2. Info: Emergency + Work Hour + Location -->
-    <div class="flex-1 flex justify-end items-center gap-[21px]">
+    <div
+      class="flex-1 flex flex-wrap justify-center lg:justify-end lg:flex-nowrap items-center gap-[21px]"
+    >
       <!-- Emergency -->
-      <div class="flex items-center gap-[5.48px]">
+      <div
+        class="flex items-center justify-center w-[162px] gap-[5.48px] lg:w-auto"
+      >
         <!-- <img
           src="/emergency.svg"
           alt="Emergency"
@@ -45,14 +51,14 @@
           <p class="button-text leading-[16px] text-primary uppercase mb-[2px]">
             Emergency
           </p>
-          <p class="button-text leading-[16px] text-secondary">
+          <p class="button-text leading-[16px] text-secondary lg:w-auto">
             (237) 681-812-255
           </p>
         </div>
       </div>
 
       <!-- Work Hour -->
-      <div class="flex items-center gap-[9.68px]">
+      <div class="flex items-center w-[150.17px] gap-[9.68px] lg:w-auto">
         <!-- <img src="/workhour.svg" alt="Work Hour" class="w-[30px] h-[30px]" /> -->
         <svg
           width="32"
@@ -86,7 +92,7 @@
       </div>
 
       <!-- Location -->
-      <div class="flex items-center gap-[9.68px]">
+      <div class="flex items-center w-[194.17px] gap-[9.68px] lg:w-auto">
         <!-- <img src="/location.svg" alt="Location" class="w-[30px] h-[36px]" /> -->
         <svg
           width="32"
