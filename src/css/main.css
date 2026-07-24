@@ -14,13 +14,13 @@
 @layer components {
   .display-1 {
     font-family: var(--font-display);
-    font-size: 48px;
+    @apply text-[24px] md:text-[48px];
     font-weight: 400;
   }
 
   .display-2 {
     font-family: var(--font-display);
-    font-size: 32px;
+    @apply text-[24px] md:text-[32px];
   }
   .display-3 {
     font-family: var(--font-display);
@@ -42,6 +42,7 @@
   .body {
     font-family: var(--font-body);
     font-size: 16px;
+    line-height: 140%;
   }
 
   .body-2 {
@@ -51,7 +52,7 @@
 
   .button-text {
     font-family: var(--font-body);
-    font-size: 16px;
+    @apply text-[14px] md:text-[16px];
     font-weight: 500;
   }
 
@@ -95,9 +96,19 @@
     font-size: 18px;
     font-weight: 400;
   }
+  .nav-1 {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .nav-2 {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 400;
+  }
   .caption {
     font-family: var(--font-body);
-    font-size: 18px;
+    @apply text-[14px] md:text-[18px];
     font-weight: 700;
     letter-spacing: 16%;
     text-transform: uppercase;

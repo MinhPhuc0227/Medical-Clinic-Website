@@ -57,6 +57,10 @@ if (prevBtn.disabled) {
 if (nextBtn.disabled) {
   nextBtn.classList.add("opacity-50", "cursor-not-allowed");
 }
+// nút back
+document.getElementById("back-btn").addEventListener("click", () => {
+  history.back();
+});
 // kéo lên đầu trang khi chuyển bài
 window.scrollTo({
   top: 0,

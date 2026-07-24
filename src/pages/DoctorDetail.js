@@ -44,7 +44,8 @@ document.getElementById("doctor-experience").innerHTML = doctor.experience
   .join("");
 document.getElementById("doctor-career").innerHTML = doctor.career
   .map((item) => `<li>${item}</li>`)
-  .join(""); // nút back
+  .join(""); 
+  // nút back
 document.getElementById("back-btn").addEventListener("click", () => {
   history.back();
 });
