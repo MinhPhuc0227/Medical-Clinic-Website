@@ -1,25 +1,25 @@
 <section class="w-[491px] overflow-hidden rounded-[5px]">
-  <form class="grid grid-cols-2">
+  <form id="appointmentForm" class="grid grid-cols-2">
     <input
+      id="appointmentName"
       type="text"
       placeholder="Name"
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
-    <label
-      class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
-    >
+    <label class="relative flex h-[50px] items-center border border-accent bg-primary px-5">
       <select
+        id="appointmentGender"
         class="body w-full appearance-none bg-transparent pr-8 text-white outline-none"
         name="gender"
         required
       >
-        <option value="" class="text-black bg-white" selected disabled>
+        <option value="" class="bg-white text-black" selected disabled>
           Gender
         </option>
-        <option value="male" class="text-black bg-white">Male</option>
-        <option value="female" class="text-black bg-white">Female</option>
-        <option value="other" class="text-black bg-white">Other</option>
+        <option value="male" class="bg-white text-black">Male</option>
+        <option value="female" class="bg-white text-black">Female</option>
+        <option value="other" class="bg-white text-black">Other</option>
       </select>
       <svg
         class="pointer-events-none absolute right-5 shrink-0"
@@ -37,21 +37,22 @@
     </label>
 
     <input
+      id="appointmentEmail"
       type="email"
       placeholder="Email"
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
     <input
+      id="appointmentPhone"
       type="tel"
       placeholder="Phone"
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
-    <label
-      class="relative flex h-[50px] items-center border border-accent bg-primary px-5 cursor-pointer"
-    >
+    <label class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5">
       <input
+        id="appointmentDate"
         type="text"
         placeholder="Date"
         name="date"
@@ -75,10 +76,9 @@
       </svg>
     </label>
 
-    <label
-      class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
-    >
+    <label class="relative flex h-[50px] items-center border border-accent bg-primary px-5">
       <input
+        id="appointmentTime"
         type="text"
         placeholder="Time"
         name="time"
@@ -102,24 +102,22 @@
       </svg>
     </label>
 
-    <label
-      class="relative flex h-[50px] items-center border border-accent bg-primary px-5 cursor-pointer"
-    >
+    <label class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5">
       <input
-        type="text"
         id="doctor-input"
+        type="text"
         placeholder="Doctor"
         name="doctor"
         required
         oninput="document.getElementById('doctor-select').value = this.value"
-        class="body absolute left-5 top-0 w-[calc(100%-60px)] h-full bg-transparent text-white placeholder-white outline-none z-10"
+        class="body absolute left-5 top-0 z-10 h-full w-[calc(100%-60px)] bg-transparent text-white placeholder-white outline-none"
       />
       <select
         id="doctor-select"
         onchange="document.getElementById('doctor-input').value = this.value"
-        class="body w-full appearance-none bg-transparent pr-8 text-black outline-none cursor-pointer"
+        class="body w-full cursor-pointer appearance-none bg-transparent pr-8 text-black outline-none"
       >
-        <option value="" class="text-black bg-white" selected disabled></option>
+        <option value="" class="bg-white text-black" selected disabled></option>
       </select>
       <svg
         class="pointer-events-none absolute right-5 shrink-0"
@@ -136,31 +134,22 @@
       </svg>
     </label>
 
-    <label
-      class="relative flex h-[50px] items-center border border-accent bg-primary px-5 cursor-pointer"
-    >
+    <label class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5">
       <input
+        id="department-input"
         type="text"
         placeholder="Department"
         name="department"
         required
-        oninput="this.nextElementSibling.value = this.value"
-        class="body absolute left-5 top-0 w-[calc(100%-60px)] h-full bg-transparent text-white placeholder-white outline-none z-10"
+        oninput="document.getElementById('department-select').value = this.value"
+        class="body absolute left-5 top-0 z-10 h-full w-[calc(100%-60px)] bg-transparent text-white placeholder-white outline-none"
       />
       <select
-        onchange="this.previousElementSibling.value = this.value"
-        class="body w-full appearance-none bg-transparent pr-8 text-transparent outline-none cursor-pointer"
+        id="department-select"
+        onchange="document.getElementById('department-input').value = this.value"
+        class="body w-full cursor-pointer appearance-none bg-transparent pr-8 text-transparent outline-none"
       >
-        <option value="" class="text-black bg-white" selected disabled></option>
-        <option value="Cardiology" class="text-black bg-white">
-          Cardiology
-        </option>
-        <option value="Pediatrics" class="text-black bg-white">
-          Pediatrics
-        </option>
-        <option value="Dermatology" class="text-black bg-white">
-          Dermatology
-        </option>
+        <option value="" class="bg-white text-black" selected disabled></option>
       </select>
       <svg
         class="pointer-events-none absolute right-5 shrink-0"
@@ -178,6 +167,7 @@
     </label>
 
     <textarea
+      id="appointmentMessage"
       placeholder="Message"
       class="body col-span-2 h-[189px] resize-none border border-accent bg-primary pt-4 pb-4 pl-5 pr-4 text-white placeholder-white outline-none"
     ></textarea>
