@@ -14,13 +14,13 @@
 @layer components {
   .display-1 {
     font-family: var(--font-display);
-    @apply text-[24px] md:text-[48px];
+    font-size: 48px;
     font-weight: 400;
   }
 
   .display-2 {
     font-family: var(--font-display);
-    @apply text-[24px] md:text-[32px];
+    font-size: 32px;
   }
   .display-3 {
     font-family: var(--font-display);
@@ -52,7 +52,7 @@
 
   .button-text {
     font-family: var(--font-body);
-    @apply text-[14px] md:text-[16px];
+    font-size: 16px;
     font-weight: 500;
   }
 
@@ -108,7 +108,7 @@
   }
   .caption {
     font-family: var(--font-body);
-    @apply text-[14px] md:text-[18px];
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 16%;
     text-transform: uppercase;
@@ -124,4 +124,38 @@
   .btn-text {
     @apply flex items-center gap-2 text-secondary hover:text-accent;
   }
+}
+/*BREAKPOINT*/
+/*Mobile*/
+@media (max-width: 425px) {
+  .nav {
+    font-size: 24px;
+  }
+}
+/*Mobile và Tablet*/
+@media (max-width: 768px) {
+  .button-text {
+    font-size: 14px;
+  }
+  .display-1 {
+    font-size: 24px;
+  }
+  .display-2 {
+    font-size: 24px;
+  }
+  .display-4 {
+    font-size: 32px;
+  }
+  .caption {
+    font-size: 14px;
+  }
+  .contact {
+    font-size: 16px;
+  }
+  .body {
+    font-size: 14px;
+  }
+}
+/*Laptop*/
+@media (min-width: 768px) {
 }

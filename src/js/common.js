@@ -62,12 +62,7 @@ function getCategory(title) {
     return "Surgery";
   }
 
-  if (
-    t.includes("doctor") ||
-    t.includes("nurse") ||
-    t.includes("hospital") ||
-    t.includes("clinic")
-  ) {
+  if (t.includes("doctor") || t.includes("nurse") || t.includes("hospital")) {
     return "Professional";
   }
 

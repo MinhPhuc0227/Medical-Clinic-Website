@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDDICAL | Appointment</title>
+  </head>
+
+  <body>
+    <div id="header" class="sticky top-0 z-50 bg-white shadow-sm"></div>
+
+    <section id="subheader"></section>
+
+    <main>
+      <section
+        class="mx-auto mt-[64px] flex w-[992px] items-start justify-between"
+      >
+        <!-- Left -->
+        <div class="w-[491px]">
+          <div class="mb-[64px]">
+            <h2 class="display-2 text-primary">
+              Book an Appointment
+            </h2>
+
+            <p class="body mt-4 text-black">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Quisque placerat scelerisque tortor ornare ornare.
+              Convallis felis vitae tortor augue. Velit nascetur proin massa in.
+              Consequat faucibus porttitor enim et.
+            </p>
+          </div>
+
+          <!-- Appointment Form -->
+          <div id="app-form"></div>
+        </div>
+
+        <!-- Right -->
+        <section
+          class="flex h-[650px] w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-[50px] py-[48px]"
+        >
+          <h2 class="display-1 text-accent">
+            Schedule hours
+                    </h2>
+
+          <!-- JS sẽ render danh sách vào đây -->
+          <ul
+            id="schedule-list"
+            class="mt-[51px] flex flex-col gap-[25px]"
+          ></ul>
+
+          <footer class="mt-auto border-t-2 border-accent pt-[32px]">
+            <!-- Emergency -->
+          </footer>
+        </section>
+      </section>
+    </main>
+
+    <!-- <div id="footer"></div> -->
+
+    <script type="module" src="/src/pages/Appointment.js"></script>
+  </body>
+</html>
