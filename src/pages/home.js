@@ -7,10 +7,11 @@ import { loadFAQ } from "../components/FAQ.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initAppForm } from "../components/AppointmentForm.js";
 import { loadServices } from "../components/ServiceCard.js";
-
+import { initHeader } from "../components/header.js";
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
 initNewsletter();
+initHeader();
 await loadComponent("footer", "/src/components/footer.html");
 await loadComponent("app-form", "/src/components/AppointmentForm.html");
 await loadComponent("mapview", "/src/components/MapView.html");

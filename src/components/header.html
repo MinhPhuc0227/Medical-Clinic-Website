@@ -239,7 +239,9 @@
   </div>
   </div>
   <!-- ==================== NAVIGATION BAR ======================= -->
-  <nav class="bg-primary h-[70px] md:h-[80px] w-full">
+  <!-- Tablet, Laptop -->
+  <div class="hidden md:block">
+    <nav class="bg-primary md:h-[80px] w-full">
     <div
       class="md:max-w-[1366px] md:mx-auto flex items-center justify-between px-[10px] lg:px-[186px] h-full"
     >
@@ -316,4 +318,41 @@
       </div>
     </div>
   </nav>
+  </div>
+<!--Mobile  -->
+  <div class="block md:hidden">
+    <nav class="bg-primary h-[70px] py-[19px] px-[16px] flex justify-between items-center">
+    <!-- logo -->
+ <div>
+      <a href="#" class="display-3  leading-[36px] uppercase">
+        <span class="text-accent">MED</span
+        ><span class="text-white">DICAL</span>
+      </a>
+    </div>
+    <!-- Button search và list -->
+     <div class="flex">
+<div class="border-b border-transparent focus-within:border-white transition-all duration-300">
+          <input
+            type="text"
+            placeholder=""
+            class="w-[100px] lg:w-[200px] h-[50px] bg-primary px-4 text-white placeholder:text-white outline-none"
+          />
+        </div>
+        <button >
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.88894 18.7779C14.7982 18.7779 18.7779 14.7982 18.7779 9.88894C18.7779 4.97971 14.7982 1 9.88894 1C4.97971 1 1 4.97971 1 9.88894C1 14.7982 4.97971 18.7779 9.88894 18.7779Z" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.0004 21.0001L16.167 16.1667" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </button>
+       </div>
+     
+        <button  class="pl-[30px]">
+          <svg id="menu" width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 14.4V16.8H0V14.4H24ZM24 7.2V9.6H0V7.2H24ZM24 0V2.4H0V0H24Z" fill="#FCFEFE"/>
+</svg>
+
+        </button>
+    </nav>
+  </div>
 </header>
