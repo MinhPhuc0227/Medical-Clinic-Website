@@ -57,12 +57,8 @@ function addSubmitAppointmentFormEvent() {
     const date = document.getElementById("appointmentDate").value;
     const time = document.getElementById("appointmentTime").value;
     const doctor = document.getElementById("doctor-input").value.trim();
-    const department = document
-      .getElementById("department-input")
-      .value.trim();
-    const message = document
-      .getElementById("appointmentMessage")
-      .value.trim();
+    const department = document.getElementById("department-input").value.trim();
+    const message = document.getElementById("appointmentMessage").value.trim();
 
     if (
       !name ||
@@ -104,13 +100,11 @@ function addSubmitAppointmentFormEvent() {
 
     appointments.push(appointment);
 
-    localStorage.setItem(
-      "appointmentFormData",
-      JSON.stringify(appointments)
-    );
+    localStorage.setItem("appointmentFormData", JSON.stringify(appointments));
 
     alert("Appointment booked successfully!");
 
     form.reset();
   });
 }
+
