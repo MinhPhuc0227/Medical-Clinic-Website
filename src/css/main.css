@@ -9,6 +9,8 @@
   --color-black: #212124;
   --color-white: #fcfefe;
   --color-secondary: #159eec;
+
+  --breakpoint-lg: 1440px;
 }
 
 @layer components {
