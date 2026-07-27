@@ -40,6 +40,10 @@ export function setActiveNav() {
   if (currentPage === "DoctorDetail.html") {
     currentPage = "Doctors.html";
   }
+
+  if (currentPage === "SpecialtyDetail.html") {
+    currentPage = "index.html";
+  }
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.classList.remove("text-accent");
 

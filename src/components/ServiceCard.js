@@ -1,3 +1,4 @@
+import { icons } from "../js/icons.js";
 export async function loadServices() {
   const container = document.getElementById("servicecard");
   const response = await fetch("/services.json");
@@ -25,11 +26,12 @@ export async function loadServices() {
           <div
             class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-all duration-300 group-hover:opacity-100"
           >
-            <img
-              src="${service.activeIcon}"
-              class="w-[48px] h-[48px]"
-              alt="${service.title}"
-            />
+            <div
+                class="w-[48px] h-[48px] text-accent"
+                aria-hidden="true"
+            >
+                ${icons[service.icon]}
+            </div>
           </div>
 
         </div>
@@ -38,11 +40,12 @@ export async function loadServices() {
         <div
           class="absolute right-[20px] top-[260px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary transition-all duration-300 group-hover:opacity-0"
         >
-          <img
-            src="${service.activeIcon}"
-            class="w-[26px] h-[26px]"
-            alt="${service.title}"
-          />
+          <div
+              class="w-[26px] h-[26px] text-accent"
+              aria-hidden="true"
+          >
+              ${icons[service.icon]}
+          </div>
         </div>
 
         <!-- ========== 3. CONTENT SECTION ========== -->

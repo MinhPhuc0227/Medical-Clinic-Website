@@ -22,17 +22,12 @@
     <section id="subheader"></section>
 
     <!-- PAGE CONTENT -->
-    <main
-      id="page-content"
-      class="w-full bg-white max-w-[995px] mt-[64px] mx-auto hidden"
-    >
+    <main id="page-content" class="bg-white hidden">
       <!-- MAP VIEW -->
-      <section id="mapview" class="mt-[64px]"></section>
+      <section id="mapview" class="py-[64px]"></section>
 
       <!-- MAIN SECTION -->
-      <section
-        class="max-w-[992px] mx-auto bg-white antialiased mt-[64px] mb-[64px]"
-      >
+      <section class="max-w-[992px] mx-auto bg-white py-[64px]">
         <div class="grid grid-cols-2 gap-[20px]">
           <!-- ========== LEFT COLUMN ========== -->
           <div class="flex flex-col h-[486px]">
@@ -54,6 +49,7 @@
                 <!-- Name -->
                 <input
                   id="contactName"
+                  name="name"
                   type="text"
                   placeholder="Name"
                   class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none rounded-tl-[5px]"
@@ -61,6 +57,7 @@
                 <!-- Email -->
                 <input
                   id="contactEmail"
+                  name="email"
                   type="email"
                   placeholder="Email"
                   class="body h-[50px] border border-l-0 border-accent bg-primary px-5 text-white placeholder-white outline-none rounded-tr-[5px]"
@@ -70,6 +67,7 @@
               <!-- Row 2: Subject -->
               <input
                 id="contactSubject"
+                name="subject"
                 type="text"
                 placeholder="Subject"
                 class="body h-[50px] w-full border-x border-b border-accent bg-primary px-5 text-white placeholder-white outline-none"
@@ -78,6 +76,7 @@
               <!-- Row 3: Message -->
               <textarea
                 id="contactMessage"
+                name="message"
                 placeholder="Message"
                 class="body flex-1 h-[235px] resize-none border-x border-b border-accent bg-primary p-5 text-white placeholder-white outline-none"
               ></textarea>

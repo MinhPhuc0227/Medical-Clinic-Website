@@ -3,6 +3,7 @@ import { loadComponent, setActiveNav } from "../js/common.js";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initAppForm } from "../components/AppointmentForm.js";
 import { initNewsletter } from "../components/NewsLetter.js";
+import { loadFAQ } from "../components/FAQ.js";
 
 await loadComponent("header", "/src/components/header.html");
 await setActiveNav();
@@ -15,7 +16,7 @@ await loadComponent("footer", "/src/components/footer.html");
 await initAppForm();
 addSubmitAppointmentFormEvent();
 await initNewsletter();
-
+await loadFAQ();
 // Schedule Hours
 const scheduleList = document.getElementById("schedule-list");
 
@@ -107,4 +108,3 @@ function addSubmitAppointmentFormEvent() {
     form.reset();
   });
 }
-

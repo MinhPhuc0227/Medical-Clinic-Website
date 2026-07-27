@@ -1,4 +1,5 @@
 import "../css/main.css";
+import { icons } from "../js/icons.js";
 import { loadComponent, setActiveNav } from "../js/common";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
@@ -6,15 +7,15 @@ import { initDoctorSection } from "../components/DoctorSection.js";
 
 // load layout
 await loadComponent("header", "/src/components/header.html");
-await setActiveNav();
+setActiveNav();
 await initMainContent();
-// Show main page content (service section)
-document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("doctorsSection", "/src/components/DoctorSection.html");
 await initDoctorSection();
 await loadComponent("contactsSection", "/src/components/ContactsSection.html");
+// Show main page content (service section)
+document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/src/components/footer.html");
-await initNewsletter();
+initNewsletter();
 
 // INIT MAIN CONTENT FUNCTION
 async function initMainContent() {
@@ -66,12 +67,18 @@ async function initMainContent() {
         }"
       >
         
-         <!-- Service Icon -->
-        <img
-          src="${item.id === service.id ? item.activeIcon : item.normalIcon}"
-          class="w-[32px] h-[32px]"
+        <!-- Service Icon -->
+        <div
+            class="
+                service-icon
+                w-[32px]
+                h-[32px]
+                ${item.id === service.id ? "text-accent" : "text-secondary"}
+            "
         >
-        
+            ${icons[item.icon]}
+        </div>
+
         <!-- Service Title -->
         <span class="body whitespace-nowrap">
           ${item.title}
