@@ -6,6 +6,7 @@ import { initDoctorSection } from "../components/DoctorSection.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initAppForm } from "../components/AppointmentForm.js";
 import { loadFAQ } from "../components/FAQ.js";
+import { initHeader } from "../components/header.js";
 
 const grid = document.getElementById("specialties-grid");
 const tabs = document.getElementById("service-tabs");
@@ -15,6 +16,7 @@ let services = [];
 let current = 0;
 
 await loadComponent("header", "/src/components/header.html");
+initHeader();
 setActiveNav();
 await loadServices();
 await loadSpecialties();
