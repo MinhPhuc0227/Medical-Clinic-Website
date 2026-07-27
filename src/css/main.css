@@ -137,7 +137,7 @@
     font-size: 24px;
   }
   .body-2 {
-    font-size: 16px;
+    font-size: 10px;
   }
   .display-1 {
     font-size: 24px;
@@ -161,6 +161,15 @@
     font-size: 16px;
   }
   .body {
+    font-size: 14px;
+  }
+  .display-1 {
+    font-size: 24px;
+  }
+  .display-2 {
+    font-size: 24px;
+  }
+  .caption {
     font-size: 14px;
   }
 }
