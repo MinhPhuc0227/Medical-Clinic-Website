@@ -10,7 +10,7 @@ export async function loadSubHeader(page) {
   }
 
   container.innerHTML = `
-    <section class="relative w-full h-[250px] overflow-hidden">
+    <section class="relative w-full h-[140px] md:h-[180px] lg:[250px] overflow-hidden">
       <!-- Background Image -->
       <img
         src="${data.image}"
