@@ -24,12 +24,30 @@ export async function loadSubHeader(page) {
 
       <!-- Left Circle -->
       <div
-        class="absolute w-[239px] h-[239px] rounded-full bg-secondary opacity-30 -left-[119px] -top-[119px]"
+        class=" absolute rounded-full bg-secondary opacity-30
+
+    w-[140px] h-[140px]
+    -left-[70px] -top-[70px]
+
+    md:w-[180px] md:h-[180px]
+    md:-left-[90px] md:-top-[90px]
+
+    lg:w-[239px] lg:h-[239px]
+    lg:-left-[119px] lg:-top-[119px]"
       ></div>
 
       <!-- Right Circle -->
       <div
-        class="absolute w-[256px] h-[256px] rounded-full bg-accent opacity-50 -right-[128px] -bottom-[128px]"
+        class="absolute rounded-full bg-accent opacity-50
+
+    w-[150px] h-[150px]
+    -right-[75px] -bottom-[75px]
+
+    md:w-[190px] md:h-[190px]
+    md:-right-[95px] md:-bottom-[95px]
+
+    lg:w-[256px] lg:h-[256px]
+    lg:-right-[128px] lg:-bottom-[128px]"
       ></div>
 
       <!-- Content -->
