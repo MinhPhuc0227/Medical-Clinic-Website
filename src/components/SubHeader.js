@@ -135,7 +135,7 @@ export function loadNewsSubHeader(article) {
 <path d="M1 8.11108H17" stroke="#1F2B6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-            <span>${article.date}</span>
+            <span class="line-clamp-1 lg:line-clamp-none">${article.date}</span>
           </div>
 
           <div class="flex items-center gap-2">

@@ -136,18 +136,6 @@
   .nav {
     font-size: 24px;
   }
-  .body-2 {
-    font-size: 10px;
-  }
-  .display-1 {
-    font-size: 24px;
-  }
-  .display-2 {
-    font-size: 24px;
-  }
-  .caption {
-    font-size: 14px;
-  }
 }
 /*Mobile và Tablet*/
 @media (max-width: 768px) {
@@ -171,6 +159,9 @@
   }
   .caption {
     font-size: 14px;
+  }
+  .body-2 {
+    font-size: 10px;
   }
 }
 /*Laptop*/
