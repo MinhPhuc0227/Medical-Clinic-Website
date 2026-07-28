@@ -5,10 +5,12 @@ import { initTesti } from "../components/Testimonials";
 import { initNewsSection } from "../components/NewsSection";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { createDoctorCard } from "../components/DoctorCard.js";
+import { initHeader } from "../components/header.js";
 
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
 initNewsletter();
+initHeader();
 await loadComponent("footer", "/src/components/footer.html");
 await loadSubHeader("doctors");
 await loadComponent("newsSection", "/src/components/NewsSection.html");

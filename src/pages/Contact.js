@@ -4,10 +4,12 @@ import { loadSubHeader } from "../components/SubHeader.js";
 import { loadFAQ } from "../components/FAQ.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initNewsletter } from "../components/NewsLetter.js";
+import { initHeader } from "../components/header.js";
 
 // Load layout
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
+initHeader();
 await loadSubHeader("contact");
 await loadComponent("mapview", "/src/components/mapview.html");
 addSubmitContactFormEvent();

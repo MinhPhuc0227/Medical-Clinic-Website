@@ -2,9 +2,11 @@
 import "../css/main.css";
 import { loadComponent, setActiveNav } from "../js/common.js";
 import { initNewsletter } from "../components/NewsLetter.js";
+import { initHeader } from "../components/header.js";
 
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
+initHeader();
 await loadSpecialty();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");

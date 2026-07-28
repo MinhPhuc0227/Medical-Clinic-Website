@@ -3,11 +3,12 @@ import { getNews, loadComponent, setActiveNav } from "../js/common.js";
 import { initSideBar } from "../components/SideBar";
 import { loadNewsSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
+import { initHeader } from "../components/header.js";
 
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
 initNewsletter();
-
+initHeader();
 const news = await getNews();
 
 await loadComponent("sidebar", "/src/components/SideBar.html");

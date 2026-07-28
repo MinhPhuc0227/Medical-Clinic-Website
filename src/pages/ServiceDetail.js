@@ -4,10 +4,12 @@ import { loadComponent, setActiveNav } from "../js/common";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initDoctorSection } from "../components/DoctorSection.js";
+import { initHeader } from "../components/header.js";
 
 // load layout
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
+initHeader();
 await initMainContent();
 await loadComponent("doctorsSection", "/src/components/DoctorSection.html");
 await initDoctorSection();

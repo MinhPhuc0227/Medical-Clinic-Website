@@ -4,8 +4,10 @@ import { loadSubHeader } from "../components/SubHeader.js";
 import { initAppForm } from "../components/AppointmentForm.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { loadFAQ } from "../components/FAQ.js";
+import { initHeader } from "../components/header.js";
 
 await loadComponent("header", "/src/components/header.html");
+initHeader();
 await setActiveNav();
 await loadSubHeader("appointment");
 await loadComponent("app-form", "/src/components/AppointmentForm.html");

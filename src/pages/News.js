@@ -4,10 +4,12 @@ import { createNewsCard } from "../components/NewsCard";
 import { initSideBar } from "../components/SideBar";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
+import { initHeader } from "../components/header.js";
 
 await loadComponent("header", "/src/components/header.html");
 setActiveNav();
 initNewsletter();
+initHeader();
 await loadSubHeader("news");
 
 // load sidebar

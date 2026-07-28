@@ -4,8 +4,10 @@ import { loadSubHeader } from "../components/SubHeader.js";
 import { initTesti } from "../components/Testimonials";
 import { initDoctorSection } from "../components/DoctorSection.js";
 import { initNewsSection } from "../components/NewsSection.js";
+import { initHeader } from "../components/header.js";
 
 await loadComponent("header", "/src/components/header.html");
+initHeader();
 await setActiveNav();
 await loadSubHeader("about");
 
