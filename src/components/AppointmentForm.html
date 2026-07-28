@@ -7,7 +7,9 @@
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
-    <label class="relative flex h-[50px] items-center border border-accent bg-primary px-5">
+    <label
+      class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
+    >
       <select
         id="appointmentGender"
         class="body w-full appearance-none bg-transparent pr-8 text-white outline-none"
@@ -50,7 +52,9 @@
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
-    <label class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5">
+    <label
+      class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
+    >
       <input
         id="appointmentDate"
         type="text"
@@ -76,7 +80,9 @@
       </svg>
     </label>
 
-    <label class="relative flex h-[50px] items-center border border-accent bg-primary px-5">
+    <label
+      class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
+    >
       <input
         id="appointmentTime"
         type="text"
@@ -102,7 +108,9 @@
       </svg>
     </label>
 
-    <label class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5">
+    <label
+      class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
+    >
       <input
         id="doctor-input"
         type="text"
@@ -115,12 +123,7 @@
       <select
         id="doctor-select"
         onchange="document.getElementById('doctor-input').value = this.value"
-<<<<<<< HEAD
-        class="body w-full appearance-none bg-transparent pr-8 text-black 
-        outline-none cursor-pointer"
-=======
         class="body w-full cursor-pointer appearance-none bg-transparent pr-8 text-black outline-none"
->>>>>>> Quy-MPA
       >
         <option value="" class="bg-white text-black" selected disabled></option>
       </select>
@@ -139,19 +142,25 @@
       </svg>
     </label>
 
-    <label class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5">
+    <label
+      class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
+    >
       <input
         id="department-input"
         type="text"
         placeholder="Department"
         name="department"
         required
-        oninput="document.getElementById('department-select').value = this.value"
+        oninput="
+          document.getElementById('department-select').value = this.value
+        "
         class="body absolute left-5 top-0 z-10 h-full w-[calc(100%-60px)] bg-transparent text-white placeholder-white outline-none"
       />
       <select
         id="department-select"
-        onchange="document.getElementById('department-input').value = this.value"
+        onchange="
+          document.getElementById('department-input').value = this.value
+        "
         class="body w-full cursor-pointer appearance-none bg-transparent pr-8 text-transparent outline-none"
       >
         <option value="" class="bg-white text-black" selected disabled></option>
