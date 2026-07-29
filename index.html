@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MEDDICAL | Home</title>
   </head>
+
   <body>
     <!-- HEADER -->
     <header id="header" class="sticky top-0 z-50 bg-white shadow-sm"></header>
@@ -22,52 +23,61 @@
     <!-- PAGE CONTENT -->
     <main id="page-content" class="bg-white hidden">
       <!-- LARGE BANNER -->
-      <section class="relative h-[550px] overflow-hidden">
+      <section
+        class="relative h-[291px] md:h-[420px] lg:h-[550px] overflow-hidden"
+      >
         <!-- Background image -->
         <img
           src="/phuc/Physician_Trends_2021_Merritt_Hawkins.webp"
           alt="Doctor"
-          class="absolute inset-0 w-full h-full object-cover object-[center_20%] z-0"
+          class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-0"
         />
 
         <!-- Doctor image -->
         <img
           src="/phuc/Physician_Trends_2021_Merritt_Hawkins_adobespark.webp"
-          class="absolute inset-0 w-full h-full object-cover object-[center_20%] z-30"
+          class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-30"
         />
 
         <!-- Gradient layer -->
         <div
-          class="absolute inset-0 bg-[linear-gradient(92deg,#E5E4E8_20.47%,rgba(235,234,239,0)_39.27%)] z-10"
+          class="absolute inset-0 bg-[linear-gradient(180deg,rgba(229,228,232,0.8)_20%,rgba(235,234,239,0)_75%)] md:bg-[linear-gradient(120deg,#E5E4E8_25%,rgba(235,234,239,0)_45%)] lg:bg-[linear-gradient(92deg,#E5E4E8_20.47%,rgba(235,234,239,0)_39.27%)] z-10"
         ></div>
 
         <!-- Right circle -->
         <div
-          class="absolute w-[734px] h-[734px] rounded-full bg-accent opacity-50 left-[889px] top-[199px] z-20"
+          class="absolute w-[253px] h-[253px] -right-[90px] top-[105px] md:w-[420px] md:h-[420px] md:-right-[140px] md:top-[100px] lg:w-[734px] lg:h-[734px] lg:-right-[260px] lg:top-[199px] rounded-full bg-accent opacity-50 z-20"
         ></div>
 
         <!-- Left circle -->
         <div
-          class="absolute w-[734px] h-[734px] rounded-full bg-secondary opacity-30 left-[-387px] top-[-599px] z-20"
+          class="absolute w-[216px] h-[216px] left-[-108px] top-[-152px] md:w-[320px] md:h-[320px] md:left-[-120px] md:top-[-180px] lg:w-[734px] lg:h-[734px] lg:left-[-387px] lg:top-[-599px] rounded-full bg-secondary opacity-30 z-20"
         ></div>
 
         <!-- Content: text + button -->
         <div
-          class="relative max-w-[1366px] h-full mx-auto px-[186px] flex items-center z-40"
+          class="relative h-full w-full flex justify-center items-start pt-[118px] md:justify-start md:items-center md:pt-0 md:px-[48px] lg:px-[186px] z-40"
         >
-          <div class="max-w-[519px]">
+          <div
+            class="max-w-[260px] text-center md:max-w-[420px] md:text-left lg:max-w-[519px]"
+          >
             <!-- Caring for Life -->
-            <p class="caption text-secondary mb-[8px]">Caring for Life</p>
+            <p class="caption text-secondary mb-0 md:mb-[8px] lg:mb-[8px]">
+              Caring for Life
+            </p>
 
             <!-- Leading the way in Medical Excellence -->
-            <h1 class="display-1 text-primary leading-[55px] mb-[32px]">
+            <h1 class="display-1 text-primary mb-[32px]">
               Leading the Way
               <br />
               in Medical Excellence
             </h1>
 
             <!-- Button -->
-            <a href="Services.html" class="btn-filled footer-2 px-[35px]">
+            <a
+              href="Services.html"
+              class="btn-filled footer-2 px-[35px] py-[13px]"
+            >
               Our Services
             </a>
           </div>
@@ -75,7 +85,7 @@
       </section>
 
       <!-- GOALS -->
-      <section class="relative -mt-[50px] z-40">
+      <section class="hidden lg:block relative -mt-[50px] z-40">
         <div class="max-w-[995px] mx-auto grid grid-cols-3 gap-[22px]">
           <!-- Book an Appointment -->
           <a
@@ -305,18 +315,22 @@
       </section>
 
       <!-- TEXT SECTION -->
-      <section class="py-[64px]">
-        <div class="max-w-[658px] mx-auto text-center">
+      <section class="py-[48px] md:py-[56px] lg:py-[64px]">
+        <div
+          class="max-w-[343px] mx-auto text-center md:max-w-[520px] lg:max-w-[658px]"
+        >
           <!-- Caption -->
           <p class="caption text-secondary mb-[8px]">Welcome to Meddical</p>
 
           <!-- Title -->
-          <h2 class="display-2 text-primary mb-[15px]">
+          <h2
+            class="display-2 text-primary leading-[28px] mb-[24px] md:leading-[36px] md:mb-[20px] lg:leading-[40px] lg:mb-[15px]"
+          >
             A Great Place to Receive Care
           </h2>
 
           <!-- Description -->
-          <p class="body text-black mb-[32px]">
+          <p class="body text-black mb-[16px] md:mb-[24px] lg:mb-[32px]">
             We provide trusted healthcare with experienced doctors, advanced
             technology, and personalized treatment to ensure every patient
             receives the highest standard of medical care in a safe,
@@ -326,7 +340,7 @@
           <!-- Link -->
           <a
             href="About.html"
-            class="inline-flex items-center gap-[10px] body text-secondary hover:text-primary transition-colors"
+            class="inline-flex items-center justify-center gap-[10px] body text-secondary hover:text-primary transition-colors"
           >
             Learn More
 
@@ -350,28 +364,35 @@
       </section>
 
       <!-- SMALL BANNER -->
-      <section class="max-w-[992px] h-[250px] mx-auto relative overflow-hidden">
+      <section
+        class="relative overflow-hidden mx-auto h-[150px] w-full md:h-[200px] md:max-w-[768px] lg:h-[250px] lg:max-w-[992px]"
+      >
         <!-- Image -->
         <img
           src="/phuc/blackdoctors.webp"
           alt="Doctors"
-          class="absolute inset-0 w-full h-full object-cover object-[center_20%] z-0"
+          class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_20%] lg:object-[center_20%] z-0"
         />
 
         <!-- Left circle -->
         <div
-          class="absolute w-[239px] h-[239px] rounded-full bg-secondary opacity-30 left-[-119px] top-[-119px] z-10"
+          class="absolute rounded-full bg-secondary opacity-30 z-10 w-[151px] h-[151px] -left-[81px] -top-[93px] md:w-[190px] md:h-[190px] md:-left-[95px] md:-top-[95px] lg:w-[239px] lg:h-[239px] lg:-left-[119px] lg:-top-[119px]"
         ></div>
 
         <!-- Right circle -->
         <div
-          class="absolute w-[256px] h-[256px] rounded-full bg-accent opacity-50 left-[864px] top-[122px] z-10"
+          class="absolute rounded-full bg-accent opacity-50 z-10 w-[146px] h-[146px] -right-[73px] top-[66px] md:w-[200px] md:h-[200px] md:-right-[100px] md:top-[90px] lg:w-[256px] lg:h-[256px] lg:-right-[128px] lg:top-[122px]"
         ></div>
 
-        <!-- Bottom colors bar -->
+        <!-- Bottom colors -->
         <div class="absolute bottom-0 left-0 w-full h-[8px] flex z-20">
-          <div class="w-[222px] bg-accent"></div>
-          <div class="w-[608px] bg-primary"></div>
+          <!-- Accent -->
+          <div class="w-[84px] md:w-[170px] lg:w-[222px] bg-accent"></div>
+
+          <!-- Primary -->
+          <div class="w-[230px] md:flex-1 lg:w-[608px] bg-primary"></div>
+
+          <!-- Secondary -->
           <div class="flex-1 bg-secondary"></div>
         </div>
       </section>
