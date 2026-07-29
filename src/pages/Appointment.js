@@ -16,7 +16,6 @@ await loadComponent("contactSection", "/src/components/ContactsSection.html");
 await loadComponent("footer", "/src/components/footer.html");
 
 await initAppForm();
-addSubmitAppointmentFormEvent();
 await initNewsletter();
 await loadFAQ();
 // Schedule Hours
@@ -42,71 +41,5 @@ if (scheduleList) {
         </span>
       </li>
     `;
-  });
-}
-
-function addSubmitAppointmentFormEvent() {
-  const form = document.getElementById("appointmentForm");
-
-  if (!form) return;
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("appointmentName").value.trim();
-    const gender = document.getElementById("appointmentGender").value;
-    const email = document.getElementById("appointmentEmail").value.trim();
-    const phone = document.getElementById("appointmentPhone").value.trim();
-    const date = document.getElementById("appointmentDate").value;
-    const time = document.getElementById("appointmentTime").value;
-    const doctor = document.getElementById("doctor-input").value.trim();
-    const department = document.getElementById("department-input").value.trim();
-    const message = document.getElementById("appointmentMessage").value.trim();
-
-    if (
-      !name ||
-      !gender ||
-      !email ||
-      !phone ||
-      !date ||
-      !time ||
-      !doctor ||
-      !department
-    ) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    const appointments =
-      JSON.parse(localStorage.getItem("appointmentFormData")) || [];
-
-    const appointment = {
-      id: crypto.randomUUID(),
-      name,
-      gender,
-      email,
-      phone,
-      date,
-      time,
-      doctor,
-      department,
-      message,
-      createdAt: new Date().toLocaleString("sv-SE"),
-    };
-
-    appointments.push(appointment);
-
-    localStorage.setItem("appointmentFormData", JSON.stringify(appointments));
-
-    alert("Appointment booked successfully!");
-
-    form.reset();
   });
 }
