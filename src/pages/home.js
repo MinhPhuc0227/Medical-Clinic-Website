@@ -181,10 +181,10 @@ function renderImages() {
   const service = services[current];
   images.innerHTML = `
         <!-- Image 1 -->
-        <div>
+        <div class="flex-1 flex flex-col">
             <img
                 src="${service.image}"
-                class="w-full h-[231.34px] object-cover"
+                class="flex-1 w-full object-cover"
             >
             <div class="flex h-[8.53px]">
                 <div class="w-[72.51px] bg-accent"></div>
@@ -194,10 +194,10 @@ function renderImages() {
         </div>
 
         <!-- Image 2 -->
-        <div>
+        <div class="flex-1 flex flex-col">
             <img
                 src="${service.subImage}"
-                class="w-full h-[231.34px] object-cover"
+                class="flex-1 w-full object-cover"
             >
             <div class="flex h-[8.53px]">
                 <div class="w-[72.51px] bg-accent"></div>
