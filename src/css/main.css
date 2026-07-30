@@ -9,10 +9,6 @@
   --color-black: #212124;
   --color-white: #fcfefe;
   --color-secondary: #159eec;
-
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1440px;
 }
 
 @layer components {

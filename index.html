@@ -315,7 +315,7 @@
       </section>
 
       <!-- TEXT SECTION -->
-      <section class="py-[48px] md:py-[56px] lg:py-[64px]">
+      <section class="px-[16px] py-[48px] md:py-[56px] lg:py-[64px]">
         <div
           class="max-w-[343px] mx-auto text-center md:max-w-[520px] lg:max-w-[658px]"
         >
@@ -324,7 +324,7 @@
 
           <!-- Title -->
           <h2
-            class="display-2 text-primary leading-[28px] mb-[24px] md:leading-[36px] md:mb-[20px] lg:leading-[40px] lg:mb-[15px]"
+            class="max-w-[214px] mx-auto display-2 text-primary leading-[24px] mb-[8px] md:max-w-[519px] md:leading-[28px] md:mb-[10px] lg:max-w-[519px] lg:leading-[32px] lg:mb-[15px]"
           >
             A Great Place to Receive Care
           </h2>
@@ -371,7 +371,7 @@
         <img
           src="/phuc/blackdoctors.webp"
           alt="Doctors"
-          class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_20%] lg:object-[center_20%] z-0"
+          class="absolute inset-0 w-full h-full object-cover object-center object-[center_35%] md:object-[center_20%] lg:object-[center_15%] z-0"
         />
 
         <!-- Left circle -->
@@ -398,10 +398,10 @@
       </section>
 
       <!-- SERVICES -->
-      <section class="py-[64px]">
-        <div class="max-w-[1366px] mx-auto">
-          <!-- Heading text -->
-          <div class="text-center mb-[64px]">
+      <section class="py-[48px] md:py-[64px]">
+        <div class="max-w-[1366px] mx-auto px-[16px] md:px-[24px] lg:px-0">
+          <!-- Heading -->
+          <div class="text-center mb-[40px] md:mb-[56px] lg:mb-[64px]">
             <p class="caption text-secondary mb-[8px]">
               CARE YOU CAN BELIEVE IN
             </p>
@@ -411,63 +411,75 @@
 
           <!-- Body -->
           <div
-            class="max-w-[992px] mx-auto grid grid-cols-[157px_1fr_324px] gap-[20px] items-start"
+            class="max-w-[992px] mx-auto grid grid-cols-1 md:grid-cols-[120px_1fr_220px] lg:grid-cols-[157px_1fr_324px] gap-[16px] md:gap-[20px] items-start"
           >
-            <!-- LEFT (tabs) -->
+            <!-- TABS -->
             <div
               id="service-tabs"
-              class="border border-primary/20 rounded-[5px] overflow-hidden"
+              class="w-full grid grid-cols-2 md:grid-cols-1 border border-primary/20 rounded-[5px] overflow-hidden"
             ></div>
 
-            <!-- CENTER (detail)-->
-            <div id="service-detail" class="mt-[27px]"></div>
+            <!-- DETAIL -->
+            <div
+              id="service-detail"
+              class="w-full px-[4px] mt-0 lg:mt-[27px] order-2 md:order-none"
+            ></div>
 
-            <!-- RIGHT (images) -->
-            <div id="service-images"></div>
+            <!-- IMAGE -->
+            <div
+              id="service-images"
+              class="hidden md:block space-y-[16px]"
+            ></div>
           </div>
         </div>
       </section>
 
       <!-- SPECIALTIES -->
-      <section id="specialtiesSection" class="max-w-[992px] mx-auto py-[64px]">
+      <section
+        id="specialtiesSection"
+        class="max-w-[992px] mx-auto px-[16px] md:px-[24px] lg:px-0 py-[48px] md:py-[64px]"
+      >
         <!-- Heading -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-[40px] md:mb-[56px] lg:mb-[64px]">
           <p class="caption text-secondary mb-[8px]">ALWAYS CARING</p>
 
           <h2 class="display-2 text-primary">Our Specialties</h2>
         </div>
 
         <!-- Render cards from home.js -->
-        <div id="specialties-grid" class="grid grid-cols-4"></div>
+        <div
+          id="specialties-grid"
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        ></div>
       </section>
 
       <!-- APPOINTMENT -->
       <section
         id="appointmentSection"
-        class="relative h-[573px] overflow-hidden"
+        class="relative overflow-hidden py-[64px] md:py-[80px] lg:py-0 lg:h-[573px]"
       >
-        <!-- Background Image -->
+        <!-- Background -->
         <img
           src="/phuc/hero-doctors-scaled.webp"
           alt="Doctor"
-          class="absolute inset-0 w-full h-full object-cover scale-x-[-1]"
+          class="absolute inset-0 w-full h-full object-cover object-right md:object-center scale-x-[-1]"
         />
 
         <!-- Overlay -->
         <div class="absolute inset-0 bg-white/80"></div>
 
-        <!-- Content: left box + right box -->
+        <!-- Content -->
         <div
-          class="relative max-w-[1366px] h-full mx-auto px-[187px] flex justify-between items-center"
+          class="relative max-w-[1366px] mx-auto h-full px-[16px] md:px-[24px] lg:px-[187px] flex flex-col lg:flex-row items-center justify-start lg:justify-between pt-[64px] md:pt-[80px] lg:pt-0 gap-[48px]"
         >
-          <!-- Left box: heading + description -->
-          <div class="max-w-[407px]">
-            <!-- Title -->
+          <!-- Left -->
+          <div
+            class="w-full max-w-[343px] md:max-w-[500px] lg:max-w-[407px] text-center lg:text-left"
+          >
             <h2 class="display-2 text-secondary mb-[16px]">
               Book an Appointment
             </h2>
 
-            <!-- Description -->
             <p class="body text-black leading-[140%]">
               Schedule your appointment with our experienced medical team. We
               are committed to providing compassionate care, accurate diagnosis,
@@ -475,7 +487,8 @@
               the way.
             </p>
           </div>
-          <!-- Right box: form -->
+
+          <!-- Right -->
           <form id="appointmentForm"></form>
         </div>
       </section>
