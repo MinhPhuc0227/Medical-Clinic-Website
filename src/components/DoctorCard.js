@@ -1,7 +1,7 @@
 export function createDoctorCard(doctor) {
   console.log(doctor.image);
   return `
-        <div class="w-[317px] rounded-lg overflow-hidden shadow-md">
+        <div class="w-full max-w-[317px] rounded-lg overflow-hidden shadow-md">
             <img
                 src="${doctor.image}"
                 alt="${doctor.name}"
