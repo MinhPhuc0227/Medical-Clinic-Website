@@ -4,16 +4,15 @@ export function createSmallNews(news) {
       href="/NewsDetail.html?id=${news.id}"
       class="flex w-full gap-4 rounded-lg hover:shadow-lg transition"
     >
-    <article class="flex w-[486px] h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
+    <article class="flex max-w-[300px] xs:max-w-[340px] mx-auto h-auto md:max-w-[486px] md:h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
 
       <!-- Image -->
-      <div class="w-[160px] h-full flex-shrink-0">
+      <div class="w-[130px] md:w-[160px] h-full flex-shrink-0">
         <img
             src="${news.image}"
             loading="lazy"
-  alt="${news.title}"
-  onerror="this.onerror=null; this.src='/han/News1.webp';"g
-  
+            alt="${news.title}"
+            onerror="this.onerror=null; this.src='/han/News1.webp';"g
           class="w-full h-full object-cover"
         >
       </div>

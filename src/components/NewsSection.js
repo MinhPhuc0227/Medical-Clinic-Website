@@ -7,69 +7,89 @@ export async function initNewsSection() {
 
   const track = document.getElementById("news-track");
   const dotsContainer = document.getElementById("news-dots");
-  const cardsPerSlide = 4;
-  const totalSlides = Math.ceil(news.length / cardsPerSlide);
-
-  let currentSlide = 0;
-
-  for (let i = 0; i < totalSlides; i++) {
-    const slide = document.createElement("div");
-    slide.className = "min-w-full flex justify-center";
-
-    const grid = document.createElement("div");
-    grid.className = "w-fit grid grid-cols-2 gap-x-5 gap-y-6";
-
-    const start = i * cardsPerSlide;
-    const end = start + cardsPerSlide;
-
-    news.slice(start, end).forEach((item) => {
-      grid.innerHTML += createSmallNews(item);
-    });
-
-    slide.appendChild(grid);
-    track.appendChild(slide);
+  function getCardsPerSlide() {
+    return window.innerWidth < 768 ? 2 : 4;
   }
+  let currentSlide = 0;
+  function renderSlider() {
+    const cardsPerSlide = getCardsPerSlide();
+    const totalSlides = Math.ceil(news.length / cardsPerSlide);
 
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement("button");
-    dot.className = "w-3 h-3 rounded-full bg-accent";
-    if (i === 0) {
-      dot.classList.replace("bg-accent", "bg-primary");
+    track.innerHTML = "";
+    dotsContainer.innerHTML = "";
+
+    // Render slides
+    for (let i = 0; i < totalSlides; i++) {
+      const slide = document.createElement("div");
+      slide.className = "min-w-full flex justify-center";
+
+      const grid = document.createElement("div");
+      grid.className = "w-fit grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-6";
+
+      const start = i * cardsPerSlide;
+      const end = start + cardsPerSlide;
+
+      news.slice(start, end).forEach((item) => {
+        grid.innerHTML += createSmallNews(item);
+      });
+
+      slide.appendChild(grid);
+      track.appendChild(slide);
     }
-    dot.dataset.index = i;
-    dotsContainer.appendChild(dot);
+
+    // Render dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("button");
+      dot.className = "w-3 h-3 rounded-full bg-accent";
+
+      if (i === currentSlide) {
+        dot.classList.replace("bg-accent", "bg-primary");
+      }
+
+      dot.dataset.index = i;
+
+      dot.addEventListener("click", () => {
+        currentSlide = i;
+        updateSlider();
+      });
+
+      dotsContainer.appendChild(dot);
+    }
+
+    if (currentSlide >= totalSlides) {
+      currentSlide = totalSlides - 1;
+    }
+
+    updateSlider();
   }
 
   function updateSlider() {
+    const totalSlides = Math.ceil(news.length / getCardsPerSlide());
+
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
 
     const dots = dotsContainer.querySelectorAll("button");
+
     dots.forEach((dot, index) => {
       dot.classList.remove("bg-primary", "bg-accent");
-      if (index === currentSlide) {
-        dot.classList.add("bg-primary");
-      } else {
-        dot.classList.add("bg-accent");
-      }
+      dot.classList.add(index === currentSlide ? "bg-primary" : "bg-accent");
     });
   }
 
-  const dots = dotsContainer.querySelectorAll("button");
-
-  dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      currentSlide = Number(dot.dataset.index);
-      updateSlider();
-    });
+  window.addEventListener("resize", () => {
+    renderSlider();
   });
 
   setInterval(() => {
+    const totalSlides = Math.ceil(news.length / getCardsPerSlide());
+
     currentSlide++;
+
     if (currentSlide >= totalSlides) {
       currentSlide = 0;
     }
+
     updateSlider();
   }, 4000);
-
-  updateSlider();
+  renderSlider();
 }
