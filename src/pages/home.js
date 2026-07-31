@@ -184,6 +184,7 @@ function renderImages() {
         <div class="flex-1 flex flex-col">
             <img
                 src="${service.image}"
+                alt="Service image 1"
                 class="flex-1 w-full object-cover"
             >
             <div class="flex h-[8.53px]">
@@ -197,6 +198,7 @@ function renderImages() {
         <div class="flex-1 flex flex-col">
             <img
                 src="${service.subImage}"
+                alt="Service image 2"
                 class="flex-1 w-full object-cover"
             >
             <div class="flex h-[8.53px]">

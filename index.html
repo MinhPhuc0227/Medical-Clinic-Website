@@ -1,7 +1,31 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <!-- Basic Metadata -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDDICAL | Home</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | Home" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -9,10 +33,6 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEDDICAL | Home</title>
   </head>
 
   <body>
@@ -29,13 +49,14 @@
         <!-- Background image -->
         <img
           src="/phuc/Physician_Trends_2021_Merritt_Hawkins.webp"
-          alt="Doctor"
+          alt="Doctors providing healthcare services"
           class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-0"
         />
 
         <!-- Doctor image -->
         <img
           src="/phuc/Physician_Trends_2021_Merritt_Hawkins_adobespark.webp"
+          alt="Portrait of a professional doctor"
           class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-20"
         />
 
@@ -340,9 +361,10 @@
           <!-- Link -->
           <a
             href="About.html"
+            aria-label="Learn more about our clinic"
             class="inline-flex items-center justify-center gap-[10px] body text-secondary hover:text-primary transition-colors"
           >
-            Learn More
+            Learn more about us
 
             <svg
               width="13"
@@ -370,7 +392,7 @@
         <!-- Image -->
         <img
           src="/phuc/blackdoctors.webp"
-          alt="Doctors"
+          alt="Black doctors"
           class="absolute inset-0 w-full h-full object-cover object-center object-[center_35%] md:object-[center_20%] lg:object-[center_15%] z-0"
         />
 
