@@ -104,14 +104,14 @@ export async function initDoctorSection() {
       const cards = Array.from(track.children);
       if (!cards.length) return;
 
-      const cardWidth = cards[0].offsetWidth;
-      const gap = 16;
-      const containerWidth = track.parentElement.offsetWidth;
+      const targetCard = cards[currentSlide];
+const containerWidth = track.parentElement.offsetWidth;
+const cardWidth = targetCard.offsetWidth;
 
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const translateX = centerOffset - currentSlide * (cardWidth + gap);
+const centerOffset = (containerWidth - cardWidth) / 2;
+const translateX = centerOffset - targetCard.offsetLeft;
 
-      track.style.transform = `translateX(${translateX}px)`;
+track.style.transform = `translateX(${translateX}px)`;
 
       cards.forEach((card, idx) => {
         if (idx === currentSlide) {
