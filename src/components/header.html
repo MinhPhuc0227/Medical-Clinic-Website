@@ -12,7 +12,7 @@
     </div>
 
     <!-- 2. Info: Emergency + Work Hour + Location (Destop) -->
-    <div class="hidden md:flex">
+    <div class="hidden sm:flex">
        <div class="flex-1 flex justify-end items-center gap-[21px]">
       <!-- Emergency -->
       <div class="flex items-center gap-[5.48px]">
@@ -120,9 +120,9 @@
   </div>
 
     <!-- 2. Info: Emergency + Work Hour + Location (Mobile) -->
-    <div class="md:hidden">
+    <div class="sm:hidden w-full ">
       <div
-        class="grid grid-cols-2 gap-y-4 gap-x-[15px] xs:gap-x-[31px] place-items-center w-full "
+        class="grid grid-cols-2 gap-y-4 gap-x-4 gap-x-[31px] place-items-stretch w-full  "
       >
         <!-- Emergency -->
         <div
@@ -320,33 +320,34 @@
  
 <!--Mobile  -->
 
-  <nav class=" relative md:hidden bg-primary h-[70px] py-[19px] px-[10px] xs:px-[16px] flex justify-between items-center">
+  <nav class=" relative md:hidden bg-primary h-[70px] py-[19px] px-[10px] sm:px-[30px] gap-[30px] flex items-center justify-between ">
     <!-- logo -->
     <div>
-      <a href="#" class="display-3  leading-[36px] uppercase">
+      <a href="index.html" class="display-3  leading-[36px] uppercase">
         <span class="text-accent">MED</span
         ><span class="text-white">DICAL</span>
       </a>
     </div>
-    <!-- Button search -->
+  <div class="flex items-center ml-auto gap-[clamp(10px,3vw,30px)]">
+<!-- Button search -->
     <div class="flex">
       <div class="border-b border-transparent focus-within:border-white transition-all duration-300">
           <input
             type="text"
             placeholder=""
-            class="w-[80px] xs:w-[100px] lg:w-[200px] h-[50px] bg-primary px-4 text-white placeholder:text-white outline-none"
+            class="w-[clamp(40px,20vw,100px)] sm:w-[200px] h-[50px] bg-primary px-4 text-white placeholder:text-white outline-none"
           />
       </div>
         <button >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.88894 18.7779C14.7982 18.7779 18.7779 14.7982 18.7779 9.88894C18.7779 4.97971 14.7982 1 9.88894 1C4.97971 1 1 4.97971 1 9.88894C1 14.7982 4.97971 18.7779 9.88894 18.7779Z" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M21.0004 21.0001L16.167 16.1667" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
     </div>
      <!-- Button list -->
-        <button id="menuBtn" class=" pl-[20px] xs:pl-[30px]">
-        <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button id="menuBtn" >
+        <svg class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M24 14.4V16.8H0V14.4H24ZM24 7.2V9.6H0V7.2H24ZM24 0V2.4H0V0H24Z" fill="#FCFEFE"/>
         </svg>
         </button>
@@ -376,6 +377,7 @@
         Appointment
       </a>
     </div>
-  </div>
+    </div>
+    </div>
 </nav>
 </header>

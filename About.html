@@ -20,30 +20,37 @@
 
     <!-- SUBHEADER -->
     <section id="subheader"></section>
-
     <main>
-      <section class="container mx-auto my-16 max-w-5xl px-4">
-        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <section
+        class="container mx-auto my-[32px] ms:my-[48px] lg:my-[64px] max-w-[992px] px-4"
+      >
+        <div class="grid grid-cols-1 sm:gap-[20px] sm:grid-cols-2">
           <!-- Left Image -->
           <div>
             <img
               src="/quy/About.webp"
               alt="Doctor"
-              class="h-full w-full object-cover"
+              class="hidden sm:block w-95% h-95% lg:h-full lg:w-full object-cover"
             />
           </div>
 
           <!-- Right Content -->
           <div>
-            <p class="caption mb-2 text-secondary">Welcome to Hospital Name</p>
+            <p
+              class="caption leading-[21px] mb-1 lg:mb-2 text-secondary text-center sm:text-left"
+            >
+              Welcome to Hospital Name
+            </p>
 
-            <h2 class="display-1 mb-8 text-primary">
+            <h2
+              class="display-1 mb-3 lg:mb-6 text-[24px] sm:text-[32px] lg:text-[48px] lg:leading-[55px] text-center sm:text-left text-primary"
+            >
               Best Care for Your <br />
               Good Health
             </h2>
 
             <!-- Features -->
-            <div class="mb-8 grid grid-cols-2 gap-y-4">
+            <div class="mb-4 lg:mb-8 grid grid-cols-2 gap-y-2 lg:gap-y-4">
               <div class="flex items-center gap-3">
                 <span class="h-4 w-4 rounded-full bg-secondary"></span>
                 <span class="body-2">A Passion for Healing</span>
@@ -75,14 +82,14 @@
               </div>
             </div>
 
-            <p class="body mb-6 leading-7 text-black">
+            <p class="body mb-2 lg:mb-4 lg:leading-7 text-black">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
               placerat scelerisque tortor ornare ornare. Quisque placerat
               scelerisque tortor ornare augue. Velit nascetur proin massa in.
               Consequat faucibus porttitor enim et.
             </p>
 
-            <p class="body leading-7 text-black">
+            <p class="body lg:leading-7 text-black">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
               placerat scelerisque. Convallis felis vitae tortor augue. Velit
               nascetur proin massa in.
@@ -91,10 +98,19 @@
         </div>
       </section>
 
-      <section id="testi" class="my-[64px]"></section>
-      <section id="doctorSection" class="my-[64px]"></section>
-      <section id="newsSection" class="my-[64px]"></section>
-      <section id="contactSection" class="my-[64px]"></section>
+      <section id="testi" class="my-[32px] ms:my-[48px] lg:my-[64px]"></section>
+      <section
+        id="doctorSection"
+        class="my-[32px] ms:my-[48px] lg:my-[64px]"
+      ></section>
+      <section
+        id="newsSection"
+        class="my-[32px] ms:my-[48px] lg:my-[64px]"
+      ></section>
+      <section
+        id="contactSection"
+        class="my-[32px] ms:my-[48px] lg:my-[64px]"
+      ></section>
     </main>
 
     <footer id="footer"></footer>

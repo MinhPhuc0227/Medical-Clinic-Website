@@ -24,7 +24,8 @@ export async function initNewsSection() {
       slide.className = "min-w-full flex justify-center";
 
       const grid = document.createElement("div");
-      grid.className = "w-fit grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-6";
+      grid.className =
+        "w-fit grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-5 md:gap-y-6";
 
       const start = i * cardsPerSlide;
       const end = start + cardsPerSlide;
