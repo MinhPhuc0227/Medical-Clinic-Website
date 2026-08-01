@@ -39,17 +39,22 @@
         </svg>
         <span>Back</span>
       </div>
-      <div class="container gap-[20px] flex">
+      <div
+        class="flex flex-col gap-[32px] px-[24px] md:px-[64px] lg:px-0 lg:flex-row lg:gap-[20px]"
+      >
         <!-- Danh sách bài viết -->
-        <section class="w-[658px]">
+        <section class="w-full md:w-[480px] lg:w-[658px]">
           <!-- Bài viết -->
           <div id="news-detail">
-            <img id="detail-image" />
+            <img
+              id="detail-image"
+              class="w-full h-[180px] md:h-[240px] lg:h-auto object-cover rounded"
+            />
             <h1 id="detail-title"></h1>
             <p id="detail-description"></p>
           </div>
           <!-- nút pre, next -->
-          <div class="mt-[64px] justify-between flex">
+          <div class="mt-[32px] md:mt-[48px] lg:mt-[64px] flex justify-between">
             <button id="prev-btn" class="btn-filled">
               <svg
                 width="13"
@@ -88,7 +93,10 @@
             </button>
           </div>
         </section>
-        <aside id="sidebar"></aside>
+        <aside
+          id="sidebar"
+          class="w-full md:w-[224px] lg:w-[317px]"
+        ></aside>
       </div>
       <section id="contact-section"></section>
     </main>

@@ -23,11 +23,11 @@
 
     <main>
       <section
-        class="mx-auto mt-[64px] flex h-[650px] w-[992px] items-start justify-between"
+        class="mx-auto mt-[64px] flex flex-col items-center gap-8 px-6 py-8 md:gap-12 md:px-[64px] md:py-[48px] lg:h-[650px] lg:w-[992px] lg:flex-row lg:items-start lg:justify-between lg:gap-5 lg:px-0 lg:py-0"
       >
         <!-- Left -->
-        <div class="w-[491px]">
-          <div class="mb-[64px]">
+        <div class="w-full lg:w-[491px]">
+          <div class="mb-8 md:mb-12 lg:mb-[64px]">
             <h2 class="display-2 text-primary">Book an Appointment</h2>
 
             <p class="body mt-4 text-black">
@@ -44,27 +44,28 @@
 
         <!-- Right -->
         <section
-          class="flex h-[660px] w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-[50px] py-[32px]"
-        >
-          <h2 class="display-1 text-accent">Schedule hours</h2>
+          class="flex w-full max-w-[481px] lg:w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-6 py-8 md:px-10 md:py-10 lg:h-[660px] lg:w-[481px] lg:px-[50px] lg:py-[32px]"
+>
+          <h2 class="display-1 text-center text-accent lg:text-left">Schedule hours</h2>
 
           <!-- JS sẽ render danh sách vào đây -->
           <ul
             id="schedule-list"
-            class="mt-[51px] flex flex-col gap-[25px]"
+            class="mt-8 flex flex-col gap-5 md:mt-10 md:gap-6 lg:mt-[51px] lg:gap-[25px]"
           ></ul>
 
           <footer class="mt-auto pt-[32px]">
             <!-- Line -->
             <div
-              class="mx-auto mb-[28px] w-[331px] border-t-2 border-accent"
+              class="mx-auto mb-6 w-full max-w-[331px] border-t-2 border-accent lg:mb-[28px]"
             ></div>
 
             <!-- Emergency -->
-            <div class="flex w-full justify-center">
-              <div class="flex items-center gap-[8px]">
+            <div class="flex items-center justify-center gap-2 text-center sm:text-left">
+              <div class="flex items-center justify-center gap-[4px] md:gap-2 max-md:mx-auto">
                 <!-- Phone Icon -->
                 <svg
+                  class="max-md:h-[36px] max-md:w-[38px] max-md:shrink-0"
                   width="50"
                   height="48"
                   viewBox="0 0 50 48"
@@ -85,11 +86,11 @@
                 </svg>
 
                 <!-- Text -->
-                <div class="flex flex-col justify-center">
-                  <h3 class="title leading-[30px] text-white">Emergency</h3>
+                <div class="flex flex-col justify-center max-md:items-start">
+                  <h3 class="title max-md:!text-[18px] leading-[30px] text-white">Emergency</h3>
 
                   <p
-                    class="title-1 whitespace-nowrap leading-[30px] text-accent"
+                     class="title-1 max-md:!text-[18px] whitespace-nowrap text-center leading-[30px] text-accent"
                   >
                     (237) 681-812-255
                   </p>

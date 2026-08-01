@@ -29,14 +29,14 @@ if (scheduleList) {
 
   schedules.forEach((item) => {
     scheduleList.innerHTML += `
-      <li class="grid grid-cols-[115px_110px_165px] items-center">
-        <span class="nav text-white">
+      <li class="grid grid-cols-[90px_1fr_110px] items-center gap-2 md:grid-cols-[115px_1fr_165px]">
+        <span class="nav max-md:!text-[18px] text-white">
           ${item.day}
         </span>
 
         <span class="h-0 w-[20px] justify-self-center border-t-2 border-accent"></span>
 
-        <span class="footer-2 text-white">
+        <span class="footer-2 max-md:!text-[17px] text-white">
           ${item.time}
         </span>
       </li>
