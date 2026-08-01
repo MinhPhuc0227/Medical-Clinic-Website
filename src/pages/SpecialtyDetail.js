@@ -40,10 +40,23 @@ async function loadSpecialty() {
     }
 
     // Update meta title and meta description
-    document.title = specialty.seo.title;
+    document.title = `MEDDICAL | ${specialty.name}`;
+
     document
       .querySelector('meta[name="description"]')
-      .setAttribute("content", specialty.seo.description);
+      .setAttribute("content", specialty.meta.description);
+
+    document
+      .querySelector('meta[name="keywords"]')
+      .setAttribute("content", specialty.meta.keywords);
+
+    document
+      .querySelector('meta[property="og:title"]')
+      .setAttribute("content", `MEDDICAL | ${specialty.name}`);
+
+    document
+      .querySelector('meta[property="og:description"]')
+      .setAttribute("content", specialty.meta.description);
 
     // Render function
     renderSpecialty(specialty);
