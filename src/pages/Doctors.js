@@ -41,8 +41,21 @@ export async function initDoctorPage() {
   const prevBtn = document.getElementById("doctor-prev");
   const nextBtn = document.getElementById("doctor-next");
 
-  const cardsPerSlide = 6;
-  let totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
+ function getCardsPerSlide() {
+  if (window.innerWidth < 640) {
+    // Mobile
+    return 2;
+  } else if (window.innerWidth < 1440) {
+    // Tablet (sm -> trước lg)
+    return 4;
+  } else {
+    // Laptop/Desktop
+    return 6;
+  }
+}
+
+let cardsPerSlide = getCardsPerSlide();
+let totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
 
   let currentSlide = 0;
 

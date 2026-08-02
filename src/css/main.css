@@ -153,6 +153,9 @@
   .display-1 {
     font-size: 24px;
   }
+  .display-3 {
+    font-size: 18px;
+  }
 }
 /*Mobile và Tablet*/
 @media (max-width: 768px) {
@@ -168,7 +171,7 @@
   .body {
     font-size: 14px;
   }
-  
+
   .display-2 {
     font-size: 24px;
   }

@@ -9,11 +9,11 @@ export async function loadServices() {
   services.forEach((service) => {
     html += `
       <section
-        class="group relative w-full max-w-[317px] overflow-hidden rounded-[5px] border border-primary/10 bg-white"
+        class="group relative w-full max-w-[280px] md:max-w-[317px] overflow-hidden rounded-[5px] border border-primary/10 bg-white"
       >
 
         <!-- ========== 1. IMAGE SECTION ========== -->
-        <div class="relative h-[300px] overflow-hidden">
+        <div class="relative h-[250px] md:h-[300px] overflow-hidden">
 
           <!-- Image -->
           <img
@@ -38,7 +38,7 @@ export async function loadServices() {
 
         <!-- ========== 2. CIRCLE ICON (small icon)========== -->
         <div
-          class="absolute right-[20px] top-[260px] flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary transition-all duration-300 group-hover:opacity-0"
+          class="absolute right-[20px] top-[220px] md:top-[260px] flex h-[60px] w-[60px] md:h-[80px] md:w-[80px] items-center justify-center rounded-full bg-primary transition-all duration-300 group-hover:opacity-0"
         >
           <div
               class="w-[26px] h-[26px] text-accent"
@@ -49,7 +49,7 @@ export async function loadServices() {
         </div>
 
         <!-- ========== 3. CONTENT SECTION ========== -->
-        <div class="px-[20px] pt-[56px] pb-[32px]">
+        <div class="px-[15px] md:px-[20px] pt-[24px] pb-[16px] md:pt-[56px] md:pb-[32px]">
 
           <!-- Title -->
           <h3 class="title text-primary">

@@ -61,7 +61,7 @@ async function initMainContent() {
       (item) => `
       <a
         href="ServiceDetail.html?id=${item.id}"
-        class="flex items-center gap-[8px] h-[80px] px-[32px] 
+        class="flex items-center gap-[8px] h-[80px] sm:px-[24px] lg:px-[32px] 
         ${
           item.id === service.id
             ? "bg-primary text-accent rounded-t-[5px]"
@@ -73,8 +73,8 @@ async function initMainContent() {
         <div
             class="
                 service-icon
-                w-[32px]
-                h-[32px]
+                sm:w-[24px] lg:w-[32px]
+                sm:h-[24px] lg:h-[32px]
                 ${item.id === service.id ? "text-accent" : "text-secondary"}
             "
         >
@@ -115,11 +115,11 @@ async function initMainContent() {
 <section class="max-w-[992px] mx-auto">
 
     <!-- LAYOUT: 2 COLUMNS -->
-    <div class="grid grid-cols-[240px_1fr] gap-[21px]">
+    <div class="grid sm:grid-cols-[180px_1fr] lg:grid-cols-[240px_1fr] sm:gap-[17px] lg:gap-[21px]">
 
         <!-- Column 1. Left (Service Menu)-->
         <div
-            class="border border-primary/20 rounded-[5px] overflow-hidden h-fit"
+            class="hidden sm:block border border-primary/20 rounded-[5px] overflow-hidden h-fit"
         >
             ${serviceMenu}
         </div>
@@ -129,20 +129,20 @@ async function initMainContent() {
 
             <img
                 src="${service.image}"
-                class="w-full h-[454px] object-cover"
+                class="w-full sm:h-[395px] lg:h-[454px] object-cover"
             >
 
-            <h2 class="display-2 text-primary mt-[30px]">
+            <h2 class="display-2 text-primary text-center sm:text-left mt-[15px] lg:mt-[30px]">
                 ${service.detail.heading}
             </h2>
 
             <div
-                class="grid grid-cols-3 gap-y-[16px] mt-[24px]"
+                class="grid grid-cols-3 gap-y-[12px] lg:gap-y-[16px] mt-[12px] lg:mt-[24px]"
             >
                 ${keywords}
             </div>
 
-            <div class="space-y-[8px] mt-[24px]">
+            <div class="space-y-[6px] lg:space-y-[8px] mt-[12px] lg:mt-[24px]">
 
                 <p class="body text-black">
                     ${service.detail.description[0]}
@@ -161,3 +161,7 @@ async function initMainContent() {
 </section>
 `;
 }
+// nút back
+document.getElementById("back-btn").addEventListener("click", () => {
+  history.back();
+});
