@@ -21,14 +21,14 @@
       id="page-content"
       class="w-full bg-white max-w-[995px] mx-auto px-6 py-8 md:px-[64px] md:py-[48px] lg:px-0 lg:py-[64px] hidden"
     >
-      <div class="container flex flex-col gap-8 lg:flex-row lg:gap-[20px]">
+      <div class="container flex flex-col gap-8 md:flex-row md:gap-[16px] lg:gap-[20px]">
         <!-- Danh sách bài viết -->
-        <section class="w-full lg:w-[658px]">
-          <div id="news-list" class="flex flex-col gap-10"></div>
+        <section class="w-full md:w-[470px] lg:w-[658px]">
+          <div id="news-list" class="flex flex-col gap-5 md:gap-7 lg:gap-10"></div>
 
           <!-- Pagination -->
 
-          <div class="flex justify-between gap-3 mt-[32px]">
+          <div class="flex justify-between gap-3 mt-8 md:mt-[48px] lg:mt-[64px]">
             <button
               id="prev"
               class="btn-text body hover:opacity-30% transition"
@@ -78,11 +78,10 @@
         </section>
 
         <!-- Sidebar -->
-        <aside id="sidebar" class="w-full lg:w-[320px]"></aside>
+        <aside id="sidebar" class="w-full md:w-[280px] lg:w-[320px]"></aside>
       </div>
-      <section id="contact-section" class="mt-8 md:mt-[48px] lg:mt-[64px]"></section>
     </main>
-
+    <section id="contact-section" class="mt-8 md:mt-[48px] lg:mt-[64px]"></section>
     <footer id="footer"></footer>
     <script type="module" src="/src/pages/News.js"></script>
   </body>
