@@ -23,10 +23,10 @@
 
     <main>
       <section
-        class="mx-auto mt-[64px] flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-6 px-6 md:px-[64px] md:py-[48px] lg:h-[650px] lg:w-[992px] lg:justify-between lg:gap-5 lg:px-0 lg:py-0"
+        class="mx-auto mt-[48px] md:mt-[56px] lg:mt-[64px] flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-6 px-6 md:px-[64px] md:py-[48px] lg:h-[650px] lg:w-[992px] lg:justify-between lg:gap-5 lg:px-0 lg:py-0"
       >
         <!-- Left -->
-        <div class="w-full md:w-[360px] lg:w-[491px]">
+        <div class="w-full md:w-[360px] lg:w-[491px] flex flex-col justify-between">
           <div class="mb-8 md:mb-2 lg:mb-[64px]">
             <h2 class="display-2 text-primary">Book an Appointment</h2>
 
@@ -44,14 +44,14 @@
 
         <!-- Right -->
         <section
-          class="flex w-full md:w-[320px] lg:w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-6 py-8 md:px-6 md:py-8 lg:h-[660px] lg:w-[481px] lg:px-[50px] lg:py-[32px]"
+          class="flex w-full md:w-[320px] lg:w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-6 py-8 md:px-6 md:py-8 lg:h-[650px] lg:w-[481px] lg:px-[50px] lg:py-[32px]"
 >
           <h2 class="display-1 text-center text-accent lg:text-left">Schedule hours</h2>
 
           <!-- JS sẽ render danh sách vào đây -->
           <ul
             id="schedule-list"
-            class="mt-8 flex flex-col gap-5 md:mt-10 md:gap-6 lg:mt-[51px] lg:gap-[25px]"
+            class="mt-6 flex flex-1 flex-col justify-between gap-4 md:mt-8 lg:mt-[51px]"
           ></ul>
 
           <footer class="mt-auto pt-[32px]">
@@ -87,10 +87,10 @@
 
                 <!-- Text -->
                 <div class="flex flex-col justify-center max-md:items-start">
-                  <h3 class="title max-md:!text-[18px] leading-[30px] text-white">Emergency</h3>
+                  <h3 class="title text-[18px] md:text-[20px] lg:text-[24px] leading-[30px] text-white">Emergency</h3>
 
                   <p
-                     class="title-1 max-md:!text-[18px] whitespace-nowrap text-center leading-[30px] text-accent"
+                     class="title-1 text-[18px] md:text-[20px] lg:text-[26px] whitespace-nowrap text-center leading-[30px] text-accent"
                   >
                     (237) 681-812-255
                   </p>
@@ -102,10 +102,10 @@
       </section>
 
       <!-- Map -->
-      <section id="mapview" class="mt-[64px]"></section>
+      <section id="mapview" class="mt-[48px] md:mt-[56px] lg:mt-[64px]"></section>
 
       <!-- Contact Section -->
-      <section id="contactSection" class="my-[64px]"></section>
+      <section id="contactSection" class="my-[48px] md:my-[56px] lg:my-[64px]"></section>
       <!-- FAQ -->
       <section id="faq"></section>
     </main>
