@@ -41,22 +41,32 @@ export async function initDoctorPage() {
   const prevBtn = document.getElementById("doctor-prev");
   const nextBtn = document.getElementById("doctor-next");
 
- function getCardsPerSlide() {
-  if (window.innerWidth < 640) {
-    // Mobile
-    return 2;
-  } else if (window.innerWidth < 1440) {
-    // Tablet (sm -> trước lg)
-    return 4;
-  } else {
-    // Laptop/Desktop
-    return 6;
+  function getCardsPerSlide() {
+    if (window.innerWidth < 640) {
+      // Mobile
+      return 2;
+    } else if (window.innerWidth < 1440) {
+      // Tablet (sm -> trước lg)
+      return 4;
+    } else {
+      // Laptop/Desktop
+      return 6;
+    }
   }
-}
 
-let cardsPerSlide = getCardsPerSlide();
-let totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
+  window.addEventListener("resize", () => {
+    const newCardsPerSlide = getCardsPerSlide();
 
+    if (newCardsPerSlide !== cardsPerSlide) {
+      cardsPerSlide = newCardsPerSlide;
+      totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
+      currentSlide = 0;
+      renderSlide(0);
+    }
+  });
+
+  let cardsPerSlide = getCardsPerSlide();
+  let totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
   let currentSlide = 0;
 
   function renderSlide(index) {
@@ -83,9 +93,9 @@ let totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
       );
     }
 
-    currentSlide = 0;
-
+    cardsPerSlide = getCardsPerSlide();
     totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
+    currentSlide = 0;
 
     renderSlide(0);
   }

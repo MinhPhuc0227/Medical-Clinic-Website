@@ -112,7 +112,7 @@ async function initMainContent() {
   // ========== 3. MAIN CONTENT CONTAINER ==========
   const container = document.getElementById("mainContent");
   container.innerHTML = `
-<section class="max-w-[992px] mx-auto">
+<section class=" lg:max-w-[992px] mx-auto">
 
     <!-- LAYOUT: 2 COLUMNS -->
     <div class="grid sm:grid-cols-[180px_1fr] lg:grid-cols-[240px_1fr] sm:gap-[17px] lg:gap-[21px]">
