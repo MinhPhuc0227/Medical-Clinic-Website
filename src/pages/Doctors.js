@@ -45,7 +45,7 @@ export async function initDoctorPage() {
     if (window.innerWidth < 640) {
       // Mobile
       return 2;
-    } else if (window.innerWidth < 1440) {
+    } else if (window.innerWidth < 1024) {
       // Tablet (sm -> trước lg)
       return 4;
     } else {
@@ -57,6 +57,8 @@ export async function initDoctorPage() {
   window.addEventListener("resize", () => {
     const newCardsPerSlide = getCardsPerSlide();
 
+
+    
     if (newCardsPerSlide !== cardsPerSlide) {
       cardsPerSlide = newCardsPerSlide;
       totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
