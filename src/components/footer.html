@@ -1,38 +1,40 @@
 <footer class="bg-primary text-white mt-auto min-h-[120px]">
   <!-- ========== TOP SECTION: 4 columns ========== -->
   <div
-    class="max-w-[1366px] mx-auto px-[24px] md:px-[64px] lg:px-[187px] pt-[70px] pb-[47px] grid grid-cols-[240px_143px_234px_272px] justify-center gap-x-[30px] lg:gap-x-[35px] items-start"
+    class="max-w-[450px] md:max-w-[992px] mx-auto px-[24px] md:px-[64px] lg:px-[187px] pt-[32px] pb-[24px] md:pt-[48px] md:pb-[32px] lg:pt-[70px] lg:pb-[47px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[240px_143px_234px_272px] justify-center gap-x-[5px] gap-y-[15px] md:gap-x-[30px] lg:gap-x-[35px] md:items-start"
   >
     <!-- 1. Logo + Slogan section -->
-    <div class="flex flex-col items-start">
+    <div
+      class="flex flex-col col-span-2 md:col-span-1 items-center md:items-start"
+    >
       <a
         href="/index.html"
         class="block display-4 uppercase leading-[42px] text-accent"
       >
         MEDDICAL
       </a>
-      <p class="body-2 leading-[140%] mt-[18px] w-full">
+      <p class="body-2 leading-[140%] mt-[5px] md:mt-[18px] w-full text-center">
         Leading the Way in Medical Excellence, Trusted Care.
       </p>
     </div>
 
     <!-- 2. Important Links section -->
-    <div class="flex flex-col items-start w-full">
+    <div class="min-w-0 w-full">
       <h3 class="footer-1 leading-[21px]">Important Links</h3>
-      <ul class="body space-y-[8px] mt-[39px]">
-        <li><a href="#">Appointment</a></li>
-        <li><a href="#">Doctors</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About Us</a></li>
+      <ul class="body space-y-[8px] mt-[10px] xs:mt-[15px] md:mt-[39px]">
+        <li><a href="Appointment.html">Appointment</a></li>
+        <li><a href="Doctor.html">Doctors</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="About.html">About Us</a></li>
       </ul>
     </div>
 
     <!-- 3. Contact section -->
-    <div class="flex flex-col items-start">
+    <div class="min-w-0 items-start">
       <h3 class="footer-1 leading-[21px]">Contact Us</h3>
-      <ul class="body space-y-[8px] mt-[39px]">
-        <li>Call: (237) 681-812-255</li>
-        <li>Email: fildineesoe@gmail.com</li>
+      <ul class="body space-y-[8px] mt-[10px] xs:mt-[15px] md:mt-[39px]">
+        <li class="break-all">Call: (237) 681-812-255</li>
+        <li class="break-all">Email: fildineesoe@gmail.com</li>
         <li>
           Address: 0123 Some Place,<br />
           Some Country
@@ -41,11 +43,16 @@
     </div>
 
     <!-- 4. Newsletter section -->
-    <div class="flex flex-col items-start">
+    <div
+      class="flex flex-col items-center md:items-start col-span-2 md:col-span-1 md:col-start-2 lg:col-span-1 lg:col-start-auto"
+    >
       <h3 class="footer-1 leading-[21px]">Newsletter</h3>
 
       <!-- Newsletter Form -->
-      <form id="newsletterForm" class="flex w-[272px] h-[50px] mt-[39px]">
+      <form
+        id="newsletterForm"
+        class="flex w-[272px] h-[50px] mt-[15px] md:mt-[39px]"
+      >
         <!-- Newsletter Email (enter email) -->
         <input
           id="newsletterEmail"
@@ -83,13 +90,13 @@
   </div>
 
   <!-- ========== DIVIDER ========== -->
-  <div class="max-w-[1366px] mx-auto px-[187px]">
+  <div class="max-w-[1366px] mx-auto px-[24px] md:px-[64px] lg:px-[187px]">
     <div class="border-t border-accent"></div>
   </div>
 
   <!-- ========== BOTTOM SECTION ========== -->
   <div
-    class="max-w-[1366px] mx-auto px-[187px] pt-[46px] pb-[76px] flex justify-between items-center"
+    class="max-w-[1366px] mx-auto px-[24px] md:px-[64px] lg:px-[187px] pt-[24px] pb-[40px] md:pt-[32px] md:pb-[56px] lg:pt-[46px] lg:pb-[76px] flex justify-between items-center"
   >
     <!-- Copyright -->
     <p class="footer-2">
@@ -97,12 +104,11 @@
     </p>
 
     <!-- Contact icons section -->
-    <div class="flex gap-[20px]">
+    <div class="flex gap-[8px] md:gap-[15px] lg:gap-[20px]">
       <!-- LinkedIn -->
       <a href="#">
         <svg
-          width="24"
-          height="24"
+          class="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -117,8 +123,7 @@
       <!-- Facebook -->
       <a href="#">
         <svg
-          width="24"
-          height="24"
+          class="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +138,7 @@
       <!-- Instagram -->
       <a href="#">
         <svg
-          width="24"
-          height="24"
+          class="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

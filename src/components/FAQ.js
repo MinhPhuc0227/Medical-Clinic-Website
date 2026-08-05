@@ -21,7 +21,7 @@ export async function loadFAQ() {
       </div>
 
       <!-- FAQ LIST -->
-      <div id="faq-list" class="space-y-4"></div>
+      <div id="faq-list" class="space-y-2 md:space-y-3 lg:space-y-4"></div>
 
     </section>
   `;
