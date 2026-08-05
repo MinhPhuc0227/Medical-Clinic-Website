@@ -9,11 +9,6 @@
   --color-black: #212124;
   --color-white: #fcfefe;
   --color-secondary: #159eec;
-
-  --breakpoint-xs: 375px;
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
 }
 
 @layer components {
@@ -168,7 +163,10 @@
   .body {
     font-size: 14px;
   }
-  
+  .display-1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
   .display-2 {
     font-size: 24px;
   }

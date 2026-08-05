@@ -61,13 +61,13 @@ function renderSpecialties(data) {
       (item) => `
     <a
         href="SpecialtyDetail.html?id=${item.id}"
-        class="group border-[0.15px] border-black/19 rounded-[5px] h-[172px] flex flex-col justify-center items-center gap-[8px] cursor-pointer transition-all duration-300 hover:bg-primary"
+        class="group border-[0.15px] border-black/19 rounded-[5px] min-h-[140px] md:h-[160px] lg:h-[172px] flex flex-col justify-center items-center gap-[8px] text-center cursor-pointer transition-all duration-300 hover:bg-primary"
     >
-        <div class="text-secondary transition-colors duration-300 group-hover:text-accent">
+        <div class="w-[32px] h-[32px] md:w-[40px] md:h-[40px] lg:w-[50px] lg:h-[44px] text-secondary transition-colors duration-300 group-hover:text-accent">
             ${icons[item.icon]}
         </div>
 
-        <p class="footer-2 text-black transition-colors duration-300 group-hover:text-accent">
+        <p class="footer-2 text-black text-center break-all transition-colors duration-300 group-hover:text-accent">
             ${item.name}
         </p>
     </a>
@@ -134,7 +134,7 @@ function renderTabs() {
   tabs.innerHTML += `
         <a
             href="Services.html"
-            class="w-full h-[40px] bg-primary text-accent button-text flex items-center justify-center"
+            class="col-span-2 md:col-span-1 w-full h-[40px] bg-primary text-accent button-text flex items-center justify-center"
         >
             View All
         </a>
@@ -181,10 +181,11 @@ function renderImages() {
   const service = services[current];
   images.innerHTML = `
         <!-- Image 1 -->
-        <div class="mt-[21.32px]">
+        <div class="flex-1 flex flex-col">
             <img
                 src="${service.image}"
-                class="w-full h-[231.34px] object-cover"
+                alt="Service image 1"
+                class="flex-1 w-full object-cover"
             >
             <div class="flex h-[8.53px]">
                 <div class="w-[72.51px] bg-accent"></div>
@@ -194,10 +195,11 @@ function renderImages() {
         </div>
 
         <!-- Image 2 -->
-        <div>
+        <div class="flex-1 flex flex-col">
             <img
                 src="${service.subImage}"
-                class="w-full h-[231.34px] object-cover"
+                alt="Service image 2"
+                class="flex-1 w-full object-cover"
             >
             <div class="flex h-[8.53px]">
                 <div class="w-[72.51px] bg-accent"></div>
