@@ -6,6 +6,10 @@
     "image": "phuc/pregnant-anemia-race-main.webp",
     "subImage": "phuc/blackdoctors.webp",
     "icon": "freeCheckup",
+    "meta": {
+      "description": "Book a free health checkup at MEDDICAL to identify potential health risks early and maintain your long-term well-being.",
+      "keywords": "free checkup, health screening, preventive care, medical examination, wellness, MEDDICAL"
+    },
     "detail": {
       "heading": "A passion for putting patients first",
       "keywords": [
@@ -29,6 +33,10 @@
     "image": "phuc/1920_finalliverdisparity.webp",
     "subImage": "phuc/black-women-with-stethoscope.webp",
     "icon": "cardiogram",
+    "meta": {
+      "description": "Explore MEDDICAL's cardiogram service for accurate heart monitoring, early detection of irregularities, and expert cardiac care.",
+      "keywords": "cardiogram, ECG, heart monitoring, cardiac care, heart health, MEDDICAL"
+    },
     "detail": {
       "heading": "Advanced heart care you can trust",
       "keywords": [
@@ -52,6 +60,10 @@
     "image": "phuc/doctors-exam-woolridge.webp",
     "subImage": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
     "icon": "dnaTesting",
+    "meta": {
+      "description": "Discover MEDDICAL's DNA testing service for genetic insights, hereditary risk assessment, and personalized healthcare planning.",
+      "keywords": "DNA testing, genetic testing, hereditary risks, personalized medicine, genetic health, MEDDICAL"
+    },
     "detail": {
       "heading": "Unlock the story written in your DNA",
       "keywords": [
@@ -75,6 +87,10 @@
     "image": "phuc/blackdoctors.webp",
     "subImage": "phuc/pregnant-anemia-race-main.webp",
     "icon": "bloodBank",
+    "meta": {
+      "description": "Learn about MEDDICAL's blood bank services, providing safe blood storage and rapid support for emergencies and critical treatments.",
+      "keywords": "blood bank, blood donation, blood transfusion, emergency care, healthcare services, MEDDICAL"
+    },
     "detail": {
       "heading": "Reliable blood support when every second matters",
       "keywords": [
@@ -98,6 +114,10 @@
     "image": "phuc/black-women-with-stethoscope.webp",
     "subImage": "phuc/1920_finalliverdisparity.webp",
     "icon": "dermalogy",
+    "meta": {
+      "description": "Explore MEDDICAL's dermatology services for expert skin care, diagnosis, and treatment of common skin conditions.",
+      "keywords": "dermatology, skin care, acne, eczema, psoriasis, dermatologist, MEDDICAL"
+    },
     "detail": {
       "heading": "Healthy skin starts with expert care",
       "keywords": [
@@ -121,6 +141,10 @@
     "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
     "subImage": "phuc/doctors-exam-woolridge.webp",
     "icon": "orthopedic",
+    "meta": {
+      "description": "Discover MEDDICAL's orthopedic services for expert diagnosis, treatment, and rehabilitation of bone, joint, and muscle conditions.",
+      "keywords": "orthopedic, orthopedics, bone care, joint care, rehabilitation, musculoskeletal, MEDDICAL"
+    },
     "detail": {
       "heading": "Helping you move with strength again",
       "keywords": [

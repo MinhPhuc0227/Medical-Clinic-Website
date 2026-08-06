@@ -4,30 +4,29 @@ export function createSmallNews(news) {
       href="/NewsDetail.html?id=${news.id}"
       class="flex w-full gap-4 rounded-lg hover:shadow-lg transition"
     >
-    <article class="flex w-[486px] h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
+    <article class="flex max-w-[300px] xs:max-w-[340px] mx-auto h-auto lg:max-w-[486px] lg:h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
 
       <!-- Image -->
-      <div class="w-[160px] h-full flex-shrink-0">
+      <div class="w-[130px] lg:w-[160px] h-full flex-shrink-0">
         <img
             src="${news.image}"
             loading="lazy"
-  alt="${news.title}"
-  onerror="this.onerror=null; this.src='/han/News1.webp';"g
-  
+            alt="${news.title}"
+            onerror="this.onerror=null; this.src='/han/News1.webp';"g
           class="w-full h-full object-cover"
         >
       </div>
 
       <!-- Content -->
-      <div class="flex flex-col flex-1 mb-auto pl-[20px] pr-[32px] py-[20px]">
+      <div class="flex flex-col flex-1 mb-auto pl-[20px] pr-[32px] py-[16px] md:py-[20px]">
 
         <!-- Meta -->
-        <p class="small text-secondary pb-[8px] leading-none  ">
+        <p class="small text-secondary leading-none mb-auto line-clamp-2 max-h-[28px] ">
           ${news.date} | ${news.author}
         </p>
 
         <!-- Title -->
-        <h3 class="body-2 leading-[1.3] pb-[24px] text-primary line-clamp-2">
+        <h3 class="body-2 leading-none pt-[8px] h-[50px] md:h-[62px] mt-auto text-primary line-clamp-2">
           ${news.title}
         </h3>
 
