@@ -9,12 +9,12 @@ export function createDoctorCard(doctor) {
                 class="w-full h-[281px] sm:h-[350px] object-cover"
             >
 
-            <div class="bg-accent py-[16px] sm:py-[24px] text-center">
-                <p class="nav">
+            <div class="bg-accent py-[16px] sm:py-[24px] text-center text-primary">
+                <p class="body-2 text-[18px] sm:font-normal ">
                     ${doctor.name}
                 </p>
 
-                <h3 class="caption mt-0 sm:mt-[12px]" >
+                <h3 class="caption mt-0 sm:mt-[12px] text-[18px]" >
                     ${doctor.specialty}
                 </h3>
 

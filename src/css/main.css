@@ -52,6 +52,7 @@
   .body-2 {
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
+    line-height: 140%;
   }
 
   .button-text {
@@ -132,7 +133,7 @@
 }
 /*BREAKPOINT*/
 /*Mobile*/
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .nav {
     font-size: 24px;
   }
@@ -150,6 +151,12 @@
   }
   .display-3 {
     font-size: 18px;
+  }
+  .caption {
+    font-size: 14px;
+  }
+  .body-2 {
+    font-size: 14px;
   }
 }
 /*Mobile và Tablet*/
@@ -173,12 +180,7 @@
   .display-2 {
     font-size: 24px;
   }
-  .caption {
-    font-size: 14px;
-  }
-  .body-2 {
-    font-size: 14px;
-  }
+
   .footer-2 {
     font-size: 14px;
   }
@@ -215,7 +217,7 @@
   }
 }
 
-  /* Contact Section Title */
+/* Contact Section Title */
 .contact-title {
   font-family: var(--font-body);
   font-size: 10px;
