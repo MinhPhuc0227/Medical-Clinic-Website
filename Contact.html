@@ -24,15 +24,15 @@
     <!-- PAGE CONTENT -->
     <main id="page-content" class="bg-white hidden">
       <!-- MAP VIEW -->
-      <section id="mapview" class="py-[64px]"></section>
+      <section id="mapview" class="mt-[48px] md:mt-[56px] lg:mt-[64px]"></section>
 
       <!-- MAIN SECTION -->
-      <section class="max-w-[992px] mx-auto bg-white py-[64px]">
-        <div class="grid grid-cols-2 gap-[20px]">
+      <section class="max-w-[992px] md:max-w-[600px] lg:max-w-[992px] mx-auto bg-white px-[24px] md:px-[64px] lg:px-0 mt-[48px] md:mt-[56px] lg:mt-[64px]">
+        <div class="grid grid-cols-1 gap-[32px] lg:grid-cols-2 lg:gap-[20px]">
           <!-- ========== LEFT COLUMN ========== -->
-          <div class="flex flex-col h-[486px]">
+          <div class="flex flex-col h-auto lg:h-[486px]">
             <!-- 1. HEADING -->
-            <header class="mb-[32px]">
+            <header class="text-center mb-[24px] md:mb-[28px] lg:mb-[32px]">
               <p class="caption text-secondary uppercase tracking-[4px]">
                 Get in Touch
               </p>
@@ -45,23 +45,21 @@
               class="flex flex-1 flex-col overflow-hidden rounded-[5px]"
             >
               <!-- Row 1: Name, Email -->
-              <div class="grid grid-cols-2">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 <!-- Name -->
                 <input
                   id="contactName"
                   name="name"
                   type="text"
                   placeholder="Name"
-                  class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none rounded-tl-[5px]"
+                  class="text-[13px] md:text-[15px] lg:body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none rounded-tl-[5px]"
                 />
                 <!-- Email -->
-                <input
-                  id="contactEmail"
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  class="body h-[50px] border border-l-0 border-accent bg-primary px-5 text-white placeholder-white outline-none rounded-tr-[5px]"
-                />
+                <input id="contactEmail"
+                 name="email" 
+                 type="email" 
+                 placeholder="Email" 
+                 class="text-[13px] md:text-[15px] lg:body h-[50px] border border-accent md:border-l-0 lg:border-l-0 bg-primary px-5 text-white placeholder-white outline-none md:rounded-tr-[5px] lg:rounded-tr-[5px]" />
               </div>
 
               <!-- Row 2: Subject -->
@@ -70,7 +68,7 @@
                 name="subject"
                 type="text"
                 placeholder="Subject"
-                class="body h-[50px] w-full border-x border-b border-accent bg-primary px-5 text-white placeholder-white outline-none"
+                class="text-[13px] md:text-[15px] lg:body h-[50px] w-full border-x border-b border-accent bg-primary px-5 text-white placeholder-white outline-none"
               />
 
               <!-- Row 3: Message -->
@@ -78,7 +76,7 @@
                 id="contactMessage"
                 name="message"
                 placeholder="Message"
-                class="body flex-1 h-[235px] resize-none border-x border-b border-accent bg-primary p-5 text-white placeholder-white outline-none"
+                class="text-[13px] md:text-[15px] lg:body flex-1 h-[235px] resize-none border-x border-b border-accent bg-primary p-5 text-white placeholder-white outline-none"
               ></textarea>
 
               <!-- Button -->
@@ -92,10 +90,10 @@
           </div>
 
           <!-- ========== RIGHT COLUMN ========== -->
-          <section class="grid grid-cols-2 gap-[20px] auto-rows-[233px]">
+          <section class="grid grid-cols-2 gap-x-[12px] gap-y-[12px] md:gap-x-[16px] md:gap-y-[16px] lg:gap-x-[20px] lg:gap-y-[20px]">
             <!-- CARD 1: EMERGENCY -->
             <article
-              class="group bg-accent text-primary p-[44px_30px_50px_30px] rounded-[5px] flex flex-col items-start h-[233px] box-border transition-all duration-300 hover:bg-primary hover:text-white"
+              class="group bg-accent text-primary p-4 md:p-4 lg:p-[44px_30px_50px_30px] aspect-square rounded-[4px] flex flex-col justify-center box-border transition-all duration-300 hover:bg-primary hover:text-white overflow-hidden"
             >
               <svg
                 width="41"
@@ -103,7 +101,7 @@
                 viewBox="0 0 41 39"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="mb-[15px]"
+                class="mb-[10px] w-5 h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 shrink-0"
               >
                 <path
                   d="M24.1459 33.1262C24.7274 32.7905 25.1502 32.2347 25.3211 31.5811C25.492 30.9275 25.3972 30.2296 25.0574 29.6411L23.7761 27.4219C23.4363 26.8333 22.8794 26.4022 22.2279 26.2235C21.5764 26.0447 20.8837 26.1329 20.3021 26.4687C15.9167 29.0006 13.3542 24.5622 12.0729 22.343C10.7917 20.1238 8.22919 15.6854 12.6146 13.1535C13.1962 12.8178 13.6189 12.2619 13.7899 11.6084C13.9608 10.9548 13.8659 10.2569 13.5261 9.66835L12.2449 7.44916C11.905 6.8606 11.3481 6.42952 10.6966 6.25075C10.0451 6.07199 9.35243 6.16019 8.77089 6.49594C3.28908 9.66086 1.28125 13.779 7.6875 24.875C14.0938 35.9709 18.6641 36.2911 24.1459 33.1262Z"
@@ -123,23 +121,23 @@
 
               <!-- Caption -->
               <h3
-                class="caption tracking-normal group-hover:text-accent transition-colors duration-300"
+                class="contact-title text-primary group-hover:text-accent transition-colors duration-300 w-full whitespace-NOWRAP"
               >
                 Emergency
               </h3>
 
               <!-- Body -->
               <address
-                class="not-italic flex flex-col gap-[5px] mt-[8px] text-[16px] text-primary group-hover:text-accent transition-colors duration-300"
+                class="not-italic flex flex-col mt-[6px] md:mt-[7px] lg:mt-[8px] gap-[3px] md:gap-[4px] lg:gap-[5px] text-[16px] text-primary group-hover:text-accent transition-colors duration-300"
               >
                 <a
                   href="tel:237681812255"
-                  class="body text-primary group-hover:text-white hover:underline block leading-[1.4]"
+                  class="section-text font-normal text-primary group-hover:text-white hover:underline block leading-[1.4]"
                   >(237) 681-812-255</a
                 >
                 <a
                   href="tel:237666331894"
-                  class="body text-primary group-hover:text-white hover:underline block leading-[1.4]"
+                  class="section-text font-normal text-primary group-hover:text-white hover:underline block leading-[1.4]"
                   >(237) 666-331-894</a
                 >
               </address>
@@ -147,7 +145,7 @@
 
             <!-- CARD 2: LOCATION -->
             <article
-              class="group bg-accent text-primary p-[44px_30px_50px_30px] rounded-[5px] flex flex-col items-start h-[233px] box-border transition-all duration-300 hover:bg-primary hover:text-white"
+              class="group bg-accent text-primary p-4 md:p-3 lg:p-[44px_30px_50px_30px] aspect-square rounded-[4px] flex flex-col justify-center items-start box-border transition-all duration-300 hover:bg-primary hover:text-white overflow-hidden"
             >
               <svg
                 width="32"
@@ -155,7 +153,7 @@
                 viewBox="0 0 32 39"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="mb-[15px]"
+                class="mb-[10px] w-5 h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 shrink-0"
               >
                 <path
                   d="M1 15.4C1 29.8 16 37 16 37C16 37 31 29.8 31 15.4C31 7.45 24.2875 1 16 1C7.7125 1 1 7.45 1 15.4Z"
@@ -172,23 +170,23 @@
 
               <!-- Caption -->
               <h3
-                class="contact text-primary group-hover:text-accent transition-colors duration-300 uppercase"
+                class="contact-title text-primary group-hover:text-accent transition-colors duration-300 w-full whitespace-NOWRAP"
               >
                 Location
               </h3>
 
               <!-- Body -->
               <address
-                class="not-italic flex flex-col gap-[5px] mt-[8px] text-[16px] font-normal text-primary group-hover:text-accent transition-colors duration-300"
+                class="not-italic flex flex-col mt-[6px] md:mt-[7px] lg:mt-[8px] gap-[3px] md:gap-[4px] lg:gap-[5px] text-[16px] font-normal text-primary group-hover:text-accent transition-colors duration-300"
               >
-                <span class="body block leading-[1.4]">0123 Some place</span>
-                <span class="body block leading-[1.4]">9876 Some country</span>
+                <span class="section-text font-normal text-primary group-hover:text-white hover:underline block leading-[1.4]">0123 Some place</span>
+                <span class="section-text font-normal text-primary group-hover:text-white hover:underline block leading-[1.4]">9876 Some country</span>
               </address>
             </article>
 
             <!-- CARD 3: EMAIL -->
             <article
-              class="group bg-accent text-primary p-[44px_30px_50px_30px] rounded-[5px] flex flex-col items-start h-[233px] box-border transition-all duration-300 hover:bg-primary hover:text-white"
+              class="group bg-accent text-primary p-4 md:p-3 lg:p-[44px_30px_50px_30px] aspect-square rounded-[4px] flex flex-col justify-center items-start box-border transition-all duration-300 hover:bg-primary hover:text-white overflow-hidden"
             >
               <svg
                 width="38"
@@ -196,7 +194,7 @@
                 viewBox="0 0 38 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="mb-[15px]"
+                class="mb-[10px] w-5 h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 shrink-0"
               >
                 <path
                   d="M1 1H36.4V30.5H1V1Z"
@@ -216,23 +214,23 @@
 
               <!-- Caption -->
               <h3
-                class="contact text-primary group-hover:text-accent transition-colors duration-300 uppercase tracking-[1px] text-[18px]"
+                class="contact-title text-primary group-hover:text-accent transition-colors duration-300 w-full whitespace-NOWRAP"
               >
                 Email
               </h3>
 
               <!-- Body -->
               <address
-                class="not-italic flex flex-col gap-[5px] mt-[8px] font-normal text-primary group-hover:text-accent transition-colors duration-300 w-full"
+                class="not-italic flex flex-col mt-[6px] md:mt-[7px] lg:mt-[8px] gap-[3px] md:gap-[4px] lg:gap-[5px] font-normal text-primary group-hover:text-accent transition-colors duration-300 w-full"
               >
                 <a
                   href="mailto:fildineeesoe@gmail.com"
-                  class="small text-primary group-hover:text-white hover:underline truncate"
+                  class="section-text text-primary group-hover:text-white hover:underline block leading-[1.4]"
                   >fildineeesoe@gmail.com</a
                 >
                 <a
                   href="mailto:myebstudios@gmail.com"
-                  class="small text-primary group-hover:text-white hover:underline block truncate"
+                  class="section-text text-primary group-hover:text-white hover:underline block leading-[1.4]"
                   >myebstudios@gmail.com</a
                 >
               </address>
@@ -240,7 +238,7 @@
 
             <!-- CARD 4: WORKING HOURS -->
             <article
-              class="group bg-accent text-primary p-[44px_30px_50px_30px] rounded-[5px] flex flex-col items-start h-[233px] box-border transition-all duration-300 hover:bg-primary hover:text-white"
+              class="group bg-accent text-primary p-4 md:p-3 lg:p-[44px_30px_50px_30px] aspect-square rounded-[4px] flex flex-col justify-center items-start box-border transition-all duration-300 hover:bg-primary hover:text-white overflow-hidden"
             >
               <svg
                 width="32"
@@ -248,7 +246,7 @@
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                class="mb-[15px]"
+                class="mb-[10px] w-5 h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 shrink-0"
               >
                 <path
                   d="M16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31Z"
@@ -266,17 +264,17 @@
 
               <!-- Caption -->
               <h3
-                class="contact text-primary group-hover:text-accent transition-colors duration-300 uppercase"
+                class="contact-title text-primary group-hover:text-accent transition-colors duration-300 w-full whitespace-nowrap"
               >
                 Working Hours
               </h3>
 
               <!-- Body -->
               <address
-                class="not-italic flex flex-col gap-[5px] mt-[8px] font-normal text-primary group-hover:text-accent transition-colors duration-300"
+                class="not-italic flex flex-col mt-[6px] md:mt-[7px] lg:mt-[8px] gap-[3px] md:gap-[4px] lg:gap-[5px] font-normal text-primary group-hover:text-accent transition-colors duration-300"
               >
-                <span class="block leading-[1.4]">Mon-Sat 09:00-20:00</span>
-                <span class="block leading-[1.4] whitespace-nowrap"
+                <span class="section-text font-normal text-primary group-hover:text-white hover:underline block leading-[1.4]">Mon-Sat 09:00-20:00</span>
+                <span class="section-text font-normal text-primary group-hover:text-white hover:underline block leading-[1.4]"
                   >Sunday Emergency only</span
                 >
               </address>

@@ -7,7 +7,7 @@ export async function loadFAQ() {
   const container = document.getElementById("faq");
 
   container.innerHTML = `
-    <section class="max-w-5xl mx-auto py-[64px]">
+    <section class="max-w-[310px] sm:max-w-[620px] lg:max-w-[992px] mx-auto py-[32px] sm:py-[48px] lg:py-[64px]">
 
       <!-- TITLE - DESCRIPTION -->
       <div class="text-center mb-10">
