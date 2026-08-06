@@ -151,12 +151,12 @@ function renderDetail() {
         </h3>
 
         <!-- Keywords -->
-        <div class="max-w-[414px] grid grid-cols-[auto_auto] justify-between gap-y-[16px] mb-[32px]">
+        <div class="hidden lg:grid max-w-[414px] grid-cols-[auto_auto] justify-between gap-y-[16px] mb-[32px]">
             ${service.detail.keywords
               .map(
                 (item) => `
                     <div class="flex items-center gap-[10px]">
-                        <div class="w-[16px] h-[16px] rounded-full bg-secondary"></div>
+                        <div class="size-[16px] rounded-full bg-secondary"></div>
                         <span class="body-2 text-black">${item}</span>
                     </div>
                 `,

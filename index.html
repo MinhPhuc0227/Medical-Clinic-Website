@@ -341,7 +341,7 @@
       </section>
 
       <!-- TEXT SECTION -->
-      <section class="px-[16px] py-[48px] md:py-[56px] lg:py-[64px]">
+      <section class="px-[16px] py-[48px] lg:py-[64px]">
         <div
           class="max-w-[343px] mx-auto text-center md:max-w-[520px] lg:max-w-[658px]"
         >
@@ -425,8 +425,8 @@
       </section>
 
       <!-- SERVICES -->
-      <section class="py-[48px] md:py-[64px]">
-        <div class="max-w-[1366px] mx-auto px-[16px] md:px-[24px] lg:px-0">
+      <section class="py-[48px] px-[16px] md:px-[64px] lg:px-0 lg:py-[64px]">
+        <div class="max-w-[1366px] mx-auto">
           <!-- Heading -->
           <div class="text-center mb-[24px] md:mb-[44px] lg:mb-[64px]">
             <p class="caption text-secondary mb-[8px]">
@@ -464,7 +464,7 @@
       <!-- SPECIALTIES -->
       <section
         id="specialtiesSection"
-        class="max-w-[992px] mx-auto px-[16px] md:px-[24px] lg:px-0 mb-[48px] md:mb-0 md:py-[64px]"
+        class="max-w-[992px] mx-auto px-[16px] md:px-[64px] lg:px-0 mb-[48px] lg:py-[64px]"
       >
         <!-- Heading -->
         <div class="text-center mb-[40px] md:mb-[56px] lg:mb-[64px]">
@@ -483,13 +483,21 @@
       <!-- APPOINTMENT -->
       <section
         id="appointmentSection"
-        class="relative overflow-hidden py-[48px] md:py-[64px]"
+        class="relative overflow-hidden py-[64px]"
       >
         <!-- Background -->
+        <!-- Mobile -->
+        <img
+          src="/phuc/hero-doctors-scaled-mobile.webp"
+          alt="Doctor"
+          class="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
+        />
+
+        <!-- Tablet & Desktop -->
         <img
           src="/phuc/hero-doctors-scaled.webp"
           alt="Doctor"
-          class="absolute inset-0 w-full h-full object-cover object-right md:object-center scale-x-[-1]"
+          class="absolute inset-0 w-full h-full object-cover md:object-right lg:object-center scale-x-[-1] hidden md:block"
         />
 
         <!-- Overlay -->
@@ -497,12 +505,10 @@
 
         <!-- Content -->
         <div
-          class="relative max-w-[1366px] mx-auto h-full px-[16px] md:px-[24px] lg:px-[187px] flex flex-col lg:flex-row items-center justify-start lg:justify-between pt-[64px] md:pt-[80px] lg:pt-0 gap-[48px]"
+          class="relative max-w-[1366px] mx-auto h-full px-[16px] md:px-[64px] xl:px-[187px] flex flex-col lg:flex-row items-stretch lg:items-center justify-start lg:justify-between gap-[48px]"
         >
           <!-- Left -->
-          <div
-            class="w-full max-w-[343px] md:max-w-[500px] lg:max-w-[407px] text-center lg:text-left"
-          >
+          <div class="w-full text-center lg:max-w-[407px] lg:text-left">
             <h2 class="display-2 text-secondary mb-[16px]">
               Book an Appointment
             </h2>
@@ -521,7 +527,7 @@
       </section>
 
       <!-- DOCTORS -->
-      <section id="doctorsSection" class="py-[48px]"></section>
+      <section id="doctorsSection" class="py-[48px] lg:py-[64px]"></section>
 
       <!-- TEXT DOCTOR (MOBILE ONLY) -->
       <div class="block md:hidden text-center mb-[48px]">
@@ -537,7 +543,7 @@
       <section id="newsSection" class="hidden md:block"></section>
 
       <!-- CONTACTS -->
-      <section id="contactsSection" class="mt-[64px]"></section>
+      <section id="contactsSection"></section>
 
       <!-- FAQ -->
       <section id="faq"></section>
