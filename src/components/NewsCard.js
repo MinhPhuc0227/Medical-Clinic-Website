@@ -4,18 +4,18 @@ import { createButton } from "./Button.js";
 
 export function createNewsCard(news) {
   return `
-    <article class="flex flex-col w-[658px] ">
+    <article class="flex flex-col w-full lg:w-[658px]">
 
       <img
          src="${news.image}"
          loading="lazy"
   onerror="this.onerror=null; this.src='/han/News1.webp';"
   alt="${news.title}"
-        class="w-full h-[500px] mb-[24px] object-cover"
+        class="w-full h-[220px] md:h-[280px] lg:h-[500px] mb-[24px] object-cover"
       />
 
       <!-- Info -->
-      <div class="flex items-center gap-[24px] mb-[8px] text-primary body">
+      <div class="flex flex-wrap items-center gap-2 md:gap-3 lg:gap-[24px] mb-[8px] text-primary body">
 
         <div class="flex items-center gap-2">
           <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
