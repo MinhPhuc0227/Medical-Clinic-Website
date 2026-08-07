@@ -4,7 +4,10 @@ export function createSmallNews(news) {
       href="/NewsDetail.html?id=${news.id}"
       class="flex w-full gap-4 rounded-lg hover:shadow-lg transition"
     >
-    <article class="flex max-w-[300px] xs:max-w-[340px] mx-auto h-auto lg:max-w-[486px] lg:h-[154px] rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
+    <article class="flex max-w-[300px] h-[130px]
+                      sm:max-w-[400px] sm:h-[140px]
+                      md:max-w-[350px] md:h-[140px]
+                      lg:max-w-[486px] lg:h-[154px] mx-auto rounded-[5px] shadow-[0px_0px_20px_rgba(0,0,0,0.05)] justify-self-center overflow-hidden bg-white ">
 
       <!-- Image -->
       <div class="w-[130px] lg:w-[160px] h-full flex-shrink-0">

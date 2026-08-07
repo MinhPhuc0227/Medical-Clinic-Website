@@ -10,7 +10,7 @@ export async function loadFAQ() {
     <section class="max-w-[310px] sm:max-w-[620px] lg:max-w-[992px] mx-auto py-[48px] lg:py-[64px]">
 
       <!-- TITLE - DESCRIPTION -->
-      <div class="text-center mb-10">
+      <div class="text-center mb-5 sm:mb-10">
         <h2 class="display-2 text-primary">
           Frequently Asked Questions
         </h2>
