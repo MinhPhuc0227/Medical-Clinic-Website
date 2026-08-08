@@ -275,15 +275,16 @@
         <div
           class="border-b border-transparent focus-within:border-white transition-all duration-300"
         >
+        <label for="search-input" class="sr-only">Search</label>
           <input
             type="text"
+            id="search-input"
             placeholder=""
             class="w-[100px] lg:w-[200px] h-[50px] bg-primary px-4 text-white placeholder:text-white outline-none"
           />
         </div>
         <!-- Search icon -->
-        <button>
-          <!-- <img src="/search.svg" alt="Search" class="w-[20px] h-[20px]" /> -->
+        <button type="button" aria-label="Search">
           <svg
             class="w-[20px] h-[20px] lg:w-[22px] lg:h-[22px]"
             viewBox="0 0 22 22"
@@ -332,22 +333,24 @@
 <!-- Button search -->
     <div class="flex">
       <div class="border-b border-transparent focus-within:border-white transition-all duration-300">
+        <label for="search-input" class="sr-only">Search</label>
           <input
             type="text"
+            id="search-input"
             placeholder=""
             class="w-[clamp(40px,20vw,100px)] sm:w-[200px] h-[50px] bg-primary px-4 text-white placeholder:text-white outline-none"
           />
       </div>
-        <button >
-          <svg class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button type="button" aria-label="Search">
+          <svg aria-hidden=true class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.88894 18.7779C14.7982 18.7779 18.7779 14.7982 18.7779 9.88894C18.7779 4.97971 14.7982 1 9.88894 1C4.97971 1 1 4.97971 1 9.88894C1 14.7982 4.97971 18.7779 9.88894 18.7779Z" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M21.0004 21.0001L16.167 16.1667" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
     </div>
      <!-- Button list -->
-        <button id="menuBtn" >
-        <svg class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button id="menuBtn" aria-label="Open menu" type="button">
+        <svg aria-hidden = true class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M24 14.4V16.8H0V14.4H24ZM24 7.2V9.6H0V7.2H24ZM24 0V2.4H0V0H24Z" fill="#FCFEFE"/>
         </svg>
         </button>

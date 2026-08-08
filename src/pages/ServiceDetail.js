@@ -129,6 +129,7 @@ async function initMainContent() {
 
             <img
                 src="${service.image}"
+                alt="${service.name}"
                 class="w-full sm:h-[395px] lg:h-[454px] object-cover"
             >
 
