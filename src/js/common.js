@@ -104,6 +104,8 @@ export async function getNews() {
     "verywellhealth.com",
     "eatingwell.com",
     "floridatoday.com",
+    "media.cnn.com",
+    "cnn.com",
   ];
   //lọc bỏ bài có nguồn chặn ảnh
   const newsData = newsList.map((item, index) => {
