@@ -6,16 +6,16 @@ import { loadSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 setActiveNav();
 initNewsletter();
 initHeader();
 await loadSubHeader("news");
 
 // load sidebar
-await loadComponent("sidebar", "/src/components/SideBar.html");
+await loadComponent("sidebar", "/components/SideBar.html");
 // load contact section
-await loadComponent("contact-section", "/src/components/ContactsSection.html");
+await loadComponent("contact-section", "/components/ContactsSection.html");
 // lấy dữ liệu
 console.time("news");
 

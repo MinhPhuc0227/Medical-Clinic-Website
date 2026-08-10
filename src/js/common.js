@@ -28,28 +28,56 @@ export async function fetchJson(path) {
 //   });
 // }
 
-export function setActiveNav() {
-  let currentPage = window.location.pathname.split("/").pop() || "index.html";
-  // Nếu đang ở trang News Detail thì vẫn active menu News
-  if (currentPage === "NewsDetail.html") {
-    currentPage = "News.html";
-  }
-  if (currentPage === "ServiceDetail.html") {
-    currentPage = "Services.html";
-  }
-  if (currentPage === "DoctorDetail.html") {
-    currentPage = "Doctors.html";
-  }
+// export function setActiveNav() {
+//   let currentPage = window.location.pathname.split("/").pop() || "index.html";
+//   // Nếu đang ở trang News Detail thì vẫn active menu News
+//   if (currentPage === "NewsDetail.html") {
+//     currentPage = "News.html";
+//   }
+//   if (currentPage === "ServiceDetail.html") {
+//     currentPage = "Services.html";
+//   }
+//   if (currentPage === "DoctorDetail.html") {
+//     currentPage = "Doctors.html";
+//   }
 
-  if (currentPage === "SpecialtyDetail.html") {
-    currentPage = "index.html";
-  }
+//   if (currentPage === "SpecialtyDetail.html") {
+//     currentPage = "index.html";
+//   }
+//   document.querySelectorAll(".nav-link").forEach((link) => {
+//     link.classList.remove("text-accent");
+
+//     const href = link.getAttribute("href");
+
+//     if (href === currentPage) {
+//       link.classList.add("text-accent");
+//     }
+//   });
+// }
+
+export function setActiveNav() {
+  // 1. Lấy tên file từ URL và chuyển về chữ thường
+  let currentPage = (
+    window.location.pathname.split("/").pop() || "index.html"
+  ).toLowerCase();
+
+  // 2. Gom nhóm các trang Detail về trang chính tương ứng
+  if (currentPage === "newsdetail.html") currentPage = "news.html";
+  if (currentPage === "servicedetail.html") currentPage = "services.html";
+  if (currentPage === "doctordetail.html") currentPage = "doctors.html";
+  if (currentPage === "specialtydetail.html") currentPage = "index.html";
+
+  // 3. Cập nhật class cho menu
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.classList.remove("text-accent");
 
     const href = link.getAttribute("href");
+    if (!href) return;
 
-    if (href === currentPage) {
+    // Tách lấy tên file từ attribute href (VD: "/About.html" -> "about.html")
+    const linkPage = href.split("/").pop().toLowerCase();
+
+    if (linkPage === currentPage) {
       link.classList.add("text-accent");
     }
   });
