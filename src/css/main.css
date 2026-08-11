@@ -145,6 +145,9 @@
   .btn-text {
     @apply flex items-center gap-2 text-secondary hover:text-accent;
   }
+  .section {
+    @apply my-[48px] lg:my-[64px];
+  }
 }
 /*BREAKPOINT*/
 /*Mobile*/

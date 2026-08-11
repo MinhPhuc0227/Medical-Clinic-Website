@@ -1,6 +1,6 @@
 export function initHeader() {
   let isOpen = false;
-
+  const menuBtn = document.getElementById("menuBtn");
   menuBtn.addEventListener("click", () => {
     isOpen = !isOpen;
 
