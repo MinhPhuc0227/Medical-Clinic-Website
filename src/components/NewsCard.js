@@ -68,9 +68,10 @@ export function createNewsCard(news) {
       <!-- Button -->
       <a
         href="./NewsDetail.html?id=${news.id}"
-    class="btn-filled" >
+        aria-label="Read more about ${news.title}"
+        class="btn-filled" >
     Learn More
-    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg aria-hidden="true" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
  </a>

@@ -49,6 +49,7 @@
     >
       <div id="back-btn" class="btn-text pb-6">
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -82,6 +83,7 @@
           <div class="mt-[48px] lg:mt-[64px] flex justify-between">
             <button id="prev-btn" class="btn-filled">
               <svg
+                aria-hidden="true"
                 width="13"
                 height="12"
                 viewBox="0 0 13 12"
@@ -101,6 +103,7 @@
             <button id="next-btn" class="ml-[20px] btn-filled">
               Next Article
               <svg
+                aria-hidden="true"
                 width="13"
                 height="12"
                 viewBox="0 0 13 12"
@@ -118,13 +121,10 @@
             </button>
           </div>
         </section>
-        <aside
-          id="sidebar"
-          class="w-full md:w-[280px] lg:w-[317px]"
-        ></aside>
+        <aside id="sidebar" class="w-full md:w-[280px] lg:w-[317px]"></aside>
       </div>
     </main>
-    <section id="contact-section" class="my-[48px] lg:my-[64px]"></section>
+    <section id="contact-section" class="section"></section>
     <footer id="footer"></footer>
     <script type="module" src="/src/pages/NewsDetail.js"></script>
   </body>

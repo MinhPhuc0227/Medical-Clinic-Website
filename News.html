@@ -46,10 +46,15 @@
       id="page-content"
       class="max-w-[995px] mx-auto px-6 md:px-[64px] lg:px-0 mt-[48px] lg:mt-[64px] hidden"
     >
-      <div class="container flex flex-col gap-8 md:flex-row md:gap-[16px] lg:gap-[20px]">
+      <div
+        class="container flex flex-col gap-8 md:flex-row md:gap-[16px] lg:gap-[20px]"
+      >
         <!-- Danh sách bài viết -->
         <section class="w-full md:w-[470px] lg:w-[658px]">
-          <div id="news-list" class="flex flex-col gap-5 md:gap-7 lg:gap-10"></div>
+          <div
+            id="news-list"
+            class="flex flex-col gap-5 md:gap-7 lg:gap-10"
+          ></div>
 
           <!-- Pagination -->
 
@@ -59,6 +64,7 @@
               class="btn-text body hover:opacity-30% transition"
             >
               <svg
+                aria-hidden="true"
                 width="13"
                 height="12"
                 viewBox="0 0 13 12"
@@ -84,6 +90,7 @@
             >
               Next
               <svg
+                aria-hidden="true"
                 width="13"
                 height="12"
                 viewBox="0 0 13 12"
@@ -106,7 +113,7 @@
         <aside id="sidebar" class="w-full md:w-[280px] lg:w-[320px]"></aside>
       </div>
     </main>
-    <section id="contact-section" class="my-[48px] lg:my-[64px]"></section>
+    <section id="contact-section" class="section"></section>
     <footer id="footer"></footer>
     <script type="module" src="/src/pages/News.js"></script>
   </body>
