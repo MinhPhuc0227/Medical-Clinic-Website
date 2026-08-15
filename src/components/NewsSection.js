@@ -49,6 +49,8 @@ export async function initNewsSection() {
 
       dot.dataset.index = i;
 
+      dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+
       dot.addEventListener("click", () => {
         currentSlide = i;
         updateSlider();

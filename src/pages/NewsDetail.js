@@ -5,14 +5,14 @@ import { loadNewsSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 setActiveNav();
 initNewsletter();
 initHeader();
 const news = await getNews();
 
-await loadComponent("sidebar", "/src/components/SideBar.html");
-await loadComponent("contact-section", "/src/components/ContactsSection.html");
+await loadComponent("sidebar", "/components/SideBar.html");
+await loadComponent("contact-section", "/components/ContactsSection.html");
 await initSideBar(news);
 
 // Lấy id từ URL

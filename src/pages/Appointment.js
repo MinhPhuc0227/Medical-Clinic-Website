@@ -6,14 +6,14 @@ import { initNewsletter } from "../components/NewsLetter.js";
 import { loadFAQ } from "../components/FAQ.js";
 import { initHeader } from "../components/header.js";
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 initHeader();
 await setActiveNav();
 await loadSubHeader("appointment");
-await loadComponent("app-form", "/src/components/AppointmentForm.html");
-await loadComponent("mapview", "/src/components/mapview.html");
-await loadComponent("contactSection", "/src/components/ContactsSection.html");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("app-form", "/components/AppointmentForm.html");
+await loadComponent("mapview", "/components/mapview.html");
+await loadComponent("contactSection", "/components/ContactsSection.html");
+await loadComponent("footer", "/components/footer.html");
 
 await initAppForm();
 await initNewsletter();

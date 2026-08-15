@@ -4,13 +4,13 @@ import { loadComponent, setActiveNav } from "../js/common.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 setActiveNav();
 initHeader();
 await loadSpecialty();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");
 initNewsletter();
 
 // Xác định id của trang và load dữ liệu

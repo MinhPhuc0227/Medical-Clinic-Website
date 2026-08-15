@@ -16,9 +16,9 @@ export async function initDoctorSection() {
   // 1. Xác định số card/slide theo thiết bị (ĐÃ ĐỔI MỐC 1024px)
   function getCardsPerSlide() {
     const width = window.innerWidth;
-    if (width < 768) return 1;    // Mobile: 1 card
-    if (width < 1024) return 2;   // Tablet (768px - 1023px): 2 cards
-    return 3;                     // Laptop (>= 1024px): 3 cards
+    if (width < 768) return 1; // Mobile: 1 card
+    if (width < 1024) return 2; // Tablet (768px - 1023px): 2 cards
+    return 3; // Laptop (>= 1024px): 3 cards
   }
 
   // 2. Render Slide & Card
@@ -31,7 +31,8 @@ export async function initDoctorSection() {
       // --- LOGIC MOBILE ---
       doctors.forEach((doctor) => {
         const wrapper = document.createElement("div");
-        wrapper.className = "shrink-0 w-[270px] transition-all duration-300 ease-in-out";
+        wrapper.className =
+          "shrink-0 w-[270px] transition-all duration-300 ease-in-out";
         wrapper.innerHTML = createDoctorCard(doctor);
         track.appendChild(wrapper);
       });
@@ -45,25 +46,20 @@ export async function initDoctorSection() {
 
       for (let i = 0; i < totalSlides; i++) {
         const slide = document.createElement("div");
-        slide.classList.add(
-  "min-w-full",
-  "flex",
-  "justify-center",
-  "gap-6"
-);
-        
+        slide.classList.add("min-w-full", "flex", "justify-center", "gap-6");
+
         const start = i * cardsPerSlide;
         const end = start + cardsPerSlide;
-        
+
         doctors.slice(start, end).forEach((doctor) => {
-  const wrapper = document.createElement("div");
-  wrapper.className = "shrink-0 w-[317px]";
+          const wrapper = document.createElement("div");
+          wrapper.className = "shrink-0 w-[317px]";
 
-  wrapper.innerHTML = createDoctorCard(doctor);
+          wrapper.innerHTML = createDoctorCard(doctor);
 
-  slide.appendChild(wrapper);
-});
-        
+          slide.appendChild(wrapper);
+        });
+
         track.appendChild(slide);
       }
 
@@ -78,8 +74,15 @@ export async function initDoctorSection() {
   // Tạo thẻ Dot
   function createDot(index) {
     const dot = document.createElement("button");
-    dot.classList.add("w-3", "h-3", "rounded-full", "transition-colors", "duration-300");
+    dot.classList.add(
+      "w-3",
+      "h-3",
+      "rounded-full",
+      "transition-colors",
+      "duration-300",
+    );
     dot.dataset.index = index;
+    dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
     dotsContainer.appendChild(dot);
   }
 
@@ -105,13 +108,13 @@ export async function initDoctorSection() {
       if (!cards.length) return;
 
       const targetCard = cards[currentSlide];
-const containerWidth = track.parentElement.offsetWidth;
-const cardWidth = targetCard.offsetWidth;
+      const containerWidth = track.parentElement.offsetWidth;
+      const cardWidth = targetCard.offsetWidth;
 
-const centerOffset = (containerWidth - cardWidth) / 2;
-const translateX = centerOffset - targetCard.offsetLeft;
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const translateX = centerOffset - targetCard.offsetLeft;
 
-track.style.transform = `translateX(${translateX}px)`;
+      track.style.transform = `translateX(${translateX}px)`;
 
       cards.forEach((card, idx) => {
         if (idx === currentSlide) {
@@ -140,9 +143,10 @@ track.style.transform = `translateX(${translateX}px)`;
   function startAutoplay() {
     autoPlayTimer = setInterval(() => {
       const cardsPerSlide = getCardsPerSlide();
-      const totalSlides = cardsPerSlide === 1 
-        ? doctors.length 
-        : Math.ceil(doctors.length / cardsPerSlide);
+      const totalSlides =
+        cardsPerSlide === 1
+          ? doctors.length
+          : Math.ceil(doctors.length / cardsPerSlide);
 
       currentSlide++;
       if (currentSlide >= totalSlides) {
@@ -159,12 +163,12 @@ track.style.transform = `translateX(${translateX}px)`;
 
   // Resize Listener
   window.addEventListener("resize", () => {
-  clearInterval(autoPlayTimer);
-  currentSlide = 0;
-  renderSlider();
-  updateSlider();
-  startAutoplay();
-});
+    clearInterval(autoPlayTimer);
+    currentSlide = 0;
+    renderSlider();
+    updateSlider();
+    startAutoplay();
+  });
 
   // Khởi tạo
   renderSlider();
