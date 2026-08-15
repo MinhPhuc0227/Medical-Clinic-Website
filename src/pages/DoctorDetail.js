@@ -6,15 +6,15 @@ import { initNewsSection } from "../components/NewsSection";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 setActiveNav();
 initNewsletter();
 initHeader();
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");
 await loadSubHeader("doctors");
-await loadComponent("newsSection", "/src/components/NewsSection.html");
-await loadComponent("testi", "/src/components/Testimonials.html");
-await loadComponent("contactSection", "/src/components/ContactsSection.html");
+await loadComponent("newsSection", "/components/NewsSection.html");
+await loadComponent("testi", "/components/Testimonials.html");
+await loadComponent("contactSection", "/components/ContactsSection.html");
 
 // kéo lên đầu trang khi chuyển bài
 window.scrollTo({

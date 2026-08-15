@@ -1,6 +1,8 @@
-<section class="w-full max-w-full lg:max-w-[1000px] mx-auto overflow-hidden rounded-[5px]">
-  <div 
-    id="appointmentForm" 
+<section
+  class="w-full max-w-full lg:max-w-[1000px] mx-auto overflow-hidden rounded-[5px]"
+>
+  <div
+    id="appointmentForm"
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-0"
   >
     <input
@@ -11,10 +13,12 @@
     />
 
     <label
+      for="appointmentGender"
       class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
     >
       <select
         id="appointmentGender"
+        aria-label="Gender"
         class="body w-full appearance-none bg-transparent pr-8 text-white outline-none"
         name="gender"
         required
@@ -27,6 +31,7 @@
         <option value="other" class="bg-white text-black">Other</option>
       </select>
       <svg
+        aria-hidden="true"
         class="pointer-events-none absolute right-5 shrink-0"
         width="16"
         height="10"

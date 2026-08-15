@@ -6,16 +6,16 @@ import { initDoctorSection } from "../components/DoctorSection.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initHeader } from "../components/header.js";
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 initHeader();
 await setActiveNav();
 await loadSubHeader("about");
 
-await loadComponent("testi", "/src/components/Testimonials.html");
-await loadComponent("doctorSection", "/src/components/DoctorSection.html");
-await loadComponent("newsSection", "/src/components/NewsSection.html");
-await loadComponent("contactSection", "/src/components/ContactsSection.html");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("testi", "/components/Testimonials.html");
+await loadComponent("doctorSection", "/components/DoctorSection.html");
+await loadComponent("newsSection", "/components/NewsSection.html");
+await loadComponent("contactSection", "/components/ContactsSection.html");
+await loadComponent("footer", "/components/footer.html");
 
 await initTesti();
 await initDoctorSection();

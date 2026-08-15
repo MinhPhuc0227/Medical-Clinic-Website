@@ -6,13 +6,13 @@ import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
 // load layout
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 setActiveNav();
 initHeader();
 await loadSubHeader("services");
 await loadServices();
-await loadComponent("contactsSection", "/src/components/ContactsSection.html");
+await loadComponent("contactsSection", "/components/ContactsSection.html");
 // Show main page content (service section)
 document.getElementById("page-content").classList.remove("hidden");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");
 initNewsletter();

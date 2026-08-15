@@ -7,18 +7,18 @@ import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
 // Load layout
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 setActiveNav();
 initHeader();
 await loadSubHeader("contact");
-await loadComponent("mapview", "/src/components/mapview.html");
+await loadComponent("mapview", "/components/mapview.html");
 addSubmitContactFormEvent();
-await loadComponent("newssection", "/src/components/NewsSection.html");
+await loadComponent("newssection", "/components/NewsSection.html");
 initNewsSection();
 await loadFAQ();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");
 initNewsletter();
 
 // ADD-SUBMIT-EVENT FUNCTION (save contact form data in local storage)
