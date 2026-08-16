@@ -13,7 +13,7 @@ export async function initDoctorSection() {
   let currentSlide = 0;
   let autoPlayTimer = null;
 
-  // 1. Xác định số card/slide theo thiết bị (ĐÃ ĐỔI MỐC 1024px)
+  // 1. Xác định số card/slide theo thiết bị 
   function getCardsPerSlide() {
     const width = window.innerWidth;
     if (width < 768) return 1; // Mobile: 1 card
@@ -46,7 +46,7 @@ export async function initDoctorSection() {
 
       for (let i = 0; i < totalSlides; i++) {
         const slide = document.createElement("div");
-        slide.classList.add("min-w-full", "flex", "justify-center", "gap-6");
+        slide.classList.add("min-w-full", "flex", "justify-center", "gap-5");
 
         const start = i * cardsPerSlide;
         const end = start + cardsPerSlide;
@@ -75,8 +75,8 @@ export async function initDoctorSection() {
   function createDot(index) {
     const dot = document.createElement("button");
     dot.classList.add(
-      "w-3",
-      "h-3",
+      "w-[18px]",
+      "h-[18px]",
       "rounded-full",
       "transition-colors",
       "duration-300",

@@ -4,14 +4,14 @@ import { createButton } from "./Button.js";
 
 export function createNewsCard(news) {
   return `
-    <article class="flex flex-col w-full lg:w-[658px]">
+    <article class="flex flex-col w-full lg:w-[658px] lg:h-[664px]">
 
       <img
          src="${news.image}"
          loading="lazy"
   onerror="this.onerror=null; this.src='/han/News1.webp';"
   alt="${news.title}"
-        class="w-full h-[220px] md:h-[280px] lg:h-[500px] mb-[24px] object-cover"
+        class="w-full h-[220px] md:h-[280px] lg:h-[400px] mb-[24px] object-cover"
       />
 
       <!-- Info -->
@@ -57,7 +57,7 @@ export function createNewsCard(news) {
       </div>
 
       <!-- Title -->
-      <h2 class="display-2 mb-[16px] text-primary">
+      <h2 class="display-2 mb-[16px] text-primary line-clamp-1">
         ${news.title} 
       </h2>
       <!-- Description -->
@@ -69,8 +69,8 @@ export function createNewsCard(news) {
       <a
         href="./NewsDetail.html?id=${news.id}"
         aria-label="Read more about ${news.title}"
-        class="btn-filled" >
-    Learn More
+        class="btn-filled mt-auto font-semibold" >
+    Read More
     <svg aria-hidden="true" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

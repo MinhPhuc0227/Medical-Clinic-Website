@@ -68,4 +68,4 @@ window.scrollTo({
   behavior: "smooth",
 });
 document.getElementById("page-content").classList.remove("hidden");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");

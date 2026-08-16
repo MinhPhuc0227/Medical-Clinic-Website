@@ -27,9 +27,9 @@ export async function initSideBar(newsList) {
 
   for (const name in categoryCount) {
     categories.innerHTML += `
-    <div class="flex justify-between items-center">
-      <p>${name}</p>
-      <span class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center">
+    <div class="flex justify-between items-center lg:w-[274px] lg:h-[50px] px-[20px]">
+      <p class="body-2 leading-[25px] ">${name}</p>
+      <span class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center ">
         ${categoryCount[name]}
       </span>
     </div>

@@ -45,7 +45,7 @@ function renderPagination() {
   for (let i = 1; i <= totalPages; i++) {
     container.innerHTML += `
       <button
-        class="page-btn px-2 py-1 rounded transition ${
+        class="page-btn py-2 rounded transition ${
           i === currentPage
             ? "text-primary"
             : "text-secondary hover:text-accent"
@@ -94,4 +94,4 @@ window.scrollTo({
 });
 // Hiện trang
 document.getElementById("page-content").classList.remove("hidden");
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");
