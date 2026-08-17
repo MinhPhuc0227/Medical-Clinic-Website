@@ -11,7 +11,10 @@ await loadComponent("header", "/components/header.html");
 setActiveNav();
 initHeader();
 await initMainContent();
-await loadComponent("doctorsSection", "/components/DoctorSection.html");
+await loadComponent(
+  "doctorsSection",
+  "/components/DoctorSection-ServiceDetail.html",
+);
 await initDoctorSection();
 await loadComponent("contactsSection", "/components/ContactsSection.html");
 // Show main page content (service section)
@@ -138,7 +141,7 @@ async function initMainContent() {
             </h2>
 
             <div
-                class="grid grid-cols-3 gap-y-[12px] lg:gap-y-[16px] mt-[12px] lg:mt-[24px]"
+                class="grid grid-flow-col grid-rows-2 auto-cols-max gap-x-[40px] gap-y-[16px] mt-[12px] lg:mt-[24px]"
             >
                 ${keywords}
             </div>

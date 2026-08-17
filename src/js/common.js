@@ -56,29 +56,36 @@ export async function fetchJson(path) {
 // }
 
 export function setActiveNav() {
-  // 1. Lấy tên file từ URL và chuyển về chữ thường
-  let currentPage = (
-    window.location.pathname.split("/").pop() || "index.html"
-  ).toLowerCase();
+  let currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-  // 2. Gom nhóm các trang Detail về trang chính tương ứng
+  currentPage = currentPage.toLowerCase();
+
+  // Gom nhóm các trang Detail về trang chính
   if (currentPage === "newsdetail.html") currentPage = "news.html";
   if (currentPage === "servicedetail.html") currentPage = "services.html";
   if (currentPage === "doctordetail.html") currentPage = "doctors.html";
   if (currentPage === "specialtydetail.html") currentPage = "index.html";
 
-  // 3. Cập nhật class cho menu
   document.querySelectorAll(".nav-link").forEach((link) => {
-    link.classList.remove("text-accent");
+    // Xóa trạng thái cũ
+    link.classList.remove(
+      "text-accent",
+      "text-primary",
+      "text-white",
+      "font-semibold",
+    );
 
     const href = link.getAttribute("href");
     if (!href) return;
 
-    // Tách lấy tên file từ attribute href (VD: "/About.html" -> "about.html")
     const linkPage = href.split("/").pop().toLowerCase();
 
     if (linkPage === currentPage) {
-      link.classList.add("text-accent");
+      // Active
+      link.classList.add("text-primary", "md:text-accent", "font-semibold");
+    } else {
+      // Không active
+      link.classList.add("text-primary", "md:text-white");
     }
   });
 }

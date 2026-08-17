@@ -27,7 +27,7 @@ export async function loadServices() {
             class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-all duration-300 group-hover:opacity-100"
           >
             <div
-                class="w-[48px] h-[48px] text-accent"
+                class="text-accent"
                 aria-hidden="true"
             >
                 ${icons[service.icon]}
@@ -41,7 +41,7 @@ export async function loadServices() {
           class="absolute right-[20px] top-[220px] md:top-[260px] flex h-[60px] w-[60px] md:h-[80px] md:w-[80px] items-center justify-center rounded-full bg-primary transition-all duration-300 group-hover:opacity-0"
         >
           <div
-              class="w-[26px] h-[26px] text-accent"
+              class="text-accent"
               aria-hidden="true"
           >
               ${icons[service.icon]}
@@ -49,7 +49,7 @@ export async function loadServices() {
         </div>
 
         <!-- ========== 3. CONTENT SECTION ========== -->
-        <div class="px-[15px] md:px-[20px] pt-[24px] pb-[16px] md:pt-[56px] md:pb-[32px]">
+        <div class="px-[15px] md:px-[20px] pt-[24px] md:pt-[56px] pb-[16px] md:pb-[32px]">
 
           <!-- Title -->
           <h3 class="title text-primary">
@@ -57,11 +57,11 @@ export async function loadServices() {
           </h3>
 
           <!-- Body -->
-          <p class="body mt-[8px] leading-[140%] text-black">
+          <p class="body mt-[8px] leading-[22px] text-black">
             ${service.body}
           </p>
 
-          <!-- Link -->  
+          <!-- Link -->
           <a
             href="ServiceDetail.html?id=${service.id}"
             class="body mt-[16px] inline-flex items-center gap-[10px] text-secondary transition-colors hover:text-primary"
