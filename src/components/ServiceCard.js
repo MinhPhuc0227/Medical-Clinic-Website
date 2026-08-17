@@ -27,7 +27,7 @@ export async function loadServices() {
             class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-all duration-300 group-hover:opacity-100"
           >
             <div
-                class="text-accent"
+                class="w-[48px] h-[48px] text-accent"
                 aria-hidden="true"
             >
                 ${icons[service.icon]}
@@ -41,7 +41,7 @@ export async function loadServices() {
           class="absolute right-[20px] top-[220px] md:top-[260px] flex h-[60px] w-[60px] md:h-[80px] md:w-[80px] items-center justify-center rounded-full bg-primary transition-all duration-300 group-hover:opacity-0"
         >
           <div
-              class="text-accent"
+              class="w-[26px] h-[26px] text-accent"
               aria-hidden="true"
           >
               ${icons[service.icon]}
