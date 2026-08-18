@@ -77,7 +77,6 @@ async function initMainContent() {
             class="
                 service-icon
                 sm:w-[24px] lg:w-[32px]
-                sm:h-[24px] lg:h-[32px]
                 ${item.id === service.id ? "text-accent" : "text-secondary"}
             "
         >
