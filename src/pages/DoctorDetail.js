@@ -6,9 +6,6 @@ import { initNewsSection } from "../components/NewsSection";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
-<<<<<<< HEAD
-// 1. Tải dữ liệu JSON trước
-=======
 await loadComponent("header", "/components/header.html");
 setActiveNav();
 initNewsletter();
@@ -25,7 +22,6 @@ window.scrollTo({
   behavior: "smooth",
 });
 // đọc id từ url
->>>>>>> origin/nhom11
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
 const doctors = await fetchJson("/Doctors.json");
