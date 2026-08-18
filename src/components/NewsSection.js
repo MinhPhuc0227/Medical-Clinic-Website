@@ -25,7 +25,7 @@ export async function initNewsSection() {
 
       const grid = document.createElement("div");
       grid.className =
-        "w-fit grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-5 md:gap-y-6";
+        "w-fit grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-5 md:gap-y-5";
 
       const start = i * cardsPerSlide;
       const end = start + cardsPerSlide;
@@ -41,13 +41,15 @@ export async function initNewsSection() {
     // Render dots
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement("button");
-      dot.className = "w-3 h-3 rounded-full bg-accent";
+      dot.className = "w-[18px] h-[18px] rounded-full bg-accent";
 
       if (i === currentSlide) {
         dot.classList.replace("bg-accent", "bg-primary");
       }
 
       dot.dataset.index = i;
+
+      dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
       dot.addEventListener("click", () => {
         currentSlide = i;

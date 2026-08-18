@@ -1,4 +1,19 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Yeseva One";
+  src: url("/fonts/YesevaOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --font-display: "Yeseva One", serif;
@@ -16,32 +31,38 @@
     font-family: var(--font-display);
     font-size: 48px;
     font-weight: 400;
+    line-height: normal;
   }
 
   .display-2 {
     font-family: var(--font-display);
     font-size: 32px;
+    line-height: normal;
   }
   .display-3 {
     font-family: var(--font-display);
     font-size: 28px;
     font-weight: 400;
+    line-height: normal;
   }
   .display-4 {
     font-family: var(--font-display);
     font-size: 36px;
     font-weight: 400;
+    line-height: normal;
   }
 
   .title {
     font-family: var(--font-body);
     font-size: 26px;
     font-weight: 500;
+    line-height: normal;
   }
   .title-1 {
     font-family: var(--font-body);
     font-size: 26px;
     font-weight: 400;
+    line-height: normal;
   }
   .body {
     font-family: var(--font-body);
@@ -59,27 +80,32 @@
     font-family: var(--font-body);
     font-size: 16px;
     font-weight: 500;
+    line-height: normal;
   }
 
   .small {
     font-family: var(--font-body);
     font-size: 14px;
+    line-height: normal;
   }
   .small-1 {
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 400;
+    line-height: normal;
   }
   .small-2 {
     font-family: var(--font-body);
     font-size: 12px;
     font-weight: 400;
+    line-height: normal;
   }
 
   .footer-1 {
     font-family: var(--font-body);
     font-size: 18px;
     font-weight: 600;
+    line-height: normal;
   }
   .footer-2 {
     font-family: var(--font-body);
@@ -91,26 +117,31 @@
     font-family: var(--font-body);
     font-size: 18px;
     font-weight: 700;
+    line-height: normal;
   }
   .testi {
     font-family: var(--font-body);
     font-size: 22px;
     font-weight: 400;
+    line-height: 140%;
   }
   .nav {
     font-family: var(--font-body);
     font-size: 18px;
     font-weight: 400;
+    line-height: normal;
   }
   .nav-1 {
     font-family: var(--font-body);
     font-size: 24px;
     font-weight: 600;
+    line-height: normal;
   }
   .nav-2 {
     font-family: var(--font-body);
     font-size: 24px;
     font-weight: 400;
+    line-height: normal;
   }
   .caption {
     font-family: var(--font-body);
@@ -118,6 +149,7 @@
     font-weight: 700;
     letter-spacing: 16%;
     text-transform: uppercase;
+    line-height: normal;
   }
 
   .btn-filled {
@@ -129,6 +161,9 @@
 
   .btn-text {
     @apply flex items-center gap-2 text-secondary hover:text-accent;
+  }
+  .section {
+    @apply my-[48px] lg:my-[64px];
   }
 }
 /*BREAKPOINT*/

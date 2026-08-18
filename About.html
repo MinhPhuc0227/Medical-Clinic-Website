@@ -1,7 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Metadata -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 11" />
+    <meta
+      name="keywords"
+      content="hospital, healthcare, medical services, doctors, appointment"
+    />
+
+    <!-- SEO -->
+    <title>MEDDICAL | About us</title>
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | About us" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -9,10 +38,6 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEDDICAL | About us</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -22,14 +47,17 @@
     <section id="subheader"></section>
     <main>
       <section
-        class="container mx-auto my-[48px] lg:my-[64px] max-w-[992px] px-4"
+        class="container mx-auto my-[48px] lg:my-[64px] max-w-[992px] h-[509px] px-4"
       >
-        <div class="grid grid-cols-1 sm:gap-[20px] sm:grid-cols-2">
+        <div class="grid grid-cols-1 sm:gap-[20px] sm:grid-cols-[408px_1fr]">
           <!-- Left Image -->
           <div>
             <img
               src="/quy/About.webp"
+              loading="lazy"
               alt="Doctor"
+              width="408"
+              height="509"
               class="hidden sm:block w-95% h-95% lg:h-full lg:w-full object-cover"
             />
           </div>
@@ -42,12 +70,12 @@
               Welcome to Hospital Name
             </p>
 
-            <h2
+            <h1
               class="display-1 mb-3 lg:mb-6 text-[24px] sm:text-[32px] lg:text-[48px] lg:leading-[55px] text-center sm:text-left text-primary"
             >
               Best Care for Your <br />
               Good Health
-            </h2>
+            </h1>
 
             <!-- Features -->
             <div class="mb-4 lg:mb-8 grid grid-cols-2 gap-y-2 lg:gap-y-4">
@@ -82,26 +110,28 @@
               </div>
             </div>
 
-            <p class="body mb-2 lg:mb-4 lg:leading-7 text-black">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              placerat scelerisque tortor ornare ornare. Quisque placerat
-              scelerisque tortor ornare augue. Velit nascetur proin massa in.
-              Consequat faucibus porttitor enim et.
+            <p class="body mb-2 lg:mb-4 lg:leading-[22px] text-black">
+              With a team of experienced and dedicated doctors, MEDDICAL is
+              committed to providing high-quality healthcare tailored to every
+              patient. We listen carefully, provide thoughtful guidance, and
+              create a comfortable environment where you can feel confident
+              about your health.
             </p>
 
-            <p class="body lg:leading-7 text-black">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              placerat scelerisque. Convallis felis vitae tortor augue. Velit
-              nascetur proin massa in.
+            <p class="body lg:leading-[22px] text-black">
+              From consultation and diagnosis to treatment and follow-up care,
+              we put your safety and well-being first. Our goal is to make every
+              visit a positive experience while delivering professional,
+              compassionate, and reliable healthcare for you and your family.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="testi" class="my-[48px] lg:my-[64px]"></section>
-      <section id="doctorSection" class="my-[48px] lg:my-[64px]"></section>
-      <section id="newsSection" class="my-[48px] lg:my-[64px]"></section>
-      <section id="contactSection" class="my-[48px] lg:my-[64px]"></section>
+      <section id="testi" class="section"></section>
+      <section id="doctorSection" class="section"></section>
+      <section id="newsSection" class="section"></section>
+      <section id="contactSection" class="section"></section>
     </main>
 
     <div id="footer"></div>

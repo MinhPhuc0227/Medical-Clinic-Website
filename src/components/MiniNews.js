@@ -14,11 +14,11 @@ export function createMiniNews(news) {
       />
 
       <div class="flex flex-col justify-center">
-        <p class="text-secondary small-2 leading-[14px]">
+        <p class="text-secondary small-2 leading-[14px] line-clamp-1">
           ${news.date}
         </p>
 
-        <h3 class="small-1 text-primary text-[16px] leading-[20px]  line-clamp-2">
+        <h3 class="small-1 text-black text-[16px] leading-[17px]  line-clamp-2">
           ${news.title}
         </h3>
       </div>

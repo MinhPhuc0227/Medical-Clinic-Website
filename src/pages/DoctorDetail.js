@@ -6,7 +6,26 @@ import { initNewsSection } from "../components/NewsSection";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
+<<<<<<< HEAD
 // 1. Tải dữ liệu JSON trước
+=======
+await loadComponent("header", "/components/header.html");
+setActiveNav();
+initNewsletter();
+initHeader();
+await loadComponent("footer", "/components/footer.html");
+await loadSubHeader("doctors");
+await loadComponent("newsSection", "/components/NewsSection.html");
+await loadComponent("testi", "/components/Testimonials.html");
+await loadComponent("contactSection", "/components/ContactsSection.html");
+
+// kéo lên đầu trang khi chuyển bài
+window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+});
+// đọc id từ url
+>>>>>>> origin/nhom11
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
 const doctors = await fetchJson("/Doctors.json");

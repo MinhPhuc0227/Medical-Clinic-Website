@@ -15,18 +15,18 @@ const images = document.getElementById("service-images");
 let services = [];
 let current = 0;
 
-await loadComponent("header", "/src/components/header.html");
+await loadComponent("header", "/components/header.html");
 initHeader();
 setActiveNav();
 await loadServices();
 await loadSpecialties();
-await loadComponent("appointmentForm", "/src/components/AppointmentForm.html");
+await loadComponent("appointmentForm", "/components/AppointmentForm.html");
 await initAppForm();
-await loadComponent("doctorsSection", "/src/components/DoctorSection.html");
+await loadComponent("doctorsSection", "/components/DoctorSection.html");
 await initDoctorSection();
-await loadComponent("newsSection", "/src/components/NewsSection.html");
+await loadComponent("newsSection", "/components/NewsSection.html");
 await initNewsSection();
-await loadComponent("contactsSection", "/src/components/ContactsSection.html");
+await loadComponent("contactsSection", "/components/ContactsSection.html");
 await loadFAQ();
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
@@ -40,7 +40,7 @@ if (location.hash) {
     });
   }
 }
-await loadComponent("footer", "/src/components/footer.html");
+await loadComponent("footer", "/components/footer.html");
 initNewsletter();
 
 // ========== RENDER SPECIALTIES ==========
@@ -118,7 +118,7 @@ function renderTabs() {
             >
                 <!-- Icon -->
                 <div
-                    class="service-icon w-[32px] h-[32px] ${active ? "text-accent" : "text-secondary"}"
+                    class="service-icon ${active ? "text-accent" : "text-secondary"}"
                 >
                     ${icons[service.icon]}
                 </div>
