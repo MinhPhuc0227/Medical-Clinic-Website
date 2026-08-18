@@ -134,6 +134,7 @@ export async function getNews() {
     "floridatoday.com",
     "media.cnn.com",
     "cnn.com",
+    "washingtonpost.com",
   ];
   //lọc bỏ bài có nguồn chặn ảnh
   const newsData = newsList.map((item, index) => {
