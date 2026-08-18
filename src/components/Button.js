@@ -58,7 +58,8 @@ class LinkButton extends HTMLElement {
 customElements.define("btn-link", LinkButton); */
 
 export function createButton({
-  text,
+  text = "",
+  ariaLabel = "",
   variant = "filled", // filled | text
   icon = "none", // none | left | right
 }) {
@@ -98,14 +99,17 @@ export function createButton({
     </svg>
   `;
 
+  const label = ariaLabel || text;
+  const ariaAttr = label ? `aria-label="${label}"` : "";
   return `
     <button
       class="btn btn-${variant}"
+      ${ariaAttr}
     >
 
       ${icon === "left" ? leftIcon : ""}
 
-      <span>${text}</span>
+      ${text ? `<span>${text}</span>` : ""}
 
       ${icon === "right" ? rightIcon : ""}
 
