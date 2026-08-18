@@ -115,20 +115,36 @@ async function initMainContent() {
   // ========== 3. MAIN CONTENT CONTAINER ==========
   const container = document.getElementById("mainContent");
   container.innerHTML = `
-<section class=" lg:max-w-[992px] mx-auto">
+<section class="sm:max-w-[600px] md:max-w-[720px] lg:max-w-[992px] mx-auto">
 
-    <!-- LAYOUT: 2 COLUMNS -->
-    <div class="grid sm:grid-cols-[180px_1fr] lg:grid-cols-[240px_1fr] sm:gap-[17px] lg:gap-[21px]">
+    <div
+        class="
+            grid
+            min-w-0
+            sm:grid-cols-[180px_1fr]
+            lg:grid-cols-[240px_1fr]
+            sm:gap-[17px]
+            lg:gap-[21px]
+        "
+    >
 
-        <!-- Column 1. Left (Service Menu)-->
+        <!-- Column 1: Service Menu -->
         <div
-            class="hidden sm:block border border-primary/20 rounded-[5px] overflow-hidden h-fit"
+            class="
+                hidden
+                sm:block
+                border
+                border-primary/20
+                rounded-[5px]
+                overflow-hidden
+                h-fit
+            "
         >
             ${serviceMenu}
         </div>
 
-        <!-- Column 2. Right (Image + Heading + Keywords + Description) -->
-        <div>
+        <!-- Column 2: Content -->
+        <div class="min-w-0">
 
             <img
                 src="${service.image}"
@@ -136,17 +152,46 @@ async function initMainContent() {
                 class="w-full sm:h-[395px] lg:h-[454px] object-cover"
             >
 
-            <h2 class="display-2 text-primary text-center sm:text-left mt-[15px] lg:mt-[30px]">
+            <h2
+                class="
+                    display-2
+                    text-primary
+                    text-center
+                    sm:text-left
+                    mt-[15px]
+                    lg:mt-[30px]
+                "
+            >
                 ${service.detail.heading}
             </h2>
 
             <div
-                class="grid grid-flow-col grid-rows-2 auto-cols-max gap-x-[40px] gap-y-[16px] mt-[12px] lg:mt-[24px]"
+                class="
+                    grid
+                    grid-cols-2
+                    gap-x-[20px]
+                    gap-y-[16px]
+                    mt-[12px]
+                    lg:mt-[24px]
+
+                    lg:grid-flow-col
+                    lg:grid-rows-2
+                    lg:grid-cols-none
+                    lg:auto-cols-max
+                    lg:gap-x-[40px]
+                "
             >
                 ${keywords}
             </div>
 
-            <div class="space-y-[6px] lg:space-y-[8px] mt-[12px] lg:mt-[24px]">
+            <div
+                class="
+                    space-y-[6px]
+                    lg:space-y-[8px]
+                    mt-[12px]
+                    lg:mt-[24px]
+                "
+            >
 
                 <p class="body text-black">
                     ${service.detail.description[0]}

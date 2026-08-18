@@ -9,7 +9,7 @@ export async function loadServices() {
   services.forEach((service) => {
     html += `
       <section
-        class="group relative w-full max-w-[280px] md:max-w-[317px] overflow-hidden rounded-[5px] border border-primary/10 bg-white"
+        class="group relative w-full overflow-hidden rounded-[5px] border border-primary/10 bg-white"
       >
 
         <!-- ========== 1. IMAGE SECTION ========== -->
