@@ -118,7 +118,7 @@ function renderTabs() {
             >
                 <!-- Icon -->
                 <div
-                    class="service-icon ${active ? "text-accent" : "text-secondary"}"
+                    class="service-icon w-[32px] ${active ? "text-accent" : "text-secondary"}"
                 >
                     ${icons[service.icon]}
                 </div>

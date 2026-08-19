@@ -9,7 +9,7 @@ export async function loadServices() {
   services.forEach((service) => {
     html += `
       <section
-        class="group relative w-full max-w-[280px] md:max-w-[317px] overflow-hidden rounded-[5px] border border-primary/10 bg-white"
+        class="group relative w-full overflow-hidden rounded-[5px] border border-primary/10 bg-white"
       >
 
         <!-- ========== 1. IMAGE SECTION ========== -->
@@ -49,7 +49,7 @@ export async function loadServices() {
         </div>
 
         <!-- ========== 3. CONTENT SECTION ========== -->
-        <div class="px-[15px] md:px-[20px] pt-[24px] pb-[16px] md:pt-[56px] md:pb-[32px]">
+        <div class="px-[15px] md:px-[20px] pt-[24px] md:pt-[56px] pb-[16px] md:pb-[32px]">
 
           <!-- Title -->
           <h3 class="title text-primary">
@@ -57,11 +57,11 @@ export async function loadServices() {
           </h3>
 
           <!-- Body -->
-          <p class="body mt-[8px] leading-[140%] text-black">
+          <p class="body mt-[8px] leading-[22px] text-black">
             ${service.body}
           </p>
 
-          <!-- Link -->  
+          <!-- Link -->
           <a
             href="ServiceDetail.html?id=${service.id}"
             class="body mt-[16px] inline-flex items-center gap-[10px] text-secondary transition-colors hover:text-primary"
