@@ -41,7 +41,7 @@ export async function initNewsSection() {
     // Render dots
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement("button");
-      dot.className = "w-[18px] h-[18px] rounded-full bg-accent";
+      dot.className = "w-[10px] h-[10px] sm:w-[18px] sm:h-[18px] rounded-full bg-accent";
 
       if (i === currentSlide) {
         dot.classList.replace("bg-accent", "bg-primary");

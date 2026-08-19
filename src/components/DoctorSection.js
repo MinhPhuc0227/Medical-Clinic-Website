@@ -75,8 +75,10 @@ export async function initDoctorSection() {
   function createDot(index) {
     const dot = document.createElement("button");
     dot.classList.add(
-      "w-[18px]",
-      "h-[18px]",
+      "w-[10px]",
+      "h-[10px]",
+      "sm:w-[18px]",
+      "sm:h-[18px]",
       "rounded-full",
       "transition-colors",
       "duration-300",
