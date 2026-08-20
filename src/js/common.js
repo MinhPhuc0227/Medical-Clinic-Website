@@ -142,6 +142,11 @@ export async function getNews() {
     "media.cnn.com",
     "cnn.com",
     "washingtonpost.com",
+    "sciencealert.com",
+    "health.com",
+    "medicalnewstoday.com",
+    "medscape.com",
+    
   ];
   //lọc bỏ bài có nguồn chặn ảnh
   const newsData = newsList.map((item, index) => {

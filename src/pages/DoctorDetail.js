@@ -32,16 +32,6 @@ if (!doctor) {
   throw new Error("Doctor not found");
 }
 
-// 2. Load toàn bộ Component HTML song song (bao gồm cả SubHeader)
-await Promise.all([
-  loadComponent("header", "/src/components/header.html"),
-  loadComponent("footer", "/src/components/footer.html"),
-  loadSubHeader("doctors"),
-  loadComponent("newsSection", "/src/components/NewsSection.html"),
-  loadComponent("testi", "/src/components/Testimonials.html"),
-  loadComponent("contactSection", "/src/components/ContactsSection.html"),
-]);
-
 // 3. Render dữ liệu bác sĩ vào DOM
 document.getElementById("doctor-image").src = doctor.image;
 document.getElementById("doctor-name").textContent = doctor.name;
