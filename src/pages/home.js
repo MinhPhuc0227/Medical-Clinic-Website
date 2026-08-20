@@ -112,7 +112,7 @@ function renderTabs() {
     const active = index === current;
     tabs.innerHTML += `
             <button class="
-                service-tab w-full h-[106px] flex flex-col justify-center items-center gap-[8px] transition
+                service-tab w-full flex flex-col justify-center items-center gap-[8px] transition
                 ${active ? "bg-primary text-accent" : "bg-white text-black"}"
                 data-index="${index}"
             >
