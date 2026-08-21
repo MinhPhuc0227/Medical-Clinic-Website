@@ -12,7 +12,7 @@ export async function initSideBar(newsList) {
   }); //lấy 6 bài mới nhất
   const categoryCount = {
     Surgery: 0,
-    "Health Care": 0,
+    "Health Care": 0, 
     Medical: 0,
     Professional: 0,
   };
@@ -27,7 +27,7 @@ export async function initSideBar(newsList) {
 
   for (const name in categoryCount) {
     categories.innerHTML += `
-    <div class="flex justify-between items-center lg:w-[274px] lg:h-[50px] px-[20px]">
+    <div class="flex justify-between items-center w-full lg:w-[274px] h-[50px] ">
       <p class="body-2 leading-[25px] ">${name}</p>
       <span class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center ">
         ${categoryCount[name]}
