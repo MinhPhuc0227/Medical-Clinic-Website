@@ -19,6 +19,7 @@ export default defineConfig({
         servicedetail: resolve(__dirname, "ServiceDetail.html"),
         services: resolve(__dirname, "Services.html"),
         specialtydetail: resolve(__dirname, "SpecialtyDetail.html"),
+        myAppointment: resolve(__dirname, "MyAppointment.html"),
       },
     },
   },
