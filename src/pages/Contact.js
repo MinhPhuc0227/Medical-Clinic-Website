@@ -1,7 +1,6 @@
 import "../css/main.css";
 import { loadComponent, setActiveNav } from "../js/common";
 import { loadSubHeader } from "../components/SubHeader.js";
-import { loadFAQ } from "../components/FAQ.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
@@ -15,7 +14,7 @@ await loadComponent("mapview", "/components/mapview.html");
 addSubmitContactFormEvent();
 await loadComponent("newssection", "/components/NewsSection.html");
 initNewsSection();
-await loadFAQ();
+
 // Show main page content (contact form)
 document.getElementById("page-content").classList.remove("hidden");
 await loadComponent("footer", "/components/footer.html");
