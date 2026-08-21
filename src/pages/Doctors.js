@@ -19,8 +19,9 @@ await loadComponent("contactSection", "/components/ContactsSection.html");
 
 export async function initDoctorPage() {
   const doctors = await fetchJson("/Doctors.json");
-  const select = document.getElementById("specialty-filter");
 
+  const select = document.getElementById("specialty-filter");
+const searchInput = document.getElementById("doctor-search");
   // lấy danh sách specialty không trùng
   const specialties = [...new Set(doctors.map((d) => d.specialty))];
 
@@ -32,10 +33,17 @@ export async function initDoctorPage() {
   });
   // nút search
   let filteredDoctors = [...doctors];
+  let searchKeyword = "";
 
-  select.addEventListener("click", () => {
+  select.addEventListener("change", () => {
     filterDoctors(select.value);
   });
+
+  searchInput.addEventListener("input", () => {
+  searchKeyword = searchInput.value.trim().toLowerCase();
+
+  filterDoctors(select.value);
+});
   const track = document.getElementById("doctor-track");
   const dotsContainer = document.getElementById("doctor-dots");
   const prevBtn = document.getElementById("doctor-prev");
@@ -85,36 +93,26 @@ export async function initDoctorPage() {
     updateButtons();
   }
   function filterDoctors(specialty) {
-    if (specialty === "all") {
-      filteredDoctors = [...doctors];
-    } else {
-      filteredDoctors = doctors.filter(
-        (doctor) => doctor.specialty === specialty,
-      );
-    }
+  filteredDoctors = doctors.filter((doctor) => {
+    // Lọc chuyên khoa
+    const matchSpecialty =
+      specialty === "all" || doctor.specialty === specialty;
 
-    cardsPerSlide = getCardsPerSlide();
-    totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
-    currentSlide = 0;
+    // Tìm kiếm tên
+    const matchName = doctor.name
+      .toLowerCase()
+      .includes(searchKeyword);
 
-    renderSlide(0);
-  }
+    return matchSpecialty && matchName;
+  });
 
-  // thêm search text thì xài
-  /*select.addEventListener("input", (e) => {
-    const keyword = e.target.value.toLowerCase();
+  cardsPerSlide = getCardsPerSlide();
+  totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
+  currentSlide = 0;
 
-    filteredDoctors = doctors.filter(
-      (doctor) =>
-        doctor.specialty.toLowerCase().includes(keyword) ||
-        doctor.name.toLowerCase().includes(keyword),
-    );
+  renderSlide(0);
+}
 
-    currentSlide = 0;
-    totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
-
-    renderSlide(0);
-  });*/
 
   function updateDots() {
     dotsContainer.innerHTML = "";

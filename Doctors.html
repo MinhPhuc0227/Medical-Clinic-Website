@@ -43,21 +43,57 @@
     <header id="header" class="sticky top-0 z-50 bg-white"></header>
     <main>
       <section id="subheader"></section>
-      <!-- Lọc bác sĩ -->
-      <section class="section max-w-[992px] mx-auto">
-        <!-- Select -->
-        <div class="flex flex-row-reverse">
+      <!-- Code phần mở rộng -->
+      <section class="section flex justify-between max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto ">
+        <!-- Tìm bác sĩ -->
+        <div class="relative w-[55%] ">
+          <label for="doctor-search" class="sr-only">
+            Search doctor by name
+          </label>
+
+          <input
+            id="doctor-search"
+            type="search"
+            placeholder="Search doctor by name..."
+            autocomplete="off"
+            class="w-full h-[48px] lg:h-[56px] pl-1 sm:pl-[18px] pr-[48px] border border-[#D6D9E0] rounded-[8px] body text-black outline-none focus:border-primary"
+          />
+
+          <!-- Search icon -->
+          <svg
+            class="absolute right-[16px] top-1/2 -translate-y-1/2 w-[20px] h-[20px] text-primary pointer-events-none"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="7"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M16 16L21 21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <!-- Lọc bác sĩ -->
+        <div class="flex flex-row-reverse w-[40%] min-w-0">
           <select
             id="specialty-filter"
-            class="h-[48px] lg:h-[64px] border border-gray-300 rounded-lg mr-[20px] px-0 sm:px-2 lg:px-5 outline-none focus:border-primary"
+            class="min-w-0 h-[48px] lg:h-[56px] border border-gray-300 rounded-lg px-0 sm:px-2 lg:px-5 outline-none focus:border-primary"
           >
             <option value="all">All Specialties</option>
           </select>
         </div>
       </section>
-      <section
-        class="section max-w-[992px] flex flex-col mx-auto"
-      >
+
+      <section class="section max-w-[992px] flex flex-col mx-auto">
         <div
           id="doctor-track"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center min-h-fit"
