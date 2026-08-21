@@ -5,7 +5,6 @@ import { initNewsletter } from "../components/NewsLetter.js";
 import { initDoctorSection } from "../components/DoctorSection.js";
 import { initNewsSection } from "../components/NewsSection.js";
 import { initAppForm } from "../components/AppointmentForm.js";
-import { loadFAQ } from "../components/FAQ.js";
 import { initHeader } from "../components/header.js";
 
 const grid = document.getElementById("specialties-grid");
@@ -15,33 +14,6 @@ const images = document.getElementById("service-images");
 let services = [];
 let current = 0;
 
-// Khởi tạo các component song song để tiết kiệm thời gian
-// await Promise.all([
-//   (async () => {
-//     await loadComponent("header", "/components/header.html");
-//     initHeader();
-//     setActiveNav();
-//   })(),
-//   loadServices(),
-//   loadSpecialties(),
-//   (async () => {
-//     await loadComponent("appointmentForm", "/components/AppointmentForm.html");
-//     await initAppForm();
-//   })(),
-//   (async () => {
-//     await loadComponent("doctorsSection", "/components/DoctorSection.html");
-//     await initDoctorSection();
-//   })(),
-//   (async () => {
-//     await loadComponent("newsSection", "/components/NewsSection.html");
-//     await initNewsSection();
-//   })(),
-//   loadComponent("contactsSection", "/components/ContactsSection.html"),
-//   loadFAQ(),
-//   loadComponent("footer", "/components/footer.html").then(() =>
-//     initNewsletter(),
-//   ),
-// ]);
 await loadComponent("header", "/components/header.html");
 initHeader();
 setActiveNav();
@@ -54,7 +26,6 @@ await initDoctorSection();
 await loadComponent("newsSection", "/components/NewsSection.html");
 await initNewsSection();
 await loadComponent("contactsSection", "/components/ContactsSection.html");
-await loadFAQ();
 // // Show main page content (contact form)
 // document.getElementById("page-content").classList.remove("hidden");
 if (location.hash) {

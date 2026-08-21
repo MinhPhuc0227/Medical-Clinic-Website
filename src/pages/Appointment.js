@@ -10,7 +10,7 @@ await loadComponent("header", "/components/header.html");
 initHeader();
 await setActiveNav();
 await loadSubHeader("appointment");
-await loadComponent("app-form", "/components/AppointmentForm.html");
+await loadComponent("appointmentForm", "/components/AppointmentForm.html");
 await loadComponent("mapview", "/components/mapview.html");
 await loadComponent("contactSection", "/components/ContactsSection.html");
 await loadComponent("footer", "/components/footer.html");
