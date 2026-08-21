@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@font-face {
+/* @font-face {
   font-family: "Yeseva One";
   src: url("/fonts/YesevaOne-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -13,7 +13,7 @@
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 @theme {
   --font-display: "Yeseva One", serif;
