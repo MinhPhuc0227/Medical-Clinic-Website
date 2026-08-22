@@ -55,7 +55,7 @@ export async function loadSubHeader(page) {
       <!-- Content -->
       <div
         class="relative z-10 
-        max-w-[1366px] mx-auto h-full leading-none px-[24px] md:px-[64px] lg:px-[187px] -translate-y-[10px] flex flex-col justify-center"
+        max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto h-full leading-none -translate-y-[10px] flex flex-col justify-center"
       >
         <p class="body-2 text-primary ">
           ${data.breadcrumb}
