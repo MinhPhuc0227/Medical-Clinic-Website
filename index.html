@@ -38,33 +38,75 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/phuc/test/Physician_Trends_2021_Merritt_Hawkins_Copy_Small.webp 600w, /phuc/test/Physician_Trends_2021_Merritt_Hawkins_Copy.webp 1200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/phuc/test/Physician_Trends_2021_Merritt_Hawkins_adobespark_Copy_Small.webp 600w, /phuc/test/Physician_Trends_2021_Merritt_Hawkins_adobespark_Copy.webp 1200w"
+      imagesizes="100vw"
+    />
   </head>
 
   <body>
     <!-- HEADER -->
-    <header id="header" class="sticky top-0 z-50 bg-white shadow-sm"></header>
+    <header
+      id="header"
+      class="sticky top-0 z-50 bg-white shadow-sm min-h-[182px] md:min-h-[160px]"
+    ></header>
 
     <!-- ================================================================================ -->
     <!-- PAGE CONTENT -->
-    <main id="page-content" class="bg-white hidden">
+    <!-- <main id="page-content" class="bg-white hidden"> -->
+    <main id="page-content" class="bg-white">
       <!-- LARGE BANNER -->
       <section
         class="relative h-[291px] md:h-[420px] lg:h-[550px] overflow-hidden"
       >
         <!-- Background image -->
-        <img
+        <!-- <img
           src="/phuc/Physician_Trends_2021_Merritt_Hawkins.webp"
           alt="Doctors providing healthcare services"
+          fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-0"
+        /> -->
+        <img
+          src="/phuc/test/Physician_Trends_2021_Merritt_Hawkins_Copy.webp"
+          srcset="
+            /phuc/test/Physician_Trends_2021_Merritt_Hawkins_Copy_Small.webp  600w,
+            /phuc/test/Physician_Trends_2021_Merritt_Hawkins_Copy.webp       1200w
+          "
+          sizes="100vw"
+          alt="Doctors providing healthcare services"
+          fetchpriority="high"
           class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-0"
         />
 
         <!-- Doctor image -->
-        <img
+        <!-- <img
           src="/phuc/Physician_Trends_2021_Merritt_Hawkins_adobespark.webp"
           alt="Portrait of a professional doctor"
+          fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-30"
+        /> -->
+        <img
+          src="/phuc/test/Physician_Trends_2021_Merritt_Hawkins_adobespark_Copy.webp"
+          srcset="
+            /phuc/test/Physician_Trends_2021_Merritt_Hawkins_adobespark_Copy_Small.webp  600w,
+            /phuc/test/Physician_Trends_2021_Merritt_Hawkins_adobespark_Copy.webp       1200w
+          "
+          sizes="100vw"
+          alt="Portrait of a professional doctor"
+          fetchpriority="high"
           class="absolute inset-0 w-full h-full object-cover object-center md:object-[center_15%] lg:object-[center_20%] z-30"
         />
-        
+
         <!-- Gradient layer -->
         <div
           class="absolute inset-0 bg-[linear-gradient(to_top_right,rgba(229,228,232,0.8)_20%,rgba(235,234,239,0)_70%)] md:bg-[linear-gradient(120deg,#E5E4E8_25%,rgba(235,234,239,0)_45%)] lg:bg-[linear-gradient(92deg,#E5E4E8_20.47%,rgba(235,234,239,0)_39.27%)] z-10"
@@ -82,11 +124,9 @@
 
         <!-- Content: text + button -->
         <div
-          class="relative h-full w-full flex justify-center items-start pt-[118px] md:justify-start md:items-center md:pt-0 md:px-[48px] lg:px-0 max-w-[260px] md:max-w-[420px] lg:max-w-[992px] mx-auto z-40 "
+          class="relative h-full w-full flex justify-center items-start pt-[118px] md:justify-start md:items-center md:pt-0 md:px-[48px] lg:px-0 max-w-[260px] md:max-w-[420px] lg:max-w-[992px] mx-auto z-40"
         >
-          <div
-            class=" text-center lg:text-left"
-          >
+          <div class="text-center lg:text-left">
             <!-- Caring for Life -->
             <p class="caption text-secondary mb-0 md:mb-[8px]">
               Caring for Life
@@ -112,9 +152,7 @@
 
       <!-- GOALS -->
       <section class="hidden lg:block relative -mt-[50px] z-40">
-        <div
-          class="max-w-[995px] mx-auto  grid grid-cols-3 gap-[22px]"
-        >
+        <div class="max-w-[995px] mx-auto grid grid-cols-3 gap-[22px]">
           <!-- Book an Appointment -->
           <a
             href="#appointmentSection"
@@ -123,117 +161,12 @@
             <!-- Text -->
             <span class="body text-white"> Book an Appointment </span>
             <!-- Icon -->
-            <svg
-              aria-hidden="true"
+            <img
+              src="/phuc/BookAnAppointment.svg"
+              alt="Appointment Icon"
               width="52"
               height="52"
-              viewBox="0 0 52 52"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M49.4375 1H2.5625C1.69956 1 1 1.69956 1 2.5625V49.4375C1 50.3004 1.69956 51 2.5625 51H49.4375C50.3004 51 51 50.3004 51 49.4375V2.5625C51 1.69956 50.3004 1 49.4375 1Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16 16H6V26H16V16Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M25.9995 16H15.9995V26H25.9995V16Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M36 16H26V26H36V16Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M46.0005 16H36.0005V26H46.0005V16Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M46.0005 26H36.0005V36H46.0005V26Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M36 26H26V36H36V26Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M25.9995 26H15.9995V36H25.9995V26Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16 26H6V36H16V26Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16 36H6V46H16V36Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M25.9995 36H15.9995V46H25.9995V36Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M36 36H26V46H36V36Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M11.0005 1H16.0005V3.5C16.0005 4.88071 14.8784 6 13.5005 6C12.1198 6 11.0005 4.8779 11.0005 3.5V1Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M36.0005 1H41.0005V3.5C41.0005 4.88071 39.8784 6 38.5005 6C37.1198 6 36.0005 4.8779 36.0005 3.5V1Z"
-                stroke="#BFD2F8"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            />
           </a>
 
           <!-- Our Doctors -->
@@ -244,33 +177,12 @@
             <!-- Text -->
             <span class="body text-primary"> Our Doctors </span>
             <!-- Icon -->
-            <svg
-              aria-hidden="true"
+            <img
+              src="/phuc/OurDoctors.svg"
+              alt="Doctor Icon"
               width="52"
               height="45"
-              viewBox="0 0 52 45"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M17.7485 14.5942C17.384 14.8187 16.6974 16.2274 17.008 17.4635C17.47 19.3017 19.1133 20.0191 19.1133 20.0191C19.1133 20.0191 21.6841 23.4135 21.6841 25.3876C21.6841 27.3616 21.6841 28.1285 20.9952 29.7754C20.3062 31.4223 6.78262 33.3964 6.2085 43.1052H25.8921L45.7918 43.1073C45.2177 33.3985 31.6941 31.4244 31.0052 29.7775C30.3162 28.1307 30.3162 27.3637 30.3162 25.3897C30.3162 23.4156 32.887 20.0212 32.887 20.0212C32.887 20.0212 34.5303 19.3038 34.9923 17.4656C35.303 16.2296 34.6163 14.8208 34.2518 14.5964C35.2261 11.6235 37.172 1.3748 26.1082 1.00542C26.059 0.998435 26.0101 0.999681 25.9614 1.00112C14.8283 1.37268 16.7742 11.6214 17.7485 14.5942Z"
-                stroke="#1F2B6C"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1 36.6365C4.24791 34.3592 8.29741 33.4755 8.6274 32.6867C9.17278 31.383 9.17278 30.7759 9.17278 29.2132C9.17278 27.6505 7.13764 24.9634 7.13764 24.9634C7.13764 24.9634 5.83677 24.3954 5.47104 22.9402C5.22513 21.9618 5.7687 20.8466 6.05724 20.6689C5.28596 18.3155 3.74557 10.2023 12.5588 9.90819C12.5974 9.90705 12.6361 9.90606 12.675 9.91159C14.5757 9.97505 15.9914 10.4068 17.0352 11.0681C17.1712 12.5372 17.4931 13.8154 17.7483 14.5942C17.3838 14.8186 16.6972 16.2274 17.0078 17.4634C17.4698 19.3016 19.1131 20.0191 19.1131 20.0191C19.1131 20.0191 19.1667 20.0898 19.2584 20.2169C19.2117 20.385 19.1655 20.537 19.1218 20.6706C19.4103 20.8482 19.9539 21.9635 19.7079 22.9419C19.3422 24.3971 18.0413 24.965 18.0413 24.965C18.0413 24.965 16.0062 27.6522 16.0062 29.2149C16.0062 30.5177 16.0062 31.1563 16.3222 32.0882C12.1215 33.9144 6.57168 36.9608 6.20833 43.1052H25.8919L45.7917 43.1073C45.4215 36.8481 39.6693 33.8037 35.4437 31.9892C35.7353 31.0966 35.7353 30.4577 35.7353 29.1894C35.7353 27.6267 33.7001 24.9396 33.7001 24.9396C33.7001 24.9396 32.3993 24.3717 32.0335 22.9165C31.7876 21.938 32.3312 20.8228 32.6197 20.6451C32.6015 20.5896 32.5829 20.5308 32.564 20.469C32.7606 20.1879 32.8869 20.0212 32.8869 20.0212C32.8869 20.0212 34.5302 19.3038 34.9922 17.4656C35.3028 16.2295 34.6162 14.8208 34.2517 14.5963C34.5171 13.7864 34.8546 12.4366 34.9816 10.8935C36.0056 10.3161 37.3557 9.94336 39.1213 9.88443C39.1599 9.88329 39.1986 9.88231 39.2375 9.88783C47.9959 10.1802 46.4555 18.2934 45.6842 20.6468C45.9728 20.8245 46.5164 21.9397 46.2704 22.9182C45.9047 24.3733 44.6038 24.9413 44.6038 24.9413C44.6038 24.9413 42.5687 27.6284 42.5687 29.1911C42.5687 30.7538 42.5687 31.3609 43.1141 32.6647C43.4529 33.4745 47.7126 34.3844 51 36.8V43.2165L39.0665 43.2152H28.2556C28.2561 43.2237 28.2566 43.2321 28.2571 43.2406L12.504 43.239H1V36.6365Z"
-                stroke="#1F2B6C"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            />
           </a>
 
           <!-- Our Specialities -->
@@ -281,66 +193,12 @@
             <!-- Text -->
             <span class="body text-white"> Our Specialities </span>
             <!-- Icon -->
-            <svg
-              aria-hidden="true"
+            <img
+              src="/phuc/OurSpecialities.svg"
+              alt="Specialties Icon"
               width="52"
               height="39"
-              viewBox="0 0 52 39"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M51 1H1V31H51V1Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M48.9168 31.2083H3.0835V34.3333H48.9168V31.2083Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M46.8332 34.3333H5.1665V37.4583H46.8332V34.3333Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M25.7487 27.2886C30.1886 27.2886 33.7879 22.3365 33.7879 16.2277C33.7879 10.1189 30.1886 5.16675 25.7487 5.16675C21.3088 5.16675 17.7095 10.1189 17.7095 16.2277C17.7095 22.3365 21.3088 27.2886 25.7487 27.2886Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M9.98454 27.2886H42.0158C42.0158 24.2342 44.4059 21.7582 47.3543 21.7582V10.6972C44.4059 10.6972 42.0158 8.22114 42.0158 5.16675H9.98454C9.98454 8.22114 7.59439 10.6972 4.646 10.6972V21.7582C7.59439 21.7582 9.98454 24.2342 9.98454 27.2886Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12.1826 17.8077C13.0151 17.8077 13.69 17.1003 13.69 16.2276C13.69 15.3549 13.0151 14.6475 12.1826 14.6475C11.3502 14.6475 10.6753 15.3549 10.6753 16.2276C10.6753 17.1003 11.3502 17.8077 12.1826 17.8077Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M38.8125 17.8077C39.645 17.8077 40.3199 17.1003 40.3199 16.2276C40.3199 15.3549 39.645 14.6475 38.8125 14.6475C37.98 14.6475 37.3052 15.3549 37.3052 16.2276C37.3052 17.1003 37.98 17.8077 38.8125 17.8077Z"
-                stroke="#FCFEFE"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            />
           </a>
         </div>
       </section>
@@ -348,7 +206,7 @@
       <!-- TEXT SECTION -->
       <section class="px-[16px] section">
         <div
-          class="max-w-[343px] mx-auto text-center md:max-w-[520px] lg:max-w-[658px] "
+          class="max-w-[343px] mx-auto text-center md:max-w-[520px] lg:max-w-[658px]"
         >
           <!-- Caption -->
           <p class="caption text-secondary mb-[8px]">Welcome to Meddical</p>
@@ -400,11 +258,21 @@
 
       <!-- SMALL BANNER -->
       <section
-        class="relative overflow-hidden mx-auto h-[150px] w-full md:h-[200px] md:max-w-[768px] lg:h-[250px] lg:max-w-[992px] "
+        class="relative overflow-hidden mx-auto h-[150px] w-full md:h-[200px] md:max-w-[768px] lg:h-[250px] lg:max-w-[992px]"
       >
         <!-- Image -->
-        <img
+        <!-- <img
           src="/phuc/blackdoctors.webp"
+          alt="Black doctors"
+          class="absolute inset-0 w-full h-full object-cover object-center object-[center_35%] md:object-[center_20%] lg:object-[center_15%] z-0"
+        /> -->
+        <img
+          src="/phuc/test/blackdoctors_Copy.webp"
+          srcset="
+            /phuc/test/blackdoctors_Copy_Small.webp  600w,
+            /phuc/test/blackdoctors_Copy.webp       1200w
+          "
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt="Black doctors"
           class="absolute inset-0 w-full h-full object-cover object-center object-[center_35%] md:object-[center_20%] lg:object-[center_15%] z-0"
         />
@@ -433,10 +301,8 @@
       </section>
 
       <!-- SERVICES -->
-      <section
-        class="py-[48px] lg:py-[64px] lg:h-[742px] "
-      >
-        <div class="max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto ">
+      <section class="py-[48px] lg:py-[64px] lg:h-[742px]">
+        <div class="max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto">
           <!-- Heading -->
           <div class="text-center mb-[24px] md:mb-[44px] lg:mb-[64px]">
             <p class="caption text-secondary mb-[8px]">
@@ -448,15 +314,12 @@
 
           <!-- Body -->
           <div
-            class="max-w-[992px] mx-auto grid grid-cols-1 md:grid-cols-[120px_1fr_220px] lg:grid-cols-[157px_1fr_324px] gap-[16px] md:gap-[20px] items-stretch "
+            class="max-w-[992px] mx-auto grid grid-cols-1 md:grid-cols-[120px_1fr_220px] lg:grid-cols-[157px_1fr_324px] gap-[16px] md:gap-[20px] items-stretch"
           >
             <!-- TABS -->
             <div
               id="service-tabs"
-              class="w-full h-full grid grid-cols-2 md:grid-cols-1 border border-primary/20 rounded-[5px] overflow-hidden [&>.service-tab]:h-[106px]
-                                            [&>.service-tab:nth-child(2)]:lg:h-[109px]
-                                            [&>.service-tab:nth-child(3)]:lg:h-[109px]
-                                            [&>.service-tab:nth-child(4)]:lg:h-[117px]"
+              class="w-full h-full grid grid-cols-2 md:grid-cols-1 border border-primary/20 rounded-[5px] overflow-hidden [&>.service-tab]:h-[106px] [&>.service-tab:nth-child(2)]:lg:h-[109px] [&>.service-tab:nth-child(3)]:lg:h-[109px] [&>.service-tab:nth-child(4)]:lg:h-[117px]"
             ></div>
 
             <!-- DETAIL -->
@@ -477,7 +340,7 @@
       <!-- SPECIALTIES -->
       <section
         id="specialtiesSection"
-        class="section max-w-[992px] mx-auto  px-[16px] md:px-[64px] lg:px-0 lg:h-[646px]"
+        class="section max-w-[992px] mx-auto px-[16px] md:px-[64px] lg:px-0 lg:h-[646px]"
       >
         <!-- Heading -->
         <div class="text-center mb-[40px] md:mb-[56px] lg:mb-[64px]">
@@ -500,8 +363,18 @@
       >
         <!-- Background -->
         <!-- Mobile -->
-        <img
+        <!-- <img
           src="/phuc/hero-doctors-scaled-mobile.webp"
+          alt="Doctor"
+          class="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
+        /> -->
+        <img
+          src="/phuc/test/hero-doctors-scaled-mobile_Copy.webp"
+          srcset="
+            /phuc/test/hero-doctors-scaled-mobile_Copy_Small.webp  600w,
+            /phuc/test/hero-doctors-scaled-mobile_Copy.webp       1200w
+          "
+          sizes="100vw"
           alt="Doctor"
           class="absolute inset-0 w-full h-full object-cover object-center block md:hidden"
         />
@@ -556,10 +429,7 @@
       <section id="newsSection" class="hidden md:block"></section>
 
       <!-- CONTACTS -->
-      <section id="contactsSection" class="pt-[64px]"></section>
-
-      <!-- FAQ -->
-      <section id="faq"></section>
+      <section id="contactsSection" class="section"></section>
     </main>
 
     <!-- ================================================================================ -->

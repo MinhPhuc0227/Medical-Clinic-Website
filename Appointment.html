@@ -46,8 +46,29 @@
     <section id="subheader"></section>
 
     <main>
+      <!-- View My Appointments -->
       <section
-        class="mx-auto section flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-6 px-6 md:px-[64px] md:py-[48px] lg:h-[650px] lg:w-[992px] lg:justify-between lg:gap-5 lg:px-0 lg:py-0 "
+        class="mx-auto max-w-[992px] px-6 md:px-[64px] lg:px-0 pt-[32px] md:pt-[64px]"
+      >
+        <div
+          class="mb-[32px] flex flex-col gap-[20px] items-center md:items-start text-center md:text-left"
+        >
+          <p class="body italic text-primary">
+            Already booked? Click the button below to view your appointments.
+          </p>
+          <div class="flex justify-center md:justify-start w-full">
+            <a
+              href="/MyAppointment.html"
+              class="btn-filled footer-2 px-[35px] py-[13px] inline-flex items-center justify-center"
+            >
+              View My Appointments
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto section flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-6 px-6 md:px-[64px] md:py-[48px] lg:h-[650px] lg:w-[992px] lg:justify-between lg:gap-5 lg:px-0 lg:py-0"
       >
         <!-- Left -->
         <div
@@ -65,16 +86,14 @@
           </div>
 
           <!-- Appointment Form -->
-          <section id="app-form"></section>
+          <form id="appointmentForm"></form>
         </div>
 
         <!-- Right -->
         <section
-          class="flex w-full md:w-[320px] lg:w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-6 py-8 md:px-6 md:py-8 lg:h-[650px] lg:w-[481px] lg:px-[50px] lg:pt-[48px] lg:pb-[47px]"
+          class="flex w-full md:w-[320px] lg:w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-6 py-8 md:px-6 md:py-8 lg:min-h-[650px] lg:w-[481px] lg:px-[50px] lg:pt-[48px] lg:pb-[47px]"
         >
-          <h2 class="display-1 text-center text-accent ">
-            Shedule hours
-          </h2>
+          <h2 class="display-1 text-center text-accent">Shedule hours</h2>
 
           <!-- JS sẽ render danh sách vào đây -->
           <ul
