@@ -16,7 +16,11 @@ const appointmentList = document.getElementById("appointment-list");
 
 // ========== Get saved appointment list from localStorage ==========
 function getAppointments() {
-  return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+  } catch {
+    return [];
+  }
 }
 
 // ========== Save new appointments list ==========
@@ -30,7 +34,7 @@ function formatDate(dateString) {
 
   const date = new Date(`${dateString}T00:00:00`);
 
-  return date.toLocaleDateString("en-GB", {
+  return date.toLocaleDateString("en-US", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
@@ -171,7 +175,7 @@ function renderAppointments() {
           >
             <button
               type="button"
-              class="cancel-appointment w-auto rounded-full bg-accent px-5 py-3 button-text text-primary transition hover:bg-primary hover:text-accent"
+              class="cancel-appointment w-auto rounded-full btn-filled footer-2 px-[35px] py-[13px] transition"
               data-id="${appointment.id}"
             >
               Cancel Appointment
