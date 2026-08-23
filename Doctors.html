@@ -40,13 +40,15 @@
     />
   </head>
   <body>
-    <header id="header" class="sticky top-0 z-50 bg-white"></header>
+    <header id="header" class="sticky top-0 z-50 bg-white min-h-[182px] md:min-h-[160px]"></header>
     <main>
       <section id="subheader"></section>
       <!-- Code phần mở rộng -->
-      <section class="section flex justify-between max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto ">
+      <section
+        class="section flex justify-between max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto"
+      >
         <!-- Tìm bác sĩ -->
-        <div class="relative w-[55%] ">
+        <div class="relative w-[55%]">
           <label for="doctor-search" class="sr-only">
             Search doctor by name
           </label>
@@ -84,6 +86,9 @@
         </div>
         <!-- Lọc bác sĩ -->
         <div class="flex flex-row-reverse w-[40%] min-w-0">
+          <label for="specialty-filter" class="sr-only">
+            Filter doctors by specialty
+          </label>
           <select
             id="specialty-filter"
             class="min-w-0 h-[48px] lg:h-[56px] border border-gray-300 rounded-lg px-0 sm:px-2 lg:px-5 outline-none focus:border-primary"
@@ -104,7 +109,7 @@
           class="grid grid-cols-3 items-center mx-auto mt-[48px] lg:mt-[64px]"
         >
           <div class="flex justify-start">
-            <button id="doctor-prev" class="btn-filled">
+            <button aria-label="Previous" id="doctor-prev" class="btn-filled">
               <svg
                 aria-hidden="true"
                 width="13"
@@ -131,7 +136,7 @@
           ></div>
 
           <div class="flex justify-end">
-            <button id="doctor-next" class="btn-filled">
+            <button aria-label="Next" id="doctor-next" class="btn-filled">
               Next
               <svg
                 aria-hidden="true"

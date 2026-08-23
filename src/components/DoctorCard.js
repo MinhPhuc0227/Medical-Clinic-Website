@@ -5,7 +5,8 @@ export function createDoctorCard(doctor) {
             <img
                 src="${doctor.image}"
                 alt="${doctor.name}"
-                loading="lazy"
+                width="317"
+  height="350"
                 class="w-full h-[281px] sm:h-[350px] object-cover"
             >
 
@@ -14,9 +15,9 @@ export function createDoctorCard(doctor) {
                     ${doctor.name}
                 </p>
 
-                <h3 class="caption mt-0 sm:mt-[12px] text-[18px]" >
+                <h2 class="caption mt-0 sm:mt-[12px] text-[18px]" >
                     ${doctor.specialty}
-                </h3>
+                </h2>
 
                 <div class="flex justify-center gap-[20px] mt-[12px] sm:mt-4 ">
                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 

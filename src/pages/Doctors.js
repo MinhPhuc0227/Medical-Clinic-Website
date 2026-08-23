@@ -21,7 +21,7 @@ export async function initDoctorPage() {
   const doctors = await fetchJson("/Doctors.json");
 
   const select = document.getElementById("specialty-filter");
-const searchInput = document.getElementById("doctor-search");
+  const searchInput = document.getElementById("doctor-search");
   // lấy danh sách specialty không trùng
   const specialties = [...new Set(doctors.map((d) => d.specialty))];
 
@@ -40,10 +40,10 @@ const searchInput = document.getElementById("doctor-search");
   });
 
   searchInput.addEventListener("input", () => {
-  searchKeyword = searchInput.value.trim().toLowerCase();
+    searchKeyword = searchInput.value.trim().toLowerCase();
 
-  filterDoctors(select.value);
-});
+    filterDoctors(select.value);
+  });
   const track = document.getElementById("doctor-track");
   const dotsContainer = document.getElementById("doctor-dots");
   const prevBtn = document.getElementById("doctor-prev");
@@ -93,43 +93,50 @@ const searchInput = document.getElementById("doctor-search");
     updateButtons();
   }
   function filterDoctors(specialty) {
-  filteredDoctors = doctors.filter((doctor) => {
-    // Lọc chuyên khoa
-    const matchSpecialty =
-      specialty === "all" || doctor.specialty === specialty;
+    filteredDoctors = doctors.filter((doctor) => {
+      // Lọc chuyên khoa
+      const matchSpecialty =
+        specialty === "all" || doctor.specialty === specialty;
 
-    // Tìm kiếm tên
-    const matchName = doctor.name
-      .toLowerCase()
-      .includes(searchKeyword);
+      // Tìm kiếm tên
+      const matchName = doctor.name.toLowerCase().includes(searchKeyword);
 
-    return matchSpecialty && matchName;
-  });
+      return matchSpecialty && matchName;
+    });
 
-  cardsPerSlide = getCardsPerSlide();
-  totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
-  currentSlide = 0;
+    cardsPerSlide = getCardsPerSlide();
+    totalSlides = Math.ceil(filteredDoctors.length / cardsPerSlide);
+    currentSlide = 0;
 
-  renderSlide(0);
-}
-
+    renderSlide(0);
+  }
 
   function updateDots() {
-    dotsContainer.innerHTML = "";
+  dotsContainer.innerHTML = "";
 
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement("button");
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("button");
 
-      dot.className =
-        i === currentSlide
-          ? "w-3 h-3 rounded-full bg-primary"
-          : "w-3 h-3 rounded-full bg-accent";
+    dot.className =
+      "w-11 h-11 flex items-center justify-center";
 
-      dot.addEventListener("click", () => renderSlide(i));
+    dot.setAttribute(
+      "aria-label",
+      `Go to doctors page ${i + 1}`
+    );
 
-      dotsContainer.appendChild(dot);
-    }
+    dot.innerHTML = `
+      <span class="
+        w-3 h-3 rounded-full
+        ${i === currentSlide ? "bg-primary" : "bg-accent"}
+      "></span>
+    `;
+
+    dot.addEventListener("click", () => renderSlide(i));
+
+    dotsContainer.appendChild(dot);
   }
+}
 
   function updateButtons() {
     if (currentSlide === 0) {
