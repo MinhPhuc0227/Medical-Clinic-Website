@@ -117,7 +117,7 @@
         name="time"
         required
         min="09:00"
-        max="19:00"
+        max="18:30"
         autocomplete="off"
         onfocus="this.type = 'time'"
         onblur="if (!this.value) this.type = 'text';"
@@ -223,8 +223,10 @@
       name="message"
       placeholder="Message"
       autocomplete="off"
+      aria-describedby="contactMessage-hint"
       class="body col-span-1 md:col-span-2 h-[189px] resize-none border border-accent bg-primary pt-4 pb-4 pl-5 pr-4 text-white placeholder-white outline-none"
     ></textarea>
+    <span id="contactMessage-hint" class="sr-only">Enter your message.</span>
 
     <button
       type="submit"

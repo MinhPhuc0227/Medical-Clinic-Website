@@ -94,12 +94,14 @@ export async function initAppForm() {
 
   const selectedTime = timeInput.value;
 
-  const isBooked = bookings.some(
-    (booking) =>
-      booking.date === date &&
-      booking.doctor === doctor &&
-      booking.time === selectedTime,
-  );
+  const selectedMinutes = Number(selectedTime.split(":")[0]) * 60 + Number(selectedTime.split(":")[1]);
+  const isBooked = bookings.some((booking) => {
+    if (booking.date !== date || booking.doctor !== doctor) 
+      return false;
+    const [hour, minute] = booking.time.split(":").map(Number);
+    const bookingMinutes = hour * 60 + minute;
+    return Math.abs(selectedMinutes - bookingMinutes) < 15;
+  });
 
   if (selectedTime && isBooked) {
     timeInput.setCustomValidity(
@@ -265,7 +267,7 @@ function addSubmitAppointmentFormEvent() {
   const totalMinutes = hour * 60 + minute;
 
   const openingTime = 9 * 60;
-  const closingTime = 19 * 60;
+  const closingTime = 18.5 * 60;
 
   if (totalMinutes < openingTime || totalMinutes > closingTime) {
     showError(
@@ -283,12 +285,17 @@ function addSubmitAppointmentFormEvent() {
     // --- LƯU DATA ---
     const appointments = JSON.parse(localStorage.getItem("appointmentFormData")) || [];
 
-    const isDuplicate = appointments.some(
-      (b) => b.date === date && b.time === time && b.doctor === doctor
-    );
+    const selectedMinutes = Number(time.split(":")[0]) * 60 + Number(time.split(":")[1]);
+    const isDuplicate = appointments.some((booking) => {
+      if (booking.date !== date || booking.doctor !== doctor)
+        return false;
+      const [hour, minute] = booking.time.split(":").map(Number);
+      const bookingMinutes = hour * 60 + minute;
+      return Math.abs(selectedMinutes - bookingMinutes) < 15;
+    });
 
     if (isDuplicate) {
-      alert ("Giờ này bác sĩ đã kín lịch, vui lòng chọn giờ khác.");
+      alert ("Giờ này bác sĩ đã có lịch hẹn, vui lòng chọn khoảng thời gian sớm hoặc trễ hơn 15 phút!");
       showError("appointmentTime", "Trùng lịch đặt.");
       return; 
     }
