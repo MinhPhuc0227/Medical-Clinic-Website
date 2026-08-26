@@ -31,19 +31,33 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Google Fonts (Optimized) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="preload" href="/ScheduleHours.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/WorkSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/YesevaOne-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" as="image" href="/quy/bigstock-african-doctor-optimized.webp" fetchpriority="high" />
   </head>
+  
 
   <body>
-    <header id="header" class="sticky top-0 z-50 bg-white shadow-sm"></header>
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-sm min-h-[182px] md:min-h-[160px] lg:min-h-[160px]"></header>
 
-    <section id="subheader"></section>
+    <section id="subheader" class="min-h-[140px] md:min-h-[180px] lg:min-h-[250px]"></section>
 
     <main>
       <!-- View My Appointments -->
@@ -98,7 +112,7 @@
           <!-- JS sẽ render danh sách vào đây -->
           <ul
             id="schedule-list"
-            class="mt-6 flex flex-col gap-[30px] md:gap-[40px] lg:gap-[30px] md:mt-8 lg:mt-[51px]"
+            class="mt-6 flex flex-col gap-[30px] md:gap-[40px] lg:gap-[30px] md:mt-8 lg:mt-[51px] min-h-[275px] sm:min-h-[285px] md:min-h-[366px] lg:min-h-[326px]"
           ></ul>
 
           <footer class="mt-auto pt-[32px]">

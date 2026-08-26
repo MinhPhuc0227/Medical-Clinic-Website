@@ -78,6 +78,46 @@ export async function initAppForm() {
     doctorSelect.selectedIndex = 0;
   });
 
+  // --- HÀM KIỂM TRA VÀ KHÓA GIỜ TRÙNG LỊCH (Đọc từ Local Storage) ---
+  function updateAvailableTimes() {
+  const date = document.getElementById("appointmentDate").value;
+  const doctor = doctorInput.value;
+
+  if (!date || !doctor) return;
+
+  const bookings =
+    JSON.parse(localStorage.getItem("appointmentFormData")) || [];
+
+  const timeInput = document.getElementById("appointmentTime");
+
+  if (!timeInput) return;
+
+  const selectedTime = timeInput.value;
+
+  const selectedMinutes = Number(selectedTime.split(":")[0]) * 60 + Number(selectedTime.split(":")[1]);
+  const isBooked = bookings.some((booking) => {
+    if (booking.date !== date || booking.doctor !== doctor) 
+      return false;
+    const [hour, minute] = booking.time.split(":").map(Number);
+    const bookingMinutes = hour * 60 + minute;
+    return Math.abs(selectedMinutes - bookingMinutes) < 15;
+  });
+
+  if (selectedTime && isBooked) {
+    timeInput.setCustomValidity(
+      "Giờ này bác sĩ đã kín lịch, vui lòng chọn giờ khác.",
+    );
+  } else {
+    timeInput.setCustomValidity("");
+  }
+}
+
+  // Gắn sự kiện "Lắng nghe thay đổi"
+  // Hễ khách đổi Ngày hoặc đổi Bác sĩ là chạy lại hàm check giờ
+  document.getElementById("appointmentDate").addEventListener("change", updateAvailableTimes);
+  document.getElementById("appointmentTime").addEventListener("change", updateAvailableTimes);  
+  doctorSelect.addEventListener("change", updateAvailableTimes);
+
   addSubmitAppointmentFormEvent();
 }
 // nút submit
@@ -86,6 +126,63 @@ function addSubmitAppointmentFormEvent() {
 
   if (!form) return;
 
+  form.setAttribute("novalidate", "true");
+
+  // --- HÀM BÁO LỖI ---
+  function showError(inputId, message) {
+    const targetId = (inputId === 'doctor-input') ? 'doctor-select' : 
+                     (inputId === 'department-input') ? 'department-select' : inputId;
+                     
+    const inputElement = document.getElementById(targetId);
+    if (!inputElement) return;
+
+    inputElement.style.border = '1px solid #ef4444';
+
+    let wrapper = inputElement.parentElement;
+    if (!wrapper.classList.contains('custom-error-wrapper')) {
+      wrapper = document.createElement('div');
+      wrapper.className = 'custom-error-wrapper';
+      wrapper.style.position = 'relative'; 
+      wrapper.style.display = 'block';
+      wrapper.style.width = '100%';
+      wrapper.style.height = '100%'; 
+
+      inputElement.parentNode.insertBefore(wrapper, inputElement);
+      wrapper.appendChild(inputElement);
+
+      inputElement.style.width = '100%';
+      inputElement.style.height = '100%';
+      inputElement.style.boxSizing = 'border-box';
+      inputElement.style.paddingBottom = '18px'; 
+    }
+
+    let errorElement = wrapper.querySelector('.form-error-msg');
+    if (!errorElement) {
+      errorElement = document.createElement('span');
+      errorElement.className = 'form-error-msg';
+      errorElement.style.color = '#ef4444';
+      errorElement.style.fontSize = '12px';
+      
+      errorElement.style.position = 'absolute';
+      errorElement.style.bottom = '4px'; 
+      errorElement.style.left = '15px'; 
+      errorElement.style.zIndex = '10';
+      errorElement.style.pointerEvents = 'none'; 
+      
+      wrapper.appendChild(errorElement);
+    }
+    errorElement.innerText = message;
+  }
+
+  // --- HÀM XÓA LỖI CŨ ---
+  function clearErrors() {
+    const errorMessages = form.querySelectorAll('.form-error-msg');
+    errorMessages.forEach(msg => msg.innerText = '');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => input.style.border = '');
+  }
+
+  // --- XỬ LÝ SUBMIT ---
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -97,47 +194,119 @@ function addSubmitAppointmentFormEvent() {
     const time = document.getElementById("appointmentTime").value;
     const doctor = document.getElementById("doctor-input").value.trim();
     const department = document.getElementById("department-input").value.trim();
-    const message = document.getElementById("appointmentMessage").value.trim();
+    const message = document.getElementById("appointmentMessage") ? document.getElementById("appointmentMessage").value.trim() : "";
 
-    if (
-      !name ||
-      !gender ||
-      !email ||
-      !phone ||
-      !date ||
-      !time ||
-      !doctor ||
-      !department
-    ) {
-      alert("Please fill in all fields.");
-      return;
+    clearErrors(); 
+    let isMissingField = false;
+
+    // 1. Check rỗng
+    if (!name) { showError("appointmentName", "Vui lòng nhập họ và tên."); isMissingField = true; }
+    if (!gender) { showError("appointmentGender", "Vui lòng chọn giới tính."); isMissingField = true; }
+    if (!email) { showError("appointmentEmail", "Vui lòng nhập email."); isMissingField = true; }
+    if (!phone) { showError("appointmentPhone", "Vui lòng nhập số điện thoại."); isMissingField = true; }
+    if (!date) { showError("appointmentDate", "Vui lòng chọn ngày."); isMissingField = true; }
+    if (!time) { showError("appointmentTime", "Vui lòng chọn giờ."); isMissingField = true; }
+    if (!doctor) { showError("doctor-input", "Vui lòng chọn bác sĩ."); isMissingField = true; }
+    if (!department) { showError("department-input", "Vui lòng chọn khoa."); isMissingField = true; }
+
+    if (isMissingField) {
+      return; 
     }
 
+    let isFormatError = false; 
+
+    // 2. Check định dạng Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
+    if (email && !emailRegex.test(email)) {
+      showError("appointmentEmail", "Vui lòng nhập email hợp lệ.");
+      isFormatError = true;
     }
-    const appointments =
-      JSON.parse(localStorage.getItem("appointmentFormData")) || [];
+
+    // 3. Check định dạng SĐT
+    if (phone) {
+      // Kiểm tra có chứa chữ cái hay ký tự lạ không
+      if (!/^\d+$/.test(phone)) {
+        showError("appointmentPhone", "SĐT chỉ được chứa chữ số.");
+        isFormatError = true;
+      } 
+      // Kiểm tra bắt đầu bằng số 0
+      else if (!phone.startsWith("0")) {
+        showError("appointmentPhone", "SĐT phải bắt đầu bằng số 0.");
+        isFormatError = true;
+      } 
+      // Kiểm tra độ dài 10 số
+      else if (phone.length !== 10) {
+        showError("appointmentPhone", "SĐT phải có đúng 10 số.");
+        isFormatError = true;
+      } 
+    }
+
+    // --- CHECK THỜI GIAN ---
+    if (date && time) {
+      const selectedDate = new Date(`${date}T00:00:00`);
+      const dayOfWeek = selectedDate.getDay();
+      if (dayOfWeek === 0) 
+        {
+          alert("Chủ nhật phòng khám đóng cửa, vui lòng chọn ngày khác.");
+          isFormatError = true;
+        }
+      // Ghép ngày và giờ lại để tạo thành mốc thời gian đặt lịch
+      const appointmentDateTime = new Date(`${date} ${time}`);
+      // Lấy thời gian hiện tại của hệ thống ngay lúc này
+      const now = new Date();
+
+      // Nếu mốc thời gian đặt lịch nhỏ hơn hiện tại -> Báo lỗi!
+      if (appointmentDateTime < now) {
+        showError("appointmentDate", "Ngày giờ đã qua, vui lòng chọn lại.");
+        showError("appointmentTime", "Thời gian không hợp lệ.");
+        isFormatError = true;
+      }
+
+      // Kiểm tra giờ làm việc: 09:00 - 19:00
+  const [hour, minute] = time.split(":").map(Number);
+  const totalMinutes = hour * 60 + minute;
+
+  const openingTime = 9 * 60;
+  const closingTime = 18.5 * 60;
+
+  if (totalMinutes < openingTime || totalMinutes > closingTime) {
+    showError(
+      "appointmentTime",
+      "Ngoài giờ làm việc.",
+    );
+    isFormatError = true;
+  }
+    }
+
+    if (isFormatError) {
+      return; // Dừng lại không cho lưu nếu vướng ngàm lỗi định dạng/thời gian
+    }
+
+    // --- LƯU DATA ---
+    const appointments = JSON.parse(localStorage.getItem("appointmentFormData")) || [];
+
+    const selectedMinutes = Number(time.split(":")[0]) * 60 + Number(time.split(":")[1]);
+    const isDuplicate = appointments.some((booking) => {
+      if (booking.date !== date || booking.doctor !== doctor)
+        return false;
+      const [hour, minute] = booking.time.split(":").map(Number);
+      const bookingMinutes = hour * 60 + minute;
+      return Math.abs(selectedMinutes - bookingMinutes) < 15;
+    });
+
+    if (isDuplicate) {
+      alert ("Giờ này bác sĩ đã có lịch hẹn, vui lòng chọn khoảng thời gian sớm hoặc trễ hơn 15 phút!");
+      showError("appointmentTime", "Trùng lịch đặt.");
+      return; 
+    }
 
     const appointment = {
       id: crypto.randomUUID(),
-      name,
-      gender,
-      email,
-      phone,
-      date,
-      time,
-      doctor,
-      department,
-      message,
+      name, gender, email, phone, date, time, doctor, department, message,
       createdAt: new Date().toLocaleString("sv-SE"),
     };
 
     appointments.push(appointment);
-
     localStorage.setItem("appointmentFormData", JSON.stringify(appointments));
 
     alert("Appointment booked successfully!");

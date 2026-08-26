@@ -76,39 +76,52 @@
               <!-- Row 1: Name, Email -->
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 <!-- Name -->
+                <label for="contactName" class="sr-only">Name</label>
                 <input
                   id="contactName"
                   name="name"
                   type="text"
                   placeholder="Name"
+                  autocomplete="name"
+                  required  
                   class="text-[13px] md:text-[15px] lg:body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none rounded-tl-[5px]"
                 />
                 <!-- Email -->
+                <label for="contactEmail" class="sr-only">Email</label>
                 <input
                   id="contactEmail"
                   name="email"
                   type="email"
                   placeholder="Email"
+                  autocomplete="email"
+                  required  
                   class="text-[13px] md:text-[15px] lg:body h-[50px] border border-accent md:border-l-0 lg:border-l-0 bg-primary px-5 text-white placeholder-white outline-none md:rounded-tr-[5px] lg:rounded-tr-[5px]"
                 />
               </div>
 
               <!-- Row 2: Subject -->
+              <label for="contactSubject" class="sr-only">Subject</label>
               <input
                 id="contactSubject"
                 name="subject"
                 type="text"
                 placeholder="Subject"
+                placeholder="Subject"
+                required  
                 class="text-[13px] md:text-[15px] lg:body h-[50px] w-full border-x border-b border-accent bg-primary px-5 text-white placeholder-white outline-none"
               />
 
               <!-- Row 3: Message -->
+              <label for="contactMessage" class="sr-only">Message</label>
               <textarea
                 id="contactMessage"
                 name="message"
                 placeholder="Message"
+                autocomplete="off"
+                aria-describedby="contactMessage-hint"
                 class="text-[13px] md:text-[15px] lg:body flex-1 h-[235px] resize-none border-x border-b border-accent bg-primary p-5 text-white placeholder-white outline-none"
               ></textarea>
+              <span id="contactMessage-hint" class="sr-only">Enter your message.</span>
 
               <!-- Button -->
               <button

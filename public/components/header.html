@@ -243,51 +243,33 @@
   </div>
   <!-- ==================== NAVIGATION BAR ======================= -->
   <!-- Tablet, Laptop -->
-  <nav class="bg-primary md:h-[80px] w-full hidden md:block">
+  <nav class="bg-primary md:h-[80px] w-full hidden md:block" aria-label="Desktop Navigation">
     <div
       class="md:max-w-[720px] lg:max-w-[995px] mx-auto flex items-center justify-between h-full"
     >
       <!-- Menu items -->
       <ul class="flex items-center gap-[15px] lg:gap-[20px]">
         <li>
-          <a
-            href="/index.html"
-            class="nav-link footer-1 text-white hover:text-accent"
+          <a href="/index.html" class="nav-link footer-1 text-white hover:text-accent p-2 inline-block"
             >Home</a
           >
         </li>
         <li>
-          <a
-            href="/About.html"
-            class="nav-link nav text-white hover:text-accent whitespace-nowrap"
-            >About us</a
-          >
+          <a href="/About.html" class="nav-link nav text-white hover:text-accent whitespace-nowrap p-2 inline-block">About us</a>
         </li>
         <li>
-          <a
-            href="/Services.html"
-            class="nav-link nav text-white hover:text-accent"
+          <a href="/Services.html" class="nav-link nav text-white hover:text-accent p-2 inline-block"
             >Services</a
           >
         </li>
         <li>
-          <a
-            href="/Doctors.html"
-            class="nav-link nav text-white hover:text-accent"
-            >Doctors</a
-          >
+          <a href="/Doctors.html" class="nav-link nav text-white hover:text-accent p-2 inline-block">Doctors</a>
         </li>
         <li>
-          <a href="/News.html" class="nav-link nav text-white hover:text-accent"
-            >News</a
-          >
+          <a href="/News.html" class="nav-link nav text-white hover:text-accent p-2 inline-block">News</a>
         </li>
         <li>
-          <a
-            href="/Contact.html"
-            class="nav-link nav text-white hover:text-accent"
-            >Contact</a
-          >
+          <a href="/Contact.html" class="nav-link nav text-white hover:text-accent p-2 inline-block">Contact</a>
         </li>
       </ul>
 
@@ -305,7 +287,7 @@
           />
         </div>
         <!-- Search icon -->
-        <button type="button" aria-label="Search">
+        <button type="button" aria-label="Search" class="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
           <svg
             aria-hidden="true"
             class="w-[20px] h-[20px] lg:w-[22px] lg:h-[22px]"
@@ -341,11 +323,7 @@
     </div>
   </nav>
 
-  <!--Mobile  -->
-
-  <nav
-    class="relative md:hidden bg-primary h-[70px] py-[19px] px-[10px] sm:px-[30px] gap-[30px] flex items-center justify-between"
-  >
+  <nav class=" relative md:hidden bg-primary h-[70px] py-[19px] px-[10px] sm:px-[30px] gap-[30px] flex items-center justify-between " aria-label="Mobile Navigation">
     <!-- logo -->
     <div>
       <a
@@ -356,66 +334,53 @@
         ><span class="text-white">DICAL</span>
       </a>
     </div>
-    <div class="flex items-center ml-auto gap-[clamp(10px,3vw,30px)]">
-      <!-- Button search -->
-      <div class="flex">
-        <div
-          class="border-b border-transparent focus-within:border-white transition-all duration-300"
-        >
-          <label for="search-input" class="sr-only">Search</label>
+  <div class="flex items-center ml-auto gap-[clamp(10px,3vw,30px)]">
+<!-- Button search -->
+    <div class="flex">
+      <div class="border-b border-transparent focus-within:border-white transition-all duration-300">
+        <label for="search-input-mobile" class="sr-only">Search</label>
           <input
             type="text"
-            id="search-input"
+            id="search-input-mobile"
             placeholder=""
             class="w-[clamp(40px,20vw,100px)] sm:w-[200px] h-[50px] bg-primary px-4 text-white placeholder:text-white outline-none"
           />
-        </div>
-        <button type="button" aria-label="Search">
-          <svg
-            aria-hidden="true"
-            class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.88894 18.7779C14.7982 18.7779 18.7779 14.7982 18.7779 9.88894C18.7779 4.97971 14.7982 1 9.88894 1C4.97971 1 1 4.97971 1 9.88894C1 14.7982 4.97971 18.7779 9.88894 18.7779Z"
-              stroke="#FCFEFE"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M21.0004 21.0001L16.167 16.1667"
-              stroke="#FCFEFE"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+      </div>
+        <button type="button" aria-label="Search" class="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+          <svg aria-hidden=true class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.88894 18.7779C14.7982 18.7779 18.7779 14.7982 18.7779 9.88894C18.7779 4.97971 14.7982 1 9.88894 1C4.97971 1 1 4.97971 1 9.88894C1 14.7982 4.97971 18.7779 9.88894 18.7779Z" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21.0004 21.0001L16.167 16.1667" stroke="#FCFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-      </div>
-      <!-- Button list -->
-      <button id="menuBtn" aria-label="Open menu" type="button">
-        <svg
-          aria-hidden="true"
-          class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]"
-          viewBox="0 0 24 17"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M24 14.4V16.8H0V14.4H24ZM24 7.2V9.6H0V7.2H24ZM24 0V2.4H0V0H24Z"
-            fill="#FCFEFE"
-          />
+    </div>
+     <!-- Button list -->
+        <button id="menuBtn" aria-label="Open menu" type="button" class="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+        <svg aria-hidden = true class="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 14.4V16.8H0V14.4H24ZM24 7.2V9.6H0V7.2H24ZM24 0V2.4H0V0H24Z" fill="#FCFEFE"/>
         </svg>
-      </button>
-      <!-- Menu Mobile -->
-      <div
-        id="mobileMenu"
-        class="absolute left-0 top-full h-[441px] w-full bg-accent opacity-0 invisible transition-all duration-300"
+        </button>
+        <!-- Menu Mobile -->
+        <div
+    id="mobileMenu"
+    class="absolute left-0 top-full h-[441px] w-full bg-accent
+           opacity-0
+           invisible
+           transition-all
+           duration-300"
+  >
+    <ul class="flex flex-col items-center gap-[20px] pt-[48px] nav text-primary">
+      <li><a href="index.html" class="nav-link p-2 inline-block">Home</a></li>
+      <li><a href="About.html" class="nav-link p-2 inline-block">About us</a></li>
+      <li><a href="Services.html" class="nav-link p-2 inline-block">Services</a></li>
+      <li><a href="Doctors.html" class="nav-link p-2 inline-block">Doctors</a></li>
+      <li><a href="News.html" class="nav-link p-2 inline-block">News</a></li>
+      <li><a href="Contact.html" class="nav-link p-2 inline-block">Contact</a></li>
+    </ul>
+
+    <div class="pt-[32px] pb-[48px] flex justify-center">
+      <a
+        href="/Appointment.html"
+        class="bg-primary text-accent footer-2 rounded-full w-[295px] h-[45px] flex justify-center items-center"
       >
         <ul
           class="flex flex-col items-center gap-[20px] pt-[48px] nav text-primary"
