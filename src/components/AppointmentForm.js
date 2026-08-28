@@ -1,3 +1,5 @@
+import { fetchJson } from "../js/common.js";
+
 export async function initAppForm() {
   const doctorSelect = document.getElementById("doctor-select");
   const doctorInput = document.getElementById("doctor-input");
@@ -10,8 +12,7 @@ export async function initAppForm() {
   }
 
   // Lấy dữ liệu bác sĩ
-  const response = await fetch("/Doctors.json");
-  const doctors = await response.json();
+  const doctors = await fetchJson("/Doctors.json");
 
   // Lấy danh sách khoa (không trùng)
   const departments = [...new Set(doctors.map((doctor) => doctor.specialty))];

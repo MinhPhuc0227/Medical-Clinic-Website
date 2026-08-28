@@ -1,6 +1,6 @@
 import "../css/main.css";
 import { icons } from "../js/icons.js";
-import { loadComponent, setActiveNav } from "../js/common";
+import { loadComponent, setActiveNav, fetchJson } from "../js/common";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initDoctorSection } from "../components/DoctorSection.js";
@@ -41,8 +41,7 @@ async function initMainContent() {
   }
 
   // Load services data
-  const response = await fetch("/services.json");
-  const services = await response.json();
+  const services = await fetchJson("/services.json");
 
   // Find selected service
   const service = services.find((item) => item.id === id);

@@ -1,6 +1,6 @@
 // THÊM ACTIVE HOME TAB TRONG SET ACTIVE NAV
 import "../css/main.css";
-import { loadComponent, setActiveNav } from "../js/common.js";
+import { loadComponent, setActiveNav, fetchJson } from "../js/common.js";
 import { initNewsletter } from "../components/NewsLetter.js";
 import { initHeader } from "../components/header.js";
 
@@ -27,9 +27,8 @@ async function loadSpecialty() {
     }
 
     // Load data
-    const response = await fetch("/specialties.json");
-    const specialties = await response.json();
-
+    const specialties = await fetchJson("/specialties.json");
+    
     // Find specialty
     const specialty = specialties.find((item) => item.id === id);
 

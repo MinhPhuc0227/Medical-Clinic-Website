@@ -1,8 +1,9 @@
+import { fetchJson } from "../js/common.js";
 import { icons } from "../js/icons.js";
+
 export async function loadServices() {
   const container = document.getElementById("servicecard");
-  const response = await fetch("/services.json");
-  const services = await response.json();
+  const services = await fetchJson("/services.json");
 
   let html = "";
 

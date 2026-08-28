@@ -1,7 +1,8 @@
+import { fetchJson } from "../js/common.js";
+
 export async function loadSubHeader(page) {
   const container = document.getElementById("subheader");
-  const response = await fetch("/subheaders.json");
-  const subHeaders = await response.json();
+  const subHeaders = await fetchJson("/subheaders.json");
   const data = subHeaders[page];
 
   if (!data) {
@@ -15,7 +16,7 @@ export async function loadSubHeader(page) {
       <img
         src="${data.image}"
         alt="${data.title}"
-        fetchpriority="high"
+        fetchJsonpriority="high"
         width="1366"
         height="250"
         class="absolute inset-0 w-full h-full object-cover object-[center_30%]"

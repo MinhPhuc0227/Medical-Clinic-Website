@@ -1,5 +1,5 @@
 import "../css/main.css";
-import { fetchJson, loadComponent, getNews, setActiveNav } from "../js/common";
+import { loadComponent, getNews, setActiveNav } from "../js/common";
 import { createNewsCard } from "../components/NewsCard";
 import { initSideBar } from "../components/SideBar";
 import { loadSubHeader } from "../components/SubHeader.js";
@@ -85,7 +85,7 @@ function renderPagination() {
         ${i}
       </button>
     `;
-// Thêm dấu "-" nếu chưa phải số cuối
+    // Thêm dấu "-" nếu chưa phải số cuối
     if (i < totalPages) {
       container.innerHTML += `
         <span class="text-primary">-</span>
@@ -97,13 +97,9 @@ function renderPagination() {
 function applyNewsFilters() {
   filteredNews = newsData.filter((news) => {
     const matchCategory =
-      selectedCategory === "All" ||
-      news.category === selectedCategory;
+      selectedCategory === "All" || news.category === selectedCategory;
 
-    const matchSearch =
-      news.title
-        .toLowerCase()
-        .includes(searchKeyword);
+    const matchSearch = news.title.toLowerCase().includes(searchKeyword);
 
     return matchCategory && matchSearch;
   });
@@ -145,9 +141,7 @@ document.addEventListener("newsCategoryChange", (e) => {
 });
 
 searchInput.addEventListener("input", () => {
-  searchKeyword = searchInput.value
-    .trim()
-    .toLowerCase();
+  searchKeyword = searchInput.value.trim().toLowerCase();
 
   applyNewsFilters();
 });

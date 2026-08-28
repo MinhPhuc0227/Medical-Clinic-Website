@@ -9,51 +9,20 @@ export async function loadComponent(id, file) {
   const html = await response.text();
   document.getElementById(id).innerHTML = html;
 }
+export async function fetchJson(url) {
+  try {
+    const response = await fetch(url);
 
-export async function fetchJson(path) {
-  const response = await fetch(path);
-  return await response.json();
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Fetch error:", error);
+    return [];
+  }
 }
-
-// // set active navigation bar tab
-// export function setActiveNav() {
-//   const currentPage = window.location.pathname.split("/").pop();
-
-//   document.querySelectorAll(".nav-link").forEach((link) => {
-//     const linkPage = link.getAttribute("href").split("/").pop();
-
-//     if (linkPage === currentPage) {
-//       link.classList.add("text-accent");
-//     }
-//   });
-// }
-
-// export function setActiveNav() {
-//   let currentPage = window.location.pathname.split("/").pop() || "index.html";
-//   // Nếu đang ở trang News Detail thì vẫn active menu News
-//   if (currentPage === "NewsDetail.html") {
-//     currentPage = "News.html";
-//   }
-//   if (currentPage === "ServiceDetail.html") {
-//     currentPage = "Services.html";
-//   }
-//   if (currentPage === "DoctorDetail.html") {
-//     currentPage = "Doctors.html";
-//   }
-
-//   if (currentPage === "SpecialtyDetail.html") {
-//     currentPage = "index.html";
-//   }
-//   document.querySelectorAll(".nav-link").forEach((link) => {
-//     link.classList.remove("text-accent");
-
-//     const href = link.getAttribute("href");
-
-//     if (href === currentPage) {
-//       link.classList.add("text-accent");
-//     }
-//   });
-// }
 
 export function setActiveNav() {
   let currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -146,7 +115,6 @@ export async function getNews() {
     "health.com",
     "medicalnewstoday.com",
     "medscape.com",
-    
   ];
   //lọc bỏ bài có nguồn chặn ảnh
   const newsData = newsList.map((item, index) => {

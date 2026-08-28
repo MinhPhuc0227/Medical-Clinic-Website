@@ -1,5 +1,5 @@
 import "../css/main.css";
-import { loadComponent, setActiveNav } from "../js/common.js";
+import { loadComponent, setActiveNav, fetchJson } from "../js/common.js";
 import { loadSubHeader } from "../components/SubHeader.js";
 import { initAppForm } from "../components/AppointmentForm.js";
 import { initNewsletter } from "../components/NewsLetter.js";
@@ -22,12 +22,13 @@ await loadFAQ();
 const scheduleList = document.getElementById("schedule-list");
 
 if (scheduleList) {
-  const response = await fetch("/ScheduleHours.json");
-  const schedules = await response.json();
+  const schedules = await fetchJson("/ScheduleHours.json");
 
   scheduleList.innerHTML = "";
 
-  scheduleList.innerHTML = schedules.map((item) => `
+  scheduleList.innerHTML = schedules
+    .map(
+      (item) => `
   <li class="grid grid-cols-[90px_1fr_130px] items-center gap-2 md:grid-cols-[90px_1fr_150px] lg:grid-cols-[100px_1fr_165px]">
     <span class="section-text lg:text-[18px] lg:leading-[130%] font-body font-normal text-white ml-5 md:ml-7 lg:ml-0">
       ${item.day}
@@ -37,5 +38,7 @@ if (scheduleList) {
       ${item.time}
     </span>
   </li>
-`).join("");
+`,
+    )
+    .join("");
 }
