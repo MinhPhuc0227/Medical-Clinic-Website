@@ -1,0 +1,164 @@
+[
+  {
+    "id": "free-checkup",
+    "title": "Free Checkup",
+    "body": "Get a complimentary health assessment to screen for potential risks and maintain your overall well-being.",
+    "image": "phuc/pregnant-anemia-race-main.webp",
+    "subImage": "phuc/blackdoctors.webp",
+    "icon": "freeCheckup",
+    "meta": {
+      "description": "Book a free health checkup at MEDDICAL to identify potential health risks early and maintain your long-term well-being.",
+      "keywords": "free checkup, health screening, preventive care, medical examination, wellness, MEDDICAL"
+    },
+    "detail": {
+      "heading": "A passion for putting patients first",
+      "keywords": [
+        "A Passion for Healing",
+        "All our best",
+        "5-Star Care",
+        "Believe in Us",
+        "A Legacy of Excellence",
+        "Always Caring"
+      ],
+      "description": [
+        "Receive a comprehensive health screening designed to detect potential issues early and help you maintain a healthier lifestyle with confidence. Using advanced technology, our specialists deliver evaluations and recommendations for better cardiovascular health.",
+        "Our experienced medical professionals provide compassionate care, personalized guidance, and reliable recommendations for your long-term well-being."
+      ]
+    }
+  },
+  {
+    "id": "cardiogram",
+    "title": "Cardiogram",
+    "body": "Quickly measure your heart's electrical activity to monitor cardiac health and detect any irregularities early.",
+    "image": "phuc/1920_finalliverdisparity.webp",
+    "subImage": "phuc/black-women-with-stethoscope.webp",
+    "icon": "cardiogram",
+    "meta": {
+      "description": "Explore MEDDICAL's cardiogram service for accurate heart monitoring, early detection of irregularities, and expert cardiac care.",
+      "keywords": "cardiogram, ECG, heart monitoring, cardiac care, heart health, MEDDICAL"
+    },
+    "detail": {
+      "heading": "Advanced heart care you can trust",
+      "keywords": [
+        "Heart Monitoring",
+        "Early Detection",
+        "Accurate Results",
+        "Modern Equipment",
+        "Expert Specialists",
+        "Patient Safety"
+      ],
+      "description": [
+        "Our cardiogram service provides fast and precise heart assessments, helping identify rhythm abnormalities before they become serious concerns.",
+        "Using advanced diagnostic technology, our specialists deliver reliable evaluations and personalized recommendations for better cardiovascular health."
+      ]
+    }
+  },
+  {
+    "id": "dna-testing",
+    "title": "Dna Testing",
+    "body": "Analyze your genetic profile to uncover hereditary health risks and personalized insights about your body.",
+    "image": "phuc/doctors-exam-woolridge.webp",
+    "subImage": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
+    "icon": "dnaTesting",
+    "meta": {
+      "description": "Discover MEDDICAL's DNA testing service for genetic insights, hereditary risk assessment, and personalized healthcare planning.",
+      "keywords": "DNA testing, genetic testing, hereditary risks, personalized medicine, genetic health, MEDDICAL"
+    },
+    "detail": {
+      "heading": "Unlock the story written in your DNA",
+      "keywords": [
+        "Genetic Insights",
+        "Health Screening",
+        "Personalized Reports",
+        "Family History",
+        "Advanced Analysis",
+        "Future Wellness"
+      ],
+      "description": [
+        "Gain valuable genetic insights to better understand inherited conditions, health risks, and opportunities for preventive medical care.",
+        "Our DNA testing service delivers accurate analysis with clear explanations, empowering you to make informed healthcare decisions."
+      ]
+    }
+  },
+  {
+    "id": "blood-bank",
+    "title": "Blood Bank",
+    "body": "Safe storage and rapid supply of essential blood types, ready to support critical treatments and emergencies.",
+    "image": "phuc/blackdoctors.webp",
+    "subImage": "phuc/pregnant-anemia-race-main.webp",
+    "icon": "bloodBank",
+    "meta": {
+      "description": "Learn about MEDDICAL's blood bank services, providing safe blood storage and rapid support for emergencies and critical treatments.",
+      "keywords": "blood bank, blood donation, blood transfusion, emergency care, healthcare services, MEDDICAL"
+    },
+    "detail": {
+      "heading": "Reliable blood support when every second matters",
+      "keywords": [
+        "Safe Storage",
+        "Emergency Supply",
+        "Quality Assurance",
+        "Rapid Response",
+        "Life-Saving Care",
+        "Always Available"
+      ],
+      "description": [
+        "Our blood bank maintains carefully screened blood supplies to ensure safe transfusions for surgeries, emergencies, and critical treatments.",
+        "Every donation is processed under strict quality standards, providing dependable support whenever patients need immediate care."
+      ]
+    }
+  },
+  {
+    "id": "dermalogy",
+    "title": "Dermalogy",
+    "body": "Professional diagnosis and care for skin conditions, restoring and protecting your skin's health and natural glow.",
+    "image": "phuc/black-women-with-stethoscope.webp",
+    "subImage": "phuc/1920_finalliverdisparity.webp",
+    "icon": "dermalogy",
+    "meta": {
+      "description": "Explore MEDDICAL's dermatology services for expert skin care, diagnosis, and treatment of common skin conditions.",
+      "keywords": "dermatology, skin care, acne, eczema, psoriasis, dermatologist, MEDDICAL"
+    },
+    "detail": {
+      "heading": "Healthy skin starts with expert care",
+      "keywords": [
+        "Skin Health",
+        "Specialist Care",
+        "Modern Treatments",
+        "Personalized Plans",
+        "Natural Beauty",
+        "Lasting Results"
+      ],
+      "description": [
+        "Our dermatology specialists diagnose and treat a wide range of skin conditions using evidence-based therapies and modern medical techniques.",
+        "Whether addressing medical concerns or improving skin appearance, we create personalized treatment plans for lasting confidence."
+      ]
+    }
+  },
+  {
+    "id": "orthopedic",
+    "title": "Orthopedic",
+    "body": "Expert treatment for bone, joint, and muscle issues to restore your strength and comfortable movement.",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
+    "subImage": "phuc/doctors-exam-woolridge.webp",
+    "icon": "orthopedic",
+    "meta": {
+      "description": "Discover MEDDICAL's orthopedic services for expert diagnosis, treatment, and rehabilitation of bone, joint, and muscle conditions.",
+      "keywords": "orthopedic, orthopedics, bone care, joint care, rehabilitation, musculoskeletal, MEDDICAL"
+    },
+    "detail": {
+      "heading": "Helping you move with strength again",
+      "keywords": [
+        "Bone Care",
+        "Joint Recovery",
+        "Pain Relief",
+        "Mobility Support",
+        "Expert Surgeons",
+        "Rehabilitation"
+      ],
+      "description": [
+        "Our orthopedic team treats injuries and musculoskeletal conditions with personalized care focused on restoring movement and reducing discomfort.",
+        "From diagnosis through rehabilitation, we help patients regain strength, improve mobility, and return to everyday activities safely."
+      ]
+    }
+  }
+]

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 11" />
+    <meta
+      name="keywords"
+      content="hospital, healthcare, medical services, doctors, appointment"
+    />
+
+    <!-- SEO -->
+    <title>MEDDICAL | Appointment</title>
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | Appointment" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts (Optimized) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="preload" href="/ScheduleHours.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/WorkSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/YesevaOne-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" as="image" href="/quy/bigstock-african-doctor-optimized.webp" fetchpriority="high" />
+  </head>
+  
+
+  <body>
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-sm min-h-[182px] md:min-h-[160px] lg:min-h-[160px]"></header>
+
+    <section id="subheader" class="min-h-[140px] md:min-h-[180px] lg:min-h-[250px]"></section>
+
+    <main>
+      <!-- View My Appointments -->
+      <section
+        class="mx-auto max-w-[992px] px-6 md:px-[64px] lg:px-0 pt-[32px] md:pt-[64px]"
+      >
+        <div
+          class="mb-[32px] flex flex-col gap-[20px] items-center md:items-start text-center md:text-left"
+        >
+          <p class="body italic text-primary">
+            Already booked? Click the button below to view your appointments.
+          </p>
+          <div class="flex justify-center md:justify-start w-full">
+            <a
+              href="/MyAppointment.html"
+              class="btn-filled footer-2 px-[35px] py-[13px] inline-flex items-center justify-center"
+            >
+              View My Appointments
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto section flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-6 px-6 md:px-[64px] md:py-[48px] lg:h-[650px] lg:w-[992px] lg:justify-between lg:gap-5 lg:px-0 lg:py-0"
+      >
+        <!-- Left -->
+        <div
+          class="w-full md:w-[360px] lg:w-[491px] flex flex-col justify-between"
+        >
+          <div class="mb-8 md:mb-2 lg:mb-[64px]">
+            <h2 class="display-2 text-primary">Book an Appointment</h2>
+
+            <p class="body mt-[16px] text-black lg:leading-[22px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              placerat scelerisque tortor ornare ornare. Convallis felis vitae
+              tortor augue. Velit nascetur proin massa in. Consequat faucibus
+              porttitor enim et.
+            </p>
+          </div>
+
+          <!-- Appointment Form -->
+          <form id="appointmentForm"></form>
+        </div>
+
+        <!-- Right -->
+        <section
+          class="flex w-full md:w-[320px] lg:w-[481px] shrink-0 flex-col rounded-[5px] bg-primary px-6 py-8 md:px-6 md:py-8 lg:min-h-[650px] lg:w-[481px] lg:px-[50px] lg:pt-[48px] lg:pb-[47px]"
+        >
+          <h2 class="display-1 text-center text-accent">Shedule hours</h2>
+
+          <!-- JS sẽ render danh sách vào đây -->
+          <ul
+            id="schedule-list"
+            class="mt-6 flex flex-col gap-[30px] md:gap-[40px] lg:gap-[30px] md:mt-8 lg:mt-[51px] min-h-[275px] sm:min-h-[285px] md:min-h-[366px] lg:min-h-[326px]"
+          ></ul>
+
+          <footer class="mt-auto pt-[32px]">
+            <!-- Line -->
+            <div
+              class="mx-auto mb-6 w-full max-w-[331px] border-t-2 border-accent lg:mb-[28px]"
+            ></div>
+
+            <!-- Emergency -->
+            <div
+              class="flex items-center justify-center gap-2 text-center sm:text-left"
+            >
+              <div
+                class="flex items-center justify-center gap-[4px] md:gap-2 max-md:mx-auto"
+              >
+                <!-- Phone Icon -->
+                <svg
+                  aria-hidden="true"
+                  class="max-md:h-[36px] max-md:w-[38px] max-md:shrink-0"
+                  width="50"
+                  height="48"
+                  viewBox="0 0 50 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.0336 41.2036C30.757 40.7859 31.2828 40.0946 31.4954 39.2816C31.708 38.4687 31.59 37.6007 31.1673 36.8686L29.5737 34.1083C29.151 33.3762 28.4583 32.84 27.6479 32.6176C26.8376 32.3953 25.976 32.505 25.2526 32.9226C19.7978 36.0719 16.6105 30.5513 15.0168 27.791C13.4231 25.0307 10.2358 19.51 15.6906 16.3607C16.4139 15.9431 16.9398 15.2518 17.1524 14.4388C17.365 13.6258 17.247 12.7578 16.8243 12.0257L15.2306 9.26543C14.808 8.53335 14.1153 7.99715 13.3049 7.7748C12.4946 7.55244 11.6329 7.66215 10.9096 8.07977C4.09109 12.0164 1.59367 17.1387 9.56202 30.9403C17.5304 44.7419 23.2151 45.1402 30.0336 41.2036Z"
+                    stroke="#BFD2F8"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M43.5815 29.5524C43.442 30.0868 43.7622 30.633 44.2966 30.7725C44.831 30.9119 45.3772 30.5918 45.5167 30.0574L44.5491 29.8049L43.5815 29.5524ZM42.3047 13.3289L41.4387 13.8289L42.3047 13.3289ZM29.4233 2.18294C28.8908 2.03652 28.3404 2.34952 28.194 2.88204C28.0476 3.41456 28.3605 3.96495 28.8931 4.11137L29.1582 3.14716L29.4233 2.18294ZM35.2312 27.2604C35.0914 27.7947 35.4111 28.3412 35.9454 28.481C36.4797 28.6209 37.0262 28.3011 37.166 27.7669L36.1986 27.5136L35.2312 27.2604ZM34.8559 17.6294L35.722 17.1294L34.8559 17.6294ZM27.2317 10.5601C26.699 10.4141 26.1489 10.7275 26.0029 11.2601C25.8568 11.7927 26.1702 12.3429 26.7029 12.4889L26.9673 11.5245L27.2317 10.5601ZM26.9254 24.9533C26.7861 25.4877 27.1063 26.0339 27.6407 26.1733C28.1752 26.3126 28.7214 25.9923 28.8607 25.4579L27.893 25.2056L26.9254 24.9533ZM25.0786 18.9072C24.5461 18.7606 23.9956 19.0735 23.8491 19.606C23.7026 20.1385 24.0155 20.6889 24.5479 20.8355L24.8133 19.8713L25.0786 18.9072ZM44.5491 29.8049L45.5167 30.0574C47.0323 24.2497 46.1872 18.0535 43.1707 12.8289L42.3047 13.3289L41.4387 13.8289C44.194 18.6011 44.9634 24.257 43.5815 29.5524L44.5491 29.8049ZM42.3047 13.3289L43.1707 12.8289C40.1543 7.60417 35.2107 3.77424 29.4233 2.18294L29.1582 3.14716L28.8931 4.11137C34.17 5.56231 38.6834 9.05657 41.4387 13.8289L42.3047 13.3289ZM36.1986 27.5136L37.166 27.7669C37.6309 25.991 37.7422 24.1377 37.4943 22.3127L36.5034 22.4473L35.5125 22.5819C35.7254 24.1489 35.6295 25.7387 35.2312 27.2604L36.1986 27.5136ZM36.5034 22.4473L37.4943 22.3127C37.2464 20.4878 36.6441 18.7265 35.722 17.1294L34.8559 17.6294L33.9899 18.1294C34.7823 19.5019 35.2996 21.015 35.5125 22.5819L36.5034 22.4473ZM34.8559 17.6294L35.722 17.1294C34.7999 15.5322 33.5757 14.13 32.1192 13.0028L31.5072 13.7937L30.8952 14.5845C32.1458 15.5524 33.1975 16.7569 33.9899 18.1294L34.8559 17.6294ZM31.5072 13.7937L32.1192 13.0028C30.6627 11.8757 29.002 11.0454 27.2317 10.5601L26.9673 11.5245L26.7029 12.4889C28.2199 12.9048 29.6446 13.6167 30.8952 14.5845L31.5072 13.7937ZM27.893 25.2056L28.8607 25.4579C29.2171 24.091 29.0176 22.6352 28.3096 21.4089L27.4436 21.9089L26.5776 22.4089C27.0245 23.1829 27.1483 24.0985 26.9254 24.9533L27.893 25.2056ZM27.4436 21.9089L28.3096 21.4089C27.6016 20.1826 26.4406 19.282 25.0786 18.9072L24.8133 19.8713L24.5479 20.8355C25.3997 21.0699 26.1307 21.6349 26.5776 22.4089L27.4436 21.9089Z"
+                    fill="#BFD2F8"
+                  />
+                </svg>
+
+                <!-- Text -->
+                <div class="flex flex-col justify-center max-md:items-start">
+                  <h3
+                    class="title text-[18px] md:text-[20px] lg:text-[26px] leading-[30px] text-white"
+                  >
+                    Emergency
+                  </h3>
+
+                  <p
+                    class="title-1 text-[18px] md:text-[20px] lg:text-[26px] whitespace-nowrap text-center leading-[30px] text-accent"
+                  >
+                    (237) 681-812-255
+                  </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </section>
+      </section>
+
+      <!-- Map -->
+      <section id="mapview" class="section"></section>
+
+      <!-- Contact Section -->
+      <section id="contactSection" class="section"></section>
+      <!-- FAQ -->
+      <section id="faq"></section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script type="module" src="/src/pages/Appointment.js"></script>
+  </body>
+</html>

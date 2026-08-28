@@ -1,0 +1,134 @@
+[
+  {
+    "id": "neurology",
+    "name": "Neurology",
+    "icon": "neurology",
+    "description": "Diagnosis and treatment of disorders affecting the brain, spinal cord, nerves, and muscles. Our neurology specialists provide comprehensive care for conditions such as stroke, epilepsy, Parkinson’s disease, migraines, and other neurological disorders using advanced diagnostic and treatment approaches.",
+    "image": "phuc/pregnant-anemia-race-main.webp",
+    "meta": {
+      "description": "Explore MEDDICAL's Neurology department, providing expert diagnosis and treatment for disorders of the brain, spinal cord, nerves, and muscles.",
+      "keywords": "neurology, brain disorders, stroke, epilepsy, Parkinson's disease, neurologist, MEDDICAL"
+    }
+  },
+  {
+    "id": "bones",
+    "name": "Bones",
+    "icon": "neurology",
+    "description": "Comprehensive care for bone, joint, and musculoskeletal conditions. Our orthopedic specialists help patients recover from fractures, arthritis, sports injuries, and chronic bone disorders through modern treatment and rehabilitation.",
+    "image": "phuc/1920_finalliverdisparity.webp",
+    "meta": {
+      "description": "Discover comprehensive orthopedic care for bone, joint, and musculoskeletal conditions, including fractures, arthritis, and sports injuries.",
+      "keywords": "orthopedics, bones, joints, fractures, arthritis, sports injuries, MEDDICAL"
+    }
+  },
+  {
+    "id": "oncology",
+    "name": "Oncology",
+    "icon": "neurology",
+    "description": "Specialized cancer care focused on prevention, diagnosis, treatment, and long-term follow-up. We provide personalized treatment plans using the latest medical technologies and evidence-based therapies.",
+    "image": "phuc/doctors-exam-woolridge.webp",
+    "meta": {
+      "description": "Learn about MEDDICAL's Oncology department, offering personalized cancer diagnosis, treatment, and long-term care using advanced medical technologies.",
+      "keywords": "oncology, cancer care, cancer treatment, chemotherapy, oncology specialists, MEDDICAL"
+    }
+  },
+  {
+    "id": "otorhinolaryngology",
+    "name": "Otorhinolaryngology",
+    "icon": "neurology",
+    "description": "Expert care for conditions affecting the ear, nose, throat, head, and neck. Our ENT specialists diagnose and treat hearing problems, sinus disorders, allergies, voice disorders, and other related conditions.",
+    "image": "phuc/blackdoctors.webp",
+    "meta": {
+      "description": "Find expert ENT care for ear, nose, throat, head, and neck conditions with advanced diagnosis and treatment.",
+      "keywords": "ENT, otorhinolaryngology, ear, nose, throat, hearing disorders, sinus care, MEDDICAL"
+    }
+  },
+  {
+    "id": "ophthalmology",
+    "name": "Ophthalmology",
+    "icon": "neurology",
+    "description": "Complete eye care services including routine examinations, diagnosis, treatment, and surgery for various vision and eye diseases. We are committed to preserving and improving your eyesight.",
+    "image": "phuc/black-women-with-stethoscope.webp",
+    "meta": {
+      "description": "Explore comprehensive eye care services, including vision examinations, treatment, and surgery for various eye conditions.",
+      "keywords": "ophthalmology, eye care, vision, eye surgery, eye diseases, ophthalmologist, MEDDICAL"
+    }
+  },
+  {
+    "id": "cardiovascular",
+    "name": "Cardiovascular",
+    "icon": "neurology",
+    "description": "Comprehensive cardiovascular care for heart and blood vessel diseases. Our specialists provide preventive screenings, advanced diagnostics, and personalized treatment for hypertension, heart failure, coronary artery disease, and other cardiac conditions.",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
+    "meta": {
+      "description": "Receive expert cardiovascular care with advanced diagnosis, preventive screenings, and personalized treatment for heart and blood vessel diseases.",
+      "keywords": "cardiovascular, cardiology, heart care, hypertension, heart disease, MEDDICAL"
+    }
+  },
+  {
+    "id": "pulmonology",
+    "name": "Pulmonology",
+    "icon": "neurology",
+    "description": "Diagnosis and management of lung and respiratory diseases including asthma, chronic obstructive pulmonary disease (COPD), pneumonia, and sleep-related breathing disorders.",
+    "image": "phuc/pregnant-anemia-race-main.webp",
+    "meta": {
+      "description": "Discover specialized respiratory care for asthma, COPD, pneumonia, and other lung conditions from experienced pulmonologists.",
+      "keywords": "pulmonology, respiratory care, asthma, COPD, pneumonia, lung diseases, MEDDICAL"
+    }
+  },
+  {
+    "id": "renal-medicine",
+    "name": "Renal Medicine",
+    "icon": "neurology",
+    "description": "Dedicated kidney care for acute and chronic kidney diseases. Our nephrology team provides comprehensive evaluation, dialysis support, and treatment plans to maintain optimal kidney health.",
+    "image": "phuc/1920_finalliverdisparity.webp",
+    "meta": {
+      "description": "Learn about kidney care services, including diagnosis, dialysis support, and treatment for acute and chronic kidney diseases.",
+      "keywords": "renal medicine, nephrology, kidney care, dialysis, kidney disease, MEDDICAL"
+    }
+  },
+  {
+    "id": "gastroenterology",
+    "name": "Gastroenterology",
+    "icon": "neurology",
+    "description": "Expert diagnosis and treatment of digestive system disorders involving the stomach, intestines, liver, pancreas, and gallbladder. We provide advanced endoscopic procedures and personalized digestive healthcare.",
+    "image": "phuc/doctors-exam-woolridge.webp",
+    "meta": {
+      "description": "Explore digestive healthcare services for stomach, intestines, liver, pancreas, and gallbladder disorders with advanced endoscopic procedures.",
+      "keywords": "gastroenterology, digestive health, stomach, liver, pancreas, endoscopy, MEDDICAL"
+    }
+  },
+  {
+    "id": "urology",
+    "name": "Urology",
+    "icon": "neurology",
+    "description": "Specialized care for urinary tract and male reproductive system conditions. Our urologists diagnose and treat kidney stones, urinary infections, prostate diseases, and other urological disorders.",
+    "image": "phuc/blackdoctors.webp",
+    "meta": {
+      "description": "Find expert urology services for urinary tract and male reproductive system conditions, including kidney stones and prostate disorders.",
+      "keywords": "urology, urinary tract, kidney stones, prostate, urologist, MEDDICAL"
+    }
+  },
+  {
+    "id": "dermatology",
+    "name": "Dermatology",
+    "icon": "neurology",
+    "description": "Professional skin care services for both medical and cosmetic dermatology. We diagnose and treat acne, eczema, psoriasis, skin infections, and other conditions while promoting healthy skin.",
+    "image": "phuc/black-women-with-stethoscope.webp",
+    "meta": {
+      "description": "Discover professional dermatology services for acne, eczema, psoriasis, skin infections, and comprehensive skin health.",
+      "keywords": "dermatology, skin care, acne, eczema, psoriasis, dermatologist, MEDDICAL"
+    }
+  },
+  {
+    "id": "gynaecology",
+    "name": "Gynaecology",
+    "icon": "neurology",
+    "description": "Comprehensive women's healthcare including preventive examinations, reproductive health, pregnancy care, and treatment of gynecological conditions with compassionate, patient-centered care.",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp",
+    "meta": {
+      "description": "Explore comprehensive women's healthcare, including reproductive health, pregnancy care, preventive examinations, and gynecological treatments.",
+      "keywords": "gynaecology, women's health, pregnancy care, reproductive health, gynecologist, MEDDICAL"
+    }
+  }
+]

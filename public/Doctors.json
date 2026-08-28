@@ -1,0 +1,288 @@
+[
+  {
+    "id": 1,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Nguyễn Ngọc Quý",
+    "specialty": "Neurology",
+    "experienceYears": 18,
+    "introduction": "   Dr. Nguyễn Ngọc Quý is a highly experienced neurologist with more than 18 years of clinical practice in diagnosing and treating disorders of the brain, spinal cord, and nervous system. He is committed to delivering evidence-based treatment plans while providing compassionate and personalized care to every patient. His expertise ranges from acute neurological emergencies to long-term management of chronic neurological diseases, helping patients improve their quality of life through advanced medical care and rehabilitation.",
+    "career": [
+      "Graduated with honors from Harvard Medical School, specializing in Neurology.",
+      "Completed residency training at Massachusetts General Hospital, where he gained extensive experience in stroke management, epilepsy, and neurocritical care.",
+      "Served as a Consultant Neurologist at Massachusetts General Hospital from 2008 to 2015, participating in multidisciplinary research projects on neurodegenerative diseases.",
+      "Appointed Head of the Neurology Department at MEDDICAL Hospital in 2016, leading a team of specialists in providing comprehensive neurological services.",
+      "Frequently invited as a speaker at international neurology conferences and actively involved in mentoring young physicians."
+    ],
+    "experience": [
+      "Diagnosis and treatment of ischemic and hemorrhagic stroke.",
+      "Comprehensive epilepsy evaluation and long-term seizure management.",
+      "Management of Parkinson's disease, Alzheimer's disease, and other neurodegenerative disorders.",
+      "Treatment of migraine, chronic headaches, and peripheral nerve disorders.",
+      "Neurorehabilitation programs for patients recovering from stroke and traumatic brain injuries."
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Nguyễn Gia Hân",
+    "specialty": "Bones",
+    "experienceYears": 15,
+    "introduction": "Dr. Nguyễn Gia Hân is a highly skilled orthopedic surgeon with over 15 years of experience in diagnosing and treating a wide range of musculoskeletal disorders. She specializes in bone, joint, and ligament injuries, helping patients restore mobility and improve their quality of life through advanced surgical techniques and personalized rehabilitation programs. Dr. Hân is dedicated to providing patient-centered care, combining modern medical technology with compassionate treatment to ensure the best possible recovery for every patient.",
+    "career": [
+      "Graduated with a Doctor of Medicine degree from Stanford University School of Medicine, specializing in Orthopedic Surgery.",
+      "Completed residency and fellowship training in Orthopedic and Trauma Surgery at Mayo Clinic, gaining extensive experience in complex bone and joint reconstruction.",
+      "Worked as an Orthopedic Surgeon at Mayo Clinic from 2011 to 2018, treating sports injuries, fractures, and degenerative joint diseases.",
+      "Joined MEDDICAL Hospital as a Senior Orthopedic Consultant in 2019, where she performs advanced orthopedic surgeries and leads multidisciplinary rehabilitation programs.",
+      "Actively participates in international orthopedic conferences and continuously researches innovative minimally invasive surgical techniques."
+    ],
+    "experience": [
+      "Total hip and knee replacement surgery.",
+      "Treatment of sports-related injuries, including ligament and tendon reconstruction.",
+      "Management of complex fractures and trauma surgery.",
+      "Arthroscopic surgery for shoulder, knee, and ankle conditions.",
+      "Postoperative rehabilitation planning and long-term musculoskeletal care."
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Nguyễn Minh Phúc",
+    "specialty": "Oncology",
+    "experienceYears": 20,
+    "introduction": "Dr. Nguyễn Minh Phúc is a senior oncologist with over 20 years of experience in cancer diagnosis, treatment, and patient care. He is dedicated to providing comprehensive and personalized treatment plans by combining advanced medical technology with evidence-based therapies. Throughout his career, Dr. Phúc has helped thousands of patients fight various types of cancer while emphasizing early detection, compassionate care, and continuous emotional support for both patients and their families. His commitment to clinical excellence and ongoing research has made him one of the leading specialists in oncology at MEDDICAL Hospital.",
+    "career": [
+      "Graduated with a Doctor of Medicine degree from Johns Hopkins University School of Medicine, specializing in Medical Oncology.",
+      "Completed residency training in Internal Medicine followed by a fellowship in Oncology at Cleveland Clinic, focusing on advanced cancer treatment and clinical research.",
+      "Served as a Medical Oncologist at Cleveland Clinic from 2005 to 2014, treating patients with breast cancer, lung cancer, colorectal cancer, and hematologic malignancies.",
+      "Joined MEDDICAL Hospital in 2015 as Director of the Cancer Center, leading multidisciplinary teams in providing comprehensive cancer care and implementing modern treatment protocols.",
+      "Regularly participates in international oncology conferences, contributes to clinical research projects, and mentors young oncologists in the latest cancer treatment techniques."
+    ],
+    "experience": [
+      "Comprehensive cancer diagnosis and personalized treatment planning.",
+      "Chemotherapy, targeted therapy, and immunotherapy for various types of cancer.",
+      "Early cancer screening, prevention, and patient education programs.",
+      "Management of treatment-related side effects and long-term cancer survivorship care.",
+      "Collaboration with multidisciplinary teams to provide integrated oncology services."
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Hoàng Vân Anh",
+    "specialty": "Otorhinolaryngology",
+    "experienceYears": 14,
+    "introduction": "Dr. Hoàng Vân Anh is an experienced Ear, Nose, and Throat (ENT) specialist with more than 14 years of clinical practice in diagnosing and treating disorders affecting the ear, nose, throat, head, and neck. She is dedicated to providing comprehensive care for both adults and children by combining modern diagnostic technology with personalized treatment plans. Dr. Vân Anh has extensive experience in managing chronic ENT conditions, hearing disorders, sinus diseases, and voice problems while emphasizing patient comfort, minimally invasive procedures, and long-term health improvement.",
+    "career": [
+      "Graduated with a Doctor of Medicine degree from the University of California Medical School, specializing in Otorhinolaryngology.",
+      "Completed residency training in Ear, Nose, and Throat Surgery at UCLA Medical Center, where she developed expertise in advanced ENT procedures and minimally invasive surgery.",
+      "Worked as an ENT Specialist at UCLA Medical Center from 2012 to 2018, treating patients with chronic sinus disease, hearing impairment, and complex throat disorders.",
+      "Joined MEDDICAL Hospital in 2019 as a Consultant Otorhinolaryngologist, providing comprehensive ENT care and leading the development of advanced diagnostic and treatment services.",
+      "Regularly attends international ENT conferences, participates in medical research, and mentors junior physicians in modern surgical techniques and patient-centered care."
+    ],
+    "experience": [
+      "Diagnosis and treatment of chronic sinusitis and nasal obstruction.",
+      "Management of hearing loss, ear infections, tinnitus, and balance disorders.",
+      "Evaluation and treatment of voice disorders, swallowing difficulties, and throat diseases.",
+      "Pediatric ENT care, including tonsillitis, adenoid disorders, and recurrent ear infections.",
+      "Minimally invasive endoscopic surgery for nasal, sinus, and throat conditions."
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Trương Mỹ Duyên",
+    "specialty": "Ophthalmology",
+    "experienceYears": 17,
+    "introduction": "Dr. Trương Mỹ Duyên is a senior ophthalmologist with over 17 years of experience in diagnosing, treating, and preventing eye diseases. She specializes in cataract surgery, refractive surgery, glaucoma management, and retinal disorders. Dr. Duyên believes that preserving vision is essential to maintaining a patient's quality of life and is committed to providing personalized treatment using advanced diagnostic technology and modern surgical techniques. She is recognized for her precision, compassionate care, and dedication to helping patients maintain healthy vision throughout every stage of life.",
+    "career": [
+      "Graduated from Yale School of Medicine with a specialization in Ophthalmology.",
+      "Completed residency and fellowship training at Yale Eye Center, focusing on cataract and retinal diseases.",
+      "Worked as an Ophthalmologist at Yale Eye Institute from 2009 to 2016, performing advanced eye surgeries and vision correction procedures.",
+      "Joined MEDDICAL Hospital in 2017 as Chief Ophthalmologist, leading the Eye Care Department and implementing modern ophthalmic technologies.",
+      "Regularly participates in international ophthalmology conferences and contributes to research on innovative treatments for retinal diseases."
+    ],
+    "experience": [
+      "Cataract diagnosis and microsurgical treatment.",
+      "LASIK and refractive vision correction surgery.",
+      "Diagnosis and management of glaucoma.",
+      "Treatment of retinal disorders and diabetic eye disease.",
+      "Comprehensive eye examinations and preventive vision care."
+    ]
+  },
+  {
+    "id": 6,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Nguyễn Thị Vân Khánh",
+    "specialty": "Cardiovascular",
+    "experienceYears": 19,
+    "introduction": "Dr. Nguyễn Thị Vân Khánh is a highly experienced cardiologist with more than 19 years of expertise in diagnosing and treating cardiovascular diseases. She is dedicated to helping patients prevent heart disease through early detection, lifestyle modification, and evidence-based medical treatment. Dr. Khánh specializes in both invasive and non-invasive cardiology, providing comprehensive care for patients with coronary artery disease, heart failure, hypertension, and arrhythmias. Her patient-centered approach ensures that every individual receives personalized treatment plans for long-term heart health.",
+    "career": [
+      "Graduated from Columbia University Vagelos College of Physicians and Surgeons with a specialization in Cardiology.",
+      "Completed advanced fellowship training in Interventional Cardiology at NewYork-Presbyterian Hospital.",
+      "Served as an Interventional Cardiologist from 2007 to 2015, performing complex coronary interventions and cardiac catheterization procedures.",
+      "Joined MEDDICAL Hospital in 2016 as Head of the Cardiology Department, overseeing cardiovascular services and preventive heart care programs.",
+      "Frequently invited to speak at international cardiovascular conferences and actively participates in clinical research on heart disease prevention."
+    ],
+    "experience": [
+      "Diagnosis and treatment of coronary artery disease.",
+      "Interventional cardiology and cardiac catheterization.",
+      "Management of hypertension and heart failure.",
+      "Cardiac imaging including echocardiography and stress testing.",
+      "Preventive cardiology and cardiovascular risk assessment."
+    ]
+  },
+  {
+    "id": 7,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Trần Ngọc Lan Hương",
+    "specialty": "Pulmonology",
+    "experienceYears": 16,
+    "introduction": "Dr. Trần Ngọc Lan Hương is a pulmonologist with more than 16 years of experience in respiratory medicine. She specializes in diagnosing and treating acute and chronic lung diseases while promoting preventive respiratory healthcare. Dr. Hương has extensive experience managing asthma, chronic obstructive pulmonary disease (COPD), sleep-related breathing disorders, and pulmonary infections. She works closely with patients to develop personalized treatment strategies that improve breathing, reduce symptoms, and enhance overall quality of life.",
+    "career": [
+      "Graduated from the University of Michigan Medical School with a specialization in Pulmonary and Critical Care Medicine.",
+      "Completed fellowship training in Pulmonology and Respiratory Medicine at the University of Michigan Health System.",
+      "Worked as a Pulmonary Specialist between 2010 and 2017, treating patients with complex respiratory disorders and critical lung diseases.",
+      "Joined MEDDICAL Hospital as a Senior Pulmonologist, leading respiratory disease management and lung function assessment services.",
+      "Actively participates in pulmonary research and regularly attends international conferences on respiratory medicine and critical care."
+    ],
+    "experience": [
+      "Diagnosis and treatment of asthma and chronic obstructive pulmonary disease (COPD).",
+      "Management of sleep apnea and other sleep-related breathing disorders.",
+      "Bronchoscopy and advanced respiratory diagnostic procedures.",
+      "Treatment of pneumonia, tuberculosis, and chronic lung infections.",
+      "Pulmonary rehabilitation and preventive respiratory healthcare."
+    ]
+  },
+  {
+    "id": 8,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Lê Thị Huyền",
+    "specialty": "Renal Medicine",
+    "experienceYears": 13,
+    "introduction": "Dr. Lê Thị Huyền is a nephrologist with over 13 years of experience specializing in kidney diseases and renal replacement therapies. She is committed to providing comprehensive care for patients with chronic kidney disease, acute kidney injury, hypertension, and electrolyte disorders. Dr. Huyền focuses on early diagnosis and individualized treatment plans to slow disease progression and improve long-term kidney health. She also works closely with multidisciplinary teams to provide high-quality dialysis care and patient education.",
+    "career": [
+      "Graduated from the Perelman School of Medicine at the University of Pennsylvania with a specialization in Nephrology.",
+      "Completed fellowship training in Kidney Diseases and Hypertension at the University of Pennsylvania Health System.",
+      "Worked at a leading Kidney Care Center from 2012 to 2018, providing comprehensive treatment for chronic kidney disease and dialysis patients.",
+      "Joined MEDDICAL Hospital as a Consultant Nephrologist, overseeing renal medicine services and dialysis programs.",
+      "Participates in international nephrology conferences and contributes to research on chronic kidney disease prevention and innovative renal therapies."
+    ],
+    "experience": [
+      "Diagnosis and treatment of chronic kidney disease and acute kidney injury.",
+      "Hemodialysis and peritoneal dialysis management.",
+      "Hypertension related to kidney disorders.",
+      "Electrolyte and metabolic disorder management.",
+      "Kidney disease prevention, patient education, and long-term renal care."
+    ]
+  },
+  {
+    "id": 9,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Bùi Thị Thu Hương",
+    "specialty": "Gastroenterology",
+    "experienceYears": 15,
+    "introduction": "Dr. Bùi Thị Thu Hương is a highly experienced gastroenterologist with over 15 years of expertise in diagnosing and treating diseases of the digestive system. She specializes in gastrointestinal disorders, liver diseases, pancreatic conditions, and advanced endoscopic procedures. Dr. Hương is dedicated to providing personalized, evidence-based care while promoting early detection and preventive healthcare. Her compassionate approach and commitment to continuous learning have earned the trust of countless patients seeking comprehensive digestive health services.",
+    "career": [
+      "Graduated from Duke University School of Medicine with a specialization in Gastroenterology.",
+      "Completed fellowship training in Digestive Diseases and Advanced Endoscopy at Duke University Medical Center.",
+      "Worked as a Gastroenterologist at the Digestive Disease Institute from 2010 to 2017, specializing in complex digestive disorders and minimally invasive procedures.",
+      "Joined MEDDICAL Hospital as a Consultant Gastroenterologist in 2018, providing comprehensive digestive healthcare and endoscopic services.",
+      "Regularly participates in international gastroenterology conferences and contributes to research on digestive disease prevention and innovative endoscopic techniques."
+    ],
+    "experience": [
+      "Diagnosis and treatment of gastrointestinal disorders including GERD and IBS.",
+      "Upper gastrointestinal endoscopy and colonoscopy procedures.",
+      "Management of liver diseases, hepatitis, and fatty liver disease.",
+      "Treatment of pancreatic and biliary tract disorders.",
+      "Preventive digestive health screening and colorectal cancer prevention."
+    ]
+  },
+  {
+    "id": 10,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Nguyễn Ngọc Anh",
+    "specialty": "Urology",
+    "experienceYears": 18,
+    "introduction": "Dr. Nguyễn Ngọc Anh is a senior urologist with more than 18 years of experience in diagnosing and treating disorders of the urinary tract and male reproductive system. He specializes in minimally invasive urological surgery, kidney stone management, prostate diseases, and urinary tract reconstruction. Dr. Anh is committed to delivering safe, effective, and patient-centered care while utilizing modern technology to improve treatment outcomes and reduce recovery time.",
+    "career": [
+      "Graduated from the University of Chicago Pritzker School of Medicine with a specialization in Urology.",
+      "Completed residency and fellowship training in Minimally Invasive Urological Surgery at the University of Chicago Medical Center.",
+      "Worked at the Urology Center from 2007 to 2015, performing advanced laparoscopic and endoscopic urological procedures.",
+      "Joined MEDDICAL Hospital in 2016 as Head of the Urology Department, overseeing modern urological treatment services.",
+      "Frequently attends international urology congresses and actively contributes to research on minimally invasive surgical techniques."
+    ],
+    "experience": [
+      "Kidney stone diagnosis and laser lithotripsy.",
+      "Treatment of benign prostatic hyperplasia and prostate diseases.",
+      "Management of urinary tract infections and urinary incontinence.",
+      "Laparoscopic and endoscopic urological surgery.",
+      "Male reproductive health and infertility evaluation."
+    ]
+  },
+  {
+    "id": 11,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Lê Hữu Phúc",
+    "specialty": "Dermatology",
+    "experienceYears": 12,
+    "introduction": "Dr. Lê Hữu Phúc is a board-certified dermatologist with over 12 years of experience in treating medical and cosmetic skin conditions. He specializes in acne management, chronic inflammatory skin diseases, skin cancer screening, and laser-based dermatological procedures. Dr. Phúc believes that healthy skin contributes significantly to overall well-being and confidence, and he is committed to providing personalized treatment plans using the latest dermatological technologies.",
+    "career": [
+      "Graduated from Boston University School of Medicine with a specialization in Dermatology.",
+      "Completed residency training in Dermatology at Boston Medical Center with advanced training in cosmetic dermatology.",
+      "Worked at the Skin Care Institute from 2013 to 2019, treating a wide range of medical and aesthetic skin conditions.",
+      "Joined MEDDICAL Hospital as a Consultant Dermatologist, expanding dermatology services and introducing advanced laser treatments.",
+      "Regularly participates in international dermatology conferences and researches innovative treatments for chronic skin diseases."
+    ],
+    "experience": [
+      "Diagnosis and treatment of acne, eczema, and psoriasis.",
+      "Skin cancer screening and mole evaluation.",
+      "Laser therapy for pigmentation and scar treatment.",
+      "Cosmetic dermatology and skin rejuvenation procedures.",
+      "Management of allergic and infectious skin diseases."
+    ]
+  },
+  {
+    "id": 12,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Nguyễn Thành Tài",
+    "specialty": "Gynaecology",
+    "experienceYears": 21,
+    "introduction": "Dr. Nguyễn Thành Tài is a distinguished gynecologist with over 21 years of experience in women's reproductive healthcare. He specializes in preventive gynecology, high-risk pregnancy management, minimally invasive gynecologic surgery, and reproductive health counseling. Dr. Tài is dedicated to supporting women through every stage of life by providing comprehensive, compassionate, and evidence-based medical care in a safe and comfortable environment.",
+    "career": [
+      "Graduated from the University of Washington School of Medicine with a specialization in Obstetrics and Gynecology.",
+      "Completed residency and fellowship training in Maternal-Fetal Medicine and Minimally Invasive Gynecologic Surgery.",
+      "Worked at the Women's Health Center from 2003 to 2014, managing complex gynecologic and obstetric cases.",
+      "Appointed Chief Gynecologist at MEDDICAL Hospital in 2015, leading women's healthcare services and high-risk pregnancy programs.",
+      "Frequently invited to international women's health conferences and contributes to research on maternal and reproductive healthcare."
+    ],
+    "experience": [
+      "Comprehensive gynecological examinations and preventive care.",
+      "High-risk pregnancy management and prenatal monitoring.",
+      "Minimally invasive laparoscopic gynecologic surgery.",
+      "Diagnosis and treatment of hormonal and reproductive disorders.",
+      "Women's health education and reproductive counseling."
+    ]
+  },
+  {
+    "id": 13,
+    "image": "/han/Doctor1.webp",
+    "name": "Dr. Đặng Nhật Tân",
+    "specialty": "Emergency Medicine",
+    "experienceYears": 18,
+    "introduction": "Dr. Đặng Nhật Tân is an experienced Emergency Medicine specialist with over 18 years of clinical practice in managing life-threatening conditions and medical emergencies. He has extensive expertise in trauma care, cardiac emergencies, emergency procedures, and critical patient stabilization. Dr. Tân is committed to delivering rapid, accurate, and compassionate care while working closely with multidisciplinary teams to ensure every patient receives immediate and effective treatment during critical situations.",
+    "career": [
+      "Graduated from Johns Hopkins University School of Medicine with a specialization in Emergency Medicine.",
+      "Completed residency training in Emergency and Critical Care Medicine at Massachusetts General Hospital.",
+      "Worked as an Emergency Physician at Massachusetts General Hospital from 2008 to 2015, managing trauma, cardiac arrest, stroke, and other critical emergencies.",
+      "Joined MEDDICAL Hospital in 2015 as Head of the Emergency Department, leading emergency response systems and improving patient care protocols.",
+      "Regularly participates in international emergency medicine conferences and provides training in Advanced Cardiac Life Support (ACLS) and trauma management."
+    ],
+    "experience": [
+      "Emergency trauma assessment and resuscitation.",
+      "Advanced Cardiac Life Support (ACLS) and cardiac emergency management.",
+      "Critical care stabilization for life-threatening conditions.",
+      "Disaster preparedness and mass casualty response.",
+      "Rapid diagnosis, emergency procedures, and multidisciplinary emergency coordination."
+    ]
+  }
+]

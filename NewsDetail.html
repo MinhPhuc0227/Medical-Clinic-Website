@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 11" />
+    <meta
+      name="keywords"
+      content="hospital, healthcare, medical services, doctors, appointment"
+    />
+
+    <!-- SEO -->
+    <title>MEDDICAL | News</title>
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | News" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header" class="sticky top-0 z-50 bg-white"></header>
+    <section id="newsSubheader"></section>
+    <div id="back-btn" class="btn-text mt-[22px] max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto">
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M19 12H5" />
+          <path d="M12 19l-7-7 7-7" />
+        </svg>
+        <span>Back</span>
+      </div>
+    <main
+      id="page-content"
+      class="w-full max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto mt-[6px] lg:mt-[20px] hidden"
+    >
+      
+      <div
+        class="container flex flex-col gap-8 md:flex-row md:gap-[16px] lg:gap-[20px]"
+      >
+        <!-- Danh sách bài viết -->
+        <section class="w-full md:w-[470px] lg:w-[658px]">
+          <!-- Bài viết -->
+          <div id="news-detail">
+            <img
+              id="detail-image"
+              alt="News image"
+              class="w-full h-[180px] md:h-[240px] lg:h-auto object-cover rounded"
+            />
+            <h2 id="detail-title" class="mt-[32px]"></h2>
+            <p id="detail-description"></p>
+          </div>
+          <!-- nút pre, next -->
+          <div class="mt-[48px] lg:mt-[64px] flex justify-between">
+            <button id="prev-btn" class="btn-filled">
+              <svg
+                aria-hidden="true"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.61555 1L1.00016 6L5.61555 11M1.00016 6H11.8335"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Previous Article
+            </button>
+            <button id="next-btn" class="ml-[20px] btn-filled">
+              Next Article
+              <svg
+                aria-hidden="true"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+        <aside id="sidebar" class="w-full md:w-[280px] lg:w-[317px]"></aside>
+      </div>
+    </main>
+    <section id="contact-section" class="section"></section>
+    <footer id="footer"></footer>
+    <script type="module" src="/src/pages/NewsDetail.js"></script>
+  </body>
+</html>

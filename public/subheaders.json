@@ -1,0 +1,73 @@
+{
+  "about": {
+    "title": "About us",
+    "breadcrumb": "Home / About",
+    "image": "phuc/blackdoctors.webp"
+  },
+
+  "services": {
+    "title": "Our Services",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/doctors-exam-woolridge.webp"
+  },
+
+  "doctors": {
+    "title": "Our Doctors",
+    "breadcrumb": "Home / Doctors",
+    "image": "phuc/blackdoctors.webp"
+  },
+
+  "contact": {
+    "title": "Our Contacts",
+    "breadcrumb": "Home / Contact",
+    "image": "phuc/hero-doctors-scaled.webp"
+  },
+
+  "appointment": {
+    "title": "Book an Appointment",
+    "breadcrumb": "Home / Appointment",
+    "image": "quy/bigstock-african-doctor-optimized.webp"
+  },
+
+  "news": {
+    "title": "Blog Posts",
+    "breadcrumb": "Home / News",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
+  },
+
+  "free-checkup": {
+    "title": "Free Checkup",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/pregnant-anemia-race-main.webp"
+  },
+
+  "cardiogram": {
+    "title": "Cardiogram",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/1920_finalliverdisparity.webp"
+  },
+
+  "dna-testing": {
+    "title": "Dna Testing",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/doctors-exam-woolridge.webp"
+  },
+
+  "blood-bank": {
+    "title": "Blood Bank",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/blackdoctors.webp"
+  },
+
+  "dermalogy": {
+    "title": "Dermalogy",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/black-women-with-stethoscope.webp"
+  },
+
+  "orthopedic": {
+    "title": "Orthopedic",
+    "breadcrumb": "Home / Services",
+    "image": "phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
+  }
+}

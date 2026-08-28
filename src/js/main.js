@@ -1,9 +1,18 @@
-import "./main.css";
+import "../css/main.css";
+import { loadComponent, setActiveNav } from "./common.js";
+import { initNewsletter } from "../components/NewsLetter.js";
 
-document.querySelector("#app").innerHTML = `
-  <div class="p-10">
-    <h1 class="text-5xl font-bold text-purple-600">
-      Hello Tailwind 🚀
-    </h1>
-  </div>
-`;
+
+async function init() {
+  await loadComponent("header", "/src/components/Header.html");
+  await setActiveNav();
+ 
+  await loadComponent("footer", "/src/components/Footer.html");
+  await initNewsletter();
+  window.addEventListener("hashchange", async () => {
+    await router();
+    await initNewsletter();
+  });
+}
+
+init();

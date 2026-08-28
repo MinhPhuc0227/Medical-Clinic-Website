@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 11" />
+    <meta
+      name="keywords"
+      content="hospital, healthcare, medical services, doctors, appointment"
+    />
+
+    <!-- SEO -->
+    <title>MEDDICAL | Doctors</title>
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | Doctors" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      id="header"
+      class="sticky top-0 z-50 bg-white min-h-[182px] md:min-h-[160px]"
+    ></header>
+    <main>
+      <section id="subheader"></section>
+      <!-- Code phần mở rộng -->
+      <section
+        class="section flex justify-between max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto"
+      >
+        <!-- Tìm bác sĩ -->
+        <div class="relative w-[55%]">
+          <label for="doctor-search" class="sr-only">
+            Search doctor by name
+          </label>
+
+          <input
+            id="doctor-search"
+            type="search"
+            placeholder="Search doctor by name..."
+            autocomplete="off"
+            class="w-full h-[48px] lg:h-[56px] pl-1 sm:pl-[18px] pr-[48px] border border-[#D6D9E0] rounded-[8px] body text-black outline-none focus:border-primary"
+          />
+
+          <!-- Search icon -->
+          <svg
+            class="absolute right-[16px] top-1/2 -translate-y-1/2 w-[20px] h-[20px] text-primary pointer-events-none"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="7"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M16 16L21 21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <!-- Lọc bác sĩ -->
+        <div class="flex flex-row-reverse w-[40%] min-w-0">
+          <label for="specialty-filter" class="sr-only">
+            Filter doctors by specialty
+          </label>
+          <select
+            id="specialty-filter"
+            class="min-w-0 h-[48px] lg:h-[56px] border border-gray-300 rounded-lg px-0 sm:px-2 lg:px-5 outline-none focus:border-primary"
+          >
+            <option value="all">All Specialties</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="section max-w-[992px] flex flex-col mx-auto">
+        <div id="loading" class="hidden w-full text-center py-10">
+          Loading doctor ...
+        </div>
+
+        <div
+          id="doctor-track"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center min-h-fit"
+        ></div>
+
+        <!-- prev next -->
+        <div
+          class="grid grid-cols-3 items-center mx-auto mt-[48px] lg:mt-[64px]"
+        >
+          <div class="flex justify-start">
+            <button aria-label="Previous" id="doctor-prev" class="btn-filled">
+              <svg
+                aria-hidden="true"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.61555 1L1.00016 6L5.61555 11M1.00016 6H11.8335"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Previous
+            </button>
+          </div>
+
+          <div
+            id="doctor-dots"
+            class="flex justify-center gap-1 lg:gap-2"
+          ></div>
+
+          <div class="flex justify-end">
+            <button aria-label="Next" id="doctor-next" class="btn-filled">
+              Next
+              <svg
+                aria-hidden="true"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="testi" class="mt-[48px] lg:mt-[64px]"></section>
+      <section id="newsSection"></section>
+      <section id="contactSection" class="section"></section>
+    </main>
+    <footer id="footer"></footer>
+    <script type="module" src="/src/pages/Doctors.js"></script>
+  </body>
+</html>

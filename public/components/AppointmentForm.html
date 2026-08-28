@@ -1,0 +1,239 @@
+<section
+  class="w-full max-w-full lg:max-w-[1000px] mx-auto overflow-hidden rounded-[5px]"
+>
+  <div id="loading" class="hidden w-full text-center py-10">Loading ...</div>
+  <div
+    id="appointmentForm"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-0"
+  >
+    <label for="appointmentName" class="sr-only">Name</label>
+    <input
+      id="appointmentName"
+      type="text"
+      name="name"
+      placeholder="Name"
+      autocomplete="name"
+      class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
+    />
+
+    <label
+      for="appointmentGender"
+      class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
+    >
+      <span class="sr-only">Gender</span>
+      <select
+        id="appointmentGender"
+        aria-label="Gender"
+        class="body w-full appearance-none bg-transparent pr-8 text-white outline-none"
+        name="gender"
+        autocomplete="sex"
+        required
+      >
+        <option value="" class="bg-white text-black" selected disabled>
+          Gender
+        </option>
+        <option value="male" class="bg-white text-black">Male</option>
+        <option value="female" class="bg-white text-black">Female</option>
+        <option value="other" class="bg-white text-black">Other</option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="pointer-events-none absolute right-5 shrink-0"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.9465 0.34977C14.1728 0.125697 14.4784 0 14.7969 0C15.1153 0 15.4209 0.125697 15.6472 0.34977C15.759 0.459802 15.8477 0.590958 15.9082 0.735605C15.9688 0.880251 16 1.0355 16 1.19231C16 1.34913 15.9688 1.50437 15.9082 1.64902C15.8477 1.79367 15.759 1.92482 15.6472 2.03485L8.85124 8.6952C8.62442 8.91896 8.31862 9.04442 8 9.04442C7.68138 9.04442 7.37558 8.91896 7.14876 8.6952L0.352777 2.03485C0.241047 1.92482 0.152318 1.79367 0.0917536 1.64902C0.0311894 1.50437 0 1.34913 0 1.19231C0 1.0355 0.0311894 0.880251 0.0917536 0.735605C0.152318 0.590958 0.241047 0.459802 0.352777 0.34977C0.57908 0.125697 0.884678 0 1.20315 0C1.52161 0 1.82721 0.125697 2.05351 0.34977L8.00261 5.81195L13.9465 0.34977Z"
+          fill="#BFD2F8"
+        />
+      </svg>
+    </label>
+
+    <label for="appointmentEmail" class="sr-only">Email</label>
+    <input
+      id="appointmentEmail"
+      type="email"
+      name="email"
+      placeholder="Email"
+      autocomplete="email"
+      class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
+    />
+
+    <label for="appointmentPhone" class="sr-only">Phone</label>
+    <input
+      id="appointmentPhone"
+      type="tel"
+      name="phone"
+      placeholder="Phone"
+      autocomplete="tel"
+      inputmode="numeric"
+      pattern="[0-9]{10}"
+      class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
+    />
+
+    <label
+      for="appointmentDate"
+      class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
+    >
+      <span class="sr-only">Date</span>
+      <input
+        id="appointmentDate"
+        type="text"
+        placeholder="Date"
+        name="date"
+        required
+        autocomplete="off"
+        onfocus="this.type = 'date'"
+        onblur="if (!this.value) this.type = 'text';"
+        class="body w-full bg-transparent pr-8 text-white placeholder-white outline-none [color-scheme:dark] [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:left-0 [&::-webkit-calendar-picker-indicator]:top-0 [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-0"
+      />
+      <svg
+        aria-hidden="true"
+        class="pointer-events-none absolute right-5 shrink-0"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.9465 0.34977C14.1728 0.125697 14.4784 0 14.7969 0C15.1153 0 15.4209 0.125697 15.6472 0.34977C15.759 0.459802 15.8477 0.590958 15.9082 0.735605C15.9688 0.880251 16 1.0355 16 1.19231C16 1.34913 15.9688 1.50437 15.9082 1.64902C15.8477 1.79367 15.759 1.92482 15.6472 2.03485L8.85124 8.6952C8.62442 8.91896 8.31862 9.04442 8 9.04442C7.68138 9.04442 7.37558 8.91896 7.14876 8.6952L0.352777 2.03485C0.241047 1.92482 0.152318 1.79367 0.0917536 1.64902C0.0311894 1.50437 0 1.34913 0 1.19231C0 1.0355 0.0311894 0.880251 0.0917536 0.735605C0.152318 0.590958 0.241047 0.459802 0.352777 0.34977C0.57908 0.125697 0.884678 0 1.20315 0C1.52161 0 1.82721 0.125697 2.05351 0.34977L8.00261 5.81195L13.9465 0.34977Z"
+          fill="#BFD2F8"
+        />
+      </svg>
+    </label>
+
+    <label
+      for="appointmentTime"
+      class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
+    >
+      <span class="sr-only">Time</span>
+      <input
+        id="appointmentTime"
+        type="text"
+        placeholder="Time"
+        name="time"
+        required
+        min="09:00"
+        max="18:30"
+        autocomplete="off"
+        onfocus="this.type = 'time'"
+        onblur="if (!this.value) this.type = 'text';"
+        class="body w-full bg-transparent pr-8 text-white placeholder-white outline-none [color-scheme:dark] [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:left-0 [&::-webkit-calendar-picker-indicator]:top-0 [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-0"
+      />
+      <svg
+        aria-hidden="true"
+        class="pointer-events-none absolute right-5 shrink-0"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.9465 0.34977C14.1728 0.125697 14.4784 0 14.7969 0C15.1153 0 15.4209 0.125697 15.6472 0.34977C15.759 0.459802 15.8477 0.590958 15.9082 0.735605C15.9688 0.880251 16 1.0355 16 1.19231C16 1.34913 15.9688 1.50437 15.9082 1.64902C15.8477 1.79367 15.759 1.92482 15.6472 2.03485L8.85124 8.6952C8.62442 8.91896 8.31862 9.04442 8 9.04442C7.68138 9.04442 7.37558 8.91896 7.14876 8.6952L0.352777 2.03485C0.241047 1.92482 0.152318 1.79367 0.0917536 1.64902C0.0311894 1.50437 0 1.34913 0 1.19231C0 1.0355 0.0311894 0.880251 0.0917536 0.735605C0.152318 0.590958 0.241047 0.459802 0.352777 0.34977C0.57908 0.125697 0.884678 0 1.20315 0C1.52161 0 1.82721 0.125697 2.05351 0.34977L8.00261 5.81195L13.9465 0.34977Z"
+          fill="#BFD2F8"
+        />
+      </svg>
+    </label>
+
+    <label
+      for="doctor-input"
+      class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
+    >
+      <span class="sr-only">Doctor</span>
+      <input
+        id="doctor-input"
+        type="text"
+        placeholder="Doctor"
+        name="doctor"
+        required
+        oninput="document.getElementById('doctor-select').value = this.value"
+        class="body absolute left-5 top-0 z-10 h-full w-[calc(100%-60px)] bg-transparent text-white placeholder-white outline-none"
+      />
+      <select
+        id="doctor-select"
+        onchange="document.getElementById('doctor-input').value = this.value"
+        class="body w-full cursor-pointer appearance-none bg-transparent pr-8 text-black outline-none"
+      >
+        <option value="" class="bg-white text-black" selected disabled></option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="pointer-events-none absolute right-5 shrink-0"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.9465 0.34977C14.1728 0.125697 14.4784 0 14.7969 0C15.1153 0 15.4209 0.125697 15.6472 0.34977C15.759 0.459802 15.8477 0.590958 15.9082 0.735605C15.9688 0.880251 16 1.0355 16 1.19231C16 1.34913 15.9688 1.50437 15.9082 1.64902C15.8477 1.79367 15.759 1.92482 15.6472 2.03485L8.85124 8.6952C8.62442 8.91896 8.31862 9.04442 8 9.04442C7.68138 9.04442 7.37558 8.91896 7.14876 8.6952L0.352777 2.03485C0.241047 1.92482 0.152318 1.79367 0.0917536 1.64902C0.0311894 1.50437 0 1.34913 0 1.19231C0 1.0355 0.0311894 0.880251 0.0917536 0.735605C0.152318 0.590958 0.241047 0.459802 0.352777 0.34977C0.57908 0.125697 0.884678 0 1.20315 0C1.52161 0 1.82721 0.125697 2.05351 0.34977L8.00261 5.81195L13.9465 0.34977Z"
+          fill="#BFD2F8"
+        />
+      </svg>
+    </label>
+
+    <label
+      for="department-input"
+      class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
+    >
+      <span class="sr-only">Department</span>
+      <input
+        id="department-input"
+        type="text"
+        placeholder="Department"
+        name="department"
+        required
+        oninput="
+          document.getElementById('department-select').value = this.value
+        "
+        class="body absolute left-5 top-0 z-10 h-full w-[calc(100%-60px)] bg-transparent text-white placeholder-white outline-none"
+      />
+      <select
+        id="department-select"
+        onchange="
+          document.getElementById('department-input').value = this.value
+        "
+        class="body w-full cursor-pointer appearance-none bg-transparent pr-8 text-transparent outline-none"
+      >
+        <option value="" class="bg-white text-black" selected disabled></option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="pointer-events-none absolute right-5 shrink-0"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.9465 0.34977C14.1728 0.125697 14.4784 0 14.7969 0C15.1153 0 15.4209 0.125697 15.6472 0.34977C15.759 0.459802 15.8477 0.590958 15.9082 0.735605C15.9688 0.880251 16 1.0355 16 1.19231C16 1.34913 15.9688 1.50437 15.9082 1.64902C15.8477 1.79367 15.759 1.92482 15.6472 2.03485L8.85124 8.6952C8.62442 8.91896 8.31862 9.04442 8 9.04442C7.68138 9.04442 7.37558 8.91896 7.14876 8.6952L0.352777 2.03485C0.241047 1.92482 0.152318 1.79367 0.0917536 1.64902C0.0311894 1.50437 0 1.34913 0 1.19231C0 1.0355 0.0311894 0.880251 0.0917536 0.735605C0.152318 0.590958 0.241047 0.459802 0.352777 0.34977C0.57908 0.125697 0.884678 0 1.20315 0C1.52161 0 1.82721 0.125697 2.05351 0.34977L8.00261 5.81195L13.9465 0.34977Z"
+          fill="#BFD2F8"
+        />
+      </svg>
+    </label>
+
+    <label for="appointmentMessage" class="sr-only">Message</label>
+    <textarea
+      id="appointmentMessage"
+      name="message"
+      placeholder="Message"
+      autocomplete="off"
+      aria-describedby="contactMessage-hint"
+      class="body col-span-1 md:col-span-2 h-[189px] resize-none border border-accent bg-primary pt-4 pb-4 pl-5 pr-4 text-white placeholder-white outline-none"
+    ></textarea>
+    <span id="contactMessage-hint" class="sr-only">Enter your message.</span>
+
+    <button
+      type="submit"
+      class="footer-2 col-span-1 md:col-span-2 flex h-[50px] items-center justify-center bg-accent text-primary uppercase"
+    >
+      Submit
+    </button>
+  </div>
+</section>

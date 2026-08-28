@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 11" />
+    <meta
+      name="keywords"
+      content="hospital, healthcare, medical services, doctors, appointment"
+    />
+
+    <!-- SEO -->
+    <title>MEDDICAL | News</title>
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | Newss" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header" class="sticky top-0 z-50 bg-white"></header>
+    <section id="subheader"></section>
+    <main
+      id="page-content"
+      class="max-w-[995px] mx-auto px-6 md:px-[64px] lg:px-0 mt-[48px] lg:mt-[64px] hidden"
+    >
+      <div
+        class="container flex flex-col gap-8 md:flex-row md:gap-[16px] lg:gap-[20px] "
+      >
+        <!-- Danh sách bài viết -->
+        <section class="w-full md:w-[470px] lg:w-[658px] ">
+          <div
+            id="news-list"
+            class="flex flex-col gap-5 md:gap-7 lg:gap-[32px]"
+          ></div>
+
+          <!-- Pagination -->
+
+          <div id="pagination-wrapper" class="flex justify-between items-center mt-[24px] translatex-x-[3px]">
+            <button
+              id="prev"
+              class="btn-text body hover:opacity-30% transition"
+            >
+              <svg
+                aria-hidden="true"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.6153 1L0.999919 6L5.6153 11M0.999919 6H11.8333"
+                  stroke="#1F2B6C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Previous Page
+            </button>
+
+            <div id="pagination" class="body"></div>
+
+            <button
+              id="next"
+              class="btn-text body hover:opacity-30% transition"
+            >
+              Next Page
+              <svg
+                aria-hidden="true"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.21795 1L11.8333 6L7.21795 11M11.8333 6H1"
+                  stroke="#1F2B6C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-full md:w-[280px] lg:w-[320px]"></aside>
+      </div>
+    </main>
+    <section id="contact-section" class="lg:mt-[56px] lg:mb-[46px]"></section>
+    <footer id="footer"></footer>
+    <script type="module" src="/src/pages/News.js"></script>
+  </body>
+</html>

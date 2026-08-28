@@ -1,0 +1,51 @@
+<aside class="w-full flex flex-col gap-6 lg:w-[314px]">
+  <!-- Search -->
+  <div class="relative">
+    <input
+    id="news-search"
+      type="text"
+      aria-label="Search posts"
+      placeholder="Search"
+      class="w-full h-[50px] bg-primary rounded px-5 pr-12 text-white leading-[22px] placeholder:text-white outline-none"
+    />
+
+    <svg
+      aria-hidden="true"
+      class="absolute right-4 top-1/2 -translate-y-1/2"
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.88894 18.7779C14.7982 18.7779 18.7779 14.7982 18.7779 9.88894C18.7779 4.97971 14.7982 1 9.88894 1C4.97971 1 1 4.97971 1 9.88894C1 14.7982 4.97971 18.7779 9.88894 18.7779Z"
+        stroke="#BFD2F8"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M21.0004 21.0002L16.167 16.1669"
+        stroke="#BFD2F8"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+
+  <!-- Recent Posts -->
+  <div class="bg-white rounded shadow-sm p-[20px]">
+    <h2 class="display-2 text-primary mb-[24px]">Recent Posts</h2>
+
+    <div class="mini-news-list flex flex-col gap-[8px]"></div>
+  </div>
+
+  <!-- Categories -->
+  <div class="bg-white rounded shadow-sm p-5">
+    <h2 class="display-2 text-primary mb-[24px]">Categories</h2>
+
+    <div class="category-list flex flex-col "></div>
+  </div>
+</aside>

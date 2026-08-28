@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 11" />
+    <meta
+      name="keywords"
+      content="hospital, healthcare, medical services, doctors, appointment"
+    />
+
+    <!-- SEO -->
+    <title>MEDDICAL | Doctors</title>
+    <meta
+      name="description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MEDDICAL | Doctors" />
+    <meta
+      property="og:description"
+      content="MEDDICAL is a healthcare website providing professional medical services, experienced doctors, online appointment booking, and trusted patient care."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Bổ sung sau khi deploy -->
+    <!-- <meta property="og:image" content="https://your-domain.com/preview.jpg" /> -->
+    <!-- <meta property="og:url" content="https://your-domain.com" /> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Yeseva+One&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+  </head>
+  <body>
+    <header
+      id="header"
+      class="sticky top-0 z-50 bg-white min-h-[182px] md:min-h-[160px]"
+    ></header>
+    <main>
+      <section
+        id="subheader"
+        class="min-h-[150px] md:min-h-[190px] lg:min-h-[256px]"
+      ></section>
+
+      <section
+        class="section flex flex-col sm:flex-row gap-[24px] lg:gap-[48px] w-full px-[10px] sm:max-w-[592px] md:max-w-[720px] lg:max-w-[992px] mx-auto"
+      >
+        <div id="loading" class="hidden w-full text-center py-10">
+          Loading doctor information...
+        </div>
+        <aside class="mx-auto w-[200px] sm:w-[270px] lg:w-[300px] shrink-0">
+          <img
+            id="doctor-image"
+            width="317"
+            height="350"
+            class="w-full h-auto aspect-[317/350] object-cover rounded-lg bg-gray-100"
+            alt="Doctor profile picture"
+          />
+          <h2
+            id="doctor-name"
+            class="display-2 text-primary text-center leading-tight mt-[24px]"
+          ></h2>
+          <p
+            id="doctor-specialty"
+            class="caption text-center text-secondary"
+          ></p>
+        </aside>
+
+        <div class="flex-1">
+          <h2 class="display-3 leading-none text-primary">Introduction</h2>
+          <p id="doctor-introduction" class="my-[12px] lg:my-[16px]"></p>
+          <p class="my-[12px] lg:my-[16px]">
+            <span class="font-bold">Years of Experience:</span>
+            <span id="doctor-experienceYears"></span> Years
+          </p>
+          <p class="my-[12px] lg:my-[16px]">
+            <strong>Experience</strong>
+          </p>
+          <ul
+            id="doctor-experience"
+            class="list-disc pl-6 mt-1 lg:mt-2 space-y-1 lg:space-y-2"
+          ></ul>
+          <p class="my-[12px] lg:my-[16px]">
+            <strong>Career</strong>
+          </p>
+          <ul
+            id="doctor-career"
+            class="list-disc pl-6 mt-1 lg:mt-2 space-y-1 lg:space-y-2"
+          ></ul>
+        </div>
+      </section>
+
+      <button id="back-btn" class="btn-filled flex mx-auto items-center gap-2">
+        <svg
+          aria-hidden="true"
+          width="13"
+          height="12"
+          viewBox="0 0 13 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.61555 1L1.00016 6L5.61555 11M1.00016 6H11.8335"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Back
+      </button>
+      <section id="testi" class="mt-[48px] lg:mt-[64px]"></section>
+      <section id="newsSection"></section>
+      <section id="contactSection" class="section"></section>
+    </main>
+    <footer id="footer"></footer>
+    <script type="module" src="/src/pages/DoctorDetail.js"></script>
+  </body>
+</html>
