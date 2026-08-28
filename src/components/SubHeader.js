@@ -2,6 +2,7 @@ import { fetchJson } from "../js/common.js";
 
 export async function loadSubHeader(page) {
   const container = document.getElementById("subheader");
+  container.innerHTML = `<p>Loading...</p>`;
   const subHeaders = await fetchJson("/subheaders.json");
   const data = subHeaders[page];
 
@@ -12,11 +13,11 @@ export async function loadSubHeader(page) {
 
   container.innerHTML = `
     <section class="relative w-full h-[140px] md:h-[180px] lg:h-[250px] overflow-hidden">
-      <!-- Background Image -->
+    <!-- Background Image -->
       <img
         src="${data.image}"
         alt="${data.title}"
-        fetchJsonpriority="high"
+        fetchpriority="high"
         width="1366"
         height="250"
         class="absolute inset-0 w-full h-full object-cover object-[center_30%]"
@@ -85,6 +86,7 @@ export function loadNewsSubHeader(article) {
 
       <img
         src="phuc/artemis-disney-130341_1256-aletha-maybank-naeemah-ghafur-myiesha-taylor_1.webp"
+        alt="${article.title}"
         width="1366"
         height="250"
         class="absolute inset-0 w-full h-full object-cover object-[center_30%]"
@@ -119,7 +121,8 @@ export function loadNewsSubHeader(article) {
 
       <!-- Content -->
       <div
-        class="relative h-full z-10 max-w-[1366px] px-[24px] md:px-[64px] lg:px-[187px] flex flex-col justify-center"
+        class="relative h-full z-10 max-w-[320px] md:max-w-[720px] lg:max-w-[992px] mx-auto h-full leading-none -translate-y-[10px] flex flex-col justify-center"
+"
       >
         <p class="body-2 leading-none text-primary  ">
           Home / News / ${article.category}

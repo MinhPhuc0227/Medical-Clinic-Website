@@ -40,7 +40,10 @@
     />
   </head>
   <body>
-    <header id="header" class="sticky top-0 z-50 bg-white min-h-[182px] md:min-h-[160px]"></header>
+    <header
+      id="header"
+      class="sticky top-0 z-50 bg-white min-h-[182px] md:min-h-[160px]"
+    ></header>
     <main>
       <section id="subheader"></section>
       <!-- Code phần mở rộng -->
@@ -99,6 +102,10 @@
       </section>
 
       <section class="section max-w-[992px] flex flex-col mx-auto">
+        <div id="loading" class="hidden w-full text-center py-10">
+          Loading doctor ...
+        </div>
+
         <div
           id="doctor-track"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center min-h-fit"

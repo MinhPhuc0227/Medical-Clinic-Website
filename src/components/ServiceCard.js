@@ -3,7 +3,9 @@ import { icons } from "../js/icons.js";
 
 export async function loadServices() {
   const container = document.getElementById("servicecard");
+  container.innerHTML = `<p>Loading...</p>`;
   const services = await fetchJson("/services.json");
+  
 
   let html = "";
 
@@ -15,7 +17,9 @@ export async function loadServices() {
 
         <!-- ========== 1. IMAGE SECTION ========== -->
         <div class="relative h-[250px] md:h-[300px] overflow-hidden">
-
+          <div id="loading" class="hidden w-full text-center py-10">
+          Loading ...
+        </div>
           <!-- Image -->
           <img
             src="${service.image}"

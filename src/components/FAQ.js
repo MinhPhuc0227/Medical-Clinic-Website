@@ -1,3 +1,5 @@
+import { fetchJson } from "../js/common.js";
+
 // Value of attribute "d" in SVG tag (path to draw down chevron & up chevron)
 const CHEVRON_DOWN = "M19 9l-7 7-7-7";
 const CHEVRON_UP = "M5 15l7-7 7 7";
@@ -27,8 +29,8 @@ export async function loadFAQ() {
   `;
 
   // Load JSON
-  const response = await fetch("/faqs.json");
-  const faqs = await response.json();
+
+  const faqs = await fetchJson("/faqs.json");
 
   // Render FAQ Items
   const faqList = document.getElementById("faq-list");

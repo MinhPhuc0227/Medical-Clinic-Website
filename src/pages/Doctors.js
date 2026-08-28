@@ -18,8 +18,11 @@ await loadComponent("testi", "/components/Testimonials.html");
 await loadComponent("contactSection", "/components/ContactsSection.html");
 
 export async function initDoctorPage() {
+  const loading = document.getElementById("loading");
+  loading.classList.remove("hidden");
   const doctors = await fetchJson("/Doctors.json");
-
+  loading.classList.add("hidden");
+  
   const select = document.getElementById("specialty-filter");
   const searchInput = document.getElementById("doctor-search");
   // lấy danh sách specialty không trùng
@@ -112,31 +115,27 @@ export async function initDoctorPage() {
   }
 
   function updateDots() {
-  dotsContainer.innerHTML = "";
+    dotsContainer.innerHTML = "";
 
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement("button");
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("button");
 
-    dot.className =
-      "w-11 h-11 flex items-center justify-center";
+      dot.className = "w-11 h-11 flex items-center justify-center";
 
-    dot.setAttribute(
-      "aria-label",
-      `Go to doctors page ${i + 1}`
-    );
+      dot.setAttribute("aria-label", `Go to doctors page ${i + 1}`);
 
-    dot.innerHTML = `
+      dot.innerHTML = `
       <span class="
         w-3 h-3 rounded-full
         ${i === currentSlide ? "bg-primary" : "bg-accent"}
       "></span>
     `;
 
-    dot.addEventListener("click", () => renderSlide(i));
+      dot.addEventListener("click", () => renderSlide(i));
 
-    dotsContainer.appendChild(dot);
+      dotsContainer.appendChild(dot);
+    }
   }
-}
 
   function updateButtons() {
     if (currentSlide === 0) {

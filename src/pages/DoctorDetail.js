@@ -24,7 +24,10 @@ window.scrollTo({
 // đọc id từ url
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
+const loading = document.getElementById("loading");
+loading.classList.remove("hidden");
 const doctors = await fetchJson("/Doctors.json");
+loading.classList.add("hidden");
 const doctor = doctors.find((item) => item.id === id);
 
 if (!doctor) {
@@ -36,8 +39,10 @@ if (!doctor) {
 document.getElementById("doctor-image").src = doctor.image;
 document.getElementById("doctor-name").textContent = doctor.name;
 document.getElementById("doctor-specialty").textContent = doctor.specialty;
-document.getElementById("doctor-introduction").textContent = doctor.introduction;
-document.getElementById("doctor-experienceYears").textContent = doctor.experienceYears;
+document.getElementById("doctor-introduction").textContent =
+  doctor.introduction;
+document.getElementById("doctor-experienceYears").textContent =
+  doctor.experienceYears;
 
 // Sử dụng DocumentFragment để tránh xáo trộn DOM liên tục (chống Forced Reflow)
 const renderList = (elementId, items) => {

@@ -41,8 +41,10 @@ async function initMainContent() {
   }
 
   // Load services data
+  const loading = document.getElementById("loading");
+  loading.classList.remove("hidden");
   const services = await fetchJson("/services.json");
-
+  loading.classList.add("hidden");
   // Find selected service
   const service = services.find((item) => item.id === id);
 

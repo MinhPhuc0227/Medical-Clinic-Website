@@ -89,11 +89,10 @@ function getCategory(title) {
 
 export async function getNews() {
   const API_KEY = "393286089051475a92bee89d2e60bea3";
-  const response = await fetch(
+  const data = await fetchJson(
     `https://newsapi.org/v2/top-headlines?category=health&language=en&apiKey=${API_KEY}`,
   );
 
-  const data = await response.json();
   //lọc bài có đủ thành phần
   const newsList = data.articles.filter(
     (article) =>

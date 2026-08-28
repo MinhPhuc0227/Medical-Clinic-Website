@@ -1,11 +1,12 @@
 <section
   class="w-full max-w-full lg:max-w-[1000px] mx-auto overflow-hidden rounded-[5px]"
 >
+  <div id="loading" class="hidden w-full text-center py-10">Loading ...</div>
   <div
     id="appointmentForm"
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-0"
   >
-  <label for="appointmentName" class="sr-only">Name</label>
+    <label for="appointmentName" class="sr-only">Name</label>
     <input
       id="appointmentName"
       type="text"
@@ -19,7 +20,7 @@
       for="appointmentGender"
       class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
     >
-    <span class="sr-only">Gender</span>
+      <span class="sr-only">Gender</span>
       <select
         id="appointmentGender"
         aria-label="Gender"
@@ -77,7 +78,7 @@
       for="appointmentDate"
       class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
     >
-    <span class="sr-only">Date</span>
+      <span class="sr-only">Date</span>
       <input
         id="appointmentDate"
         type="text"
@@ -109,7 +110,7 @@
       for="appointmentTime"
       class="relative flex h-[50px] items-center border border-accent bg-primary px-5"
     >
-    <span class="sr-only">Time</span>
+      <span class="sr-only">Time</span>
       <input
         id="appointmentTime"
         type="text"
@@ -143,7 +144,7 @@
       for="doctor-input"
       class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
     >
-    <span class="sr-only">Doctor</span>
+      <span class="sr-only">Doctor</span>
       <input
         id="doctor-input"
         type="text"
@@ -180,7 +181,7 @@
       for="department-input"
       class="relative flex h-[50px] cursor-pointer items-center border border-accent bg-primary px-5"
     >
-    <span class="sr-only">Department</span>
+      <span class="sr-only">Department</span>
       <input
         id="department-input"
         type="text"

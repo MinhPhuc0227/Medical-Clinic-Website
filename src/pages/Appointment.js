@@ -20,6 +20,7 @@ await initNewsletter();
 await loadFAQ();
 // Schedule Hours
 const scheduleList = document.getElementById("schedule-list");
+scheduleList.innerHTML = `<p>Loading...</p>`;
 
 if (scheduleList) {
   const schedules = await fetchJson("/ScheduleHours.json");

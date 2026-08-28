@@ -3,7 +3,10 @@ import { fetchJson } from "../js/common";
 import { createDoctorCard } from "../components/DoctorCard";
 
 export async function initDoctorSection() {
+  const loading = document.getElementById("loading");
+  loading.classList.remove("hidden");
   const doctors = await fetchJson("/Doctors.json");
+  loading.classList.add("hidden");
 
   const track = document.getElementById("doctor-track");
   const dotsContainer = document.getElementById("doctor-dots");

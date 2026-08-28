@@ -4,7 +4,10 @@ let slideInterval = null;
 const INTERVAL_TIME = 5000; // 5 giây
 
 export async function initTesti() {
+  const loading = document.getElementById("loading");
+  loading.classList.remove("hidden");
   const testimonials = await fetchJson("/testi.json");
+  loading.classList.add("hidden");
   // Sử dụng setInterval để kiểm tra liên tục xem HTML đã được load xong chưa
   const checkExist = setInterval(() => {
     const sectionEl = document.querySelector(".testimonial-section");

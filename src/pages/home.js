@@ -43,6 +43,8 @@ initNewsletter();
 
 // ========== RENDER SPECIALTIES ==========
 async function loadSpecialties() {
+  const loading = document.getElementById("loading");
+  loading.classList.remove("hidden");
   try {
     const response = await fetch("/specialties.json");
     const specialties = await response.json();
@@ -50,7 +52,7 @@ async function loadSpecialties() {
     renderSpecialties(specialties);
   } catch (error) {
     console.error(error);
-  }
+  } finally {loading.classList.add("hidden");}
 }
 
 function renderSpecialties(data) {
@@ -76,6 +78,8 @@ function renderSpecialties(data) {
 
 // ========== RENDER SERVICES ==========
 async function loadServices() {
+  const loading = document.getElementById("loading");
+  loading.classList.remove("hidden");
   try {
     const response = await fetch("/services.json");
     services = await response.json();
@@ -84,7 +88,7 @@ async function loadServices() {
     tabs.addEventListener("click", handleTabClick);
   } catch (error) {
     console.error(error);
-  }
+  }finally {loading.classList.add("hidden");}
 }
 
 // Hàm xử lý khi click tab

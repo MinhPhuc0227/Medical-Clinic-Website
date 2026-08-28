@@ -27,8 +27,11 @@ async function loadSpecialty() {
     }
 
     // Load data
+    const loading = document.getElementById("loading");
+    loading.classList.remove("hidden");
     const specialties = await fetchJson("/specialties.json");
-    
+    loading.classList.add("hidden");
+
     // Find specialty
     const specialty = specialties.find((item) => item.id === id);
 
