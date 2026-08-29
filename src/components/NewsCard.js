@@ -8,7 +8,6 @@ export function createNewsCard(news) {
 
       <img
          src="${news.image}"
-         loading="lazy"
   onerror="this.onerror=null; this.src='/han/News1.webp';"
   alt="${news.title}"
         class="w-full h-[220px] md:h-[280px] lg:h-[400px] mb-[24px] object-cover"
