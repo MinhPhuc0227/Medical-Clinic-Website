@@ -21,6 +21,25 @@ const id = Number(params.get("id"));
 // Tìm bài viết
 const currentIndex = news.findIndex((item) => item.id === id);
 const article = news[currentIndex];
+
+// Cập nhật Open Graph theo bài viết hiện tại
+document
+  .querySelector('meta[property="og:title"]')
+  ?.setAttribute("content", `MEDDICAL | ${article.title}`);
+
+document
+  .querySelector('meta[property="og:description"]')
+  ?.setAttribute("content", article.description);
+
+document
+  .querySelector('meta[property="og:type"]')
+  ?.setAttribute("content", "website");
+
+document
+  .querySelector('meta[property="og:url"]')
+  ?.setAttribute("content", window.location.href);
+
+// Load subheader
 await loadNewsSubHeader(article);
 
 // Render bài viết
