@@ -7,11 +7,14 @@ export function createNewsCard(news) {
     <article class="flex flex-col w-full lg:w-[658px] lg:h-[664px]">
 
       <img
-         src="${news.image}"
+  src="${news.image}"
   onerror="this.onerror=null; this.src='/han/News1.webp';"
   alt="${news.title}"
-        class="w-full h-[220px] md:h-[280px] lg:h-[400px] mb-[24px] object-cover"
-      />
+  width="658"
+  height="399"
+  ${imagePriority}
+  class="w-full h-[220px] md:h-[280px] lg:h-[400px] mb-[24px] object-cover"
+/>
 
       <!-- Info -->
       <div class="flex flex-wrap items-center gap-2 md:gap-3 lg:gap-[24px] mb-[8px] text-primary body">
