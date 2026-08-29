@@ -13,6 +13,7 @@
       name="name"
       placeholder="Name"
       autocomplete="name"
+      aria-invalid="false"
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
@@ -28,6 +29,7 @@
         name="gender"
         autocomplete="sex"
         required
+        aria-invalid="false"
       >
         <option value="" class="bg-white text-black" selected disabled>
           Gender
@@ -59,6 +61,7 @@
       name="email"
       placeholder="Email"
       autocomplete="email"
+      aria-invalid="false"
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
@@ -71,6 +74,7 @@
       autocomplete="tel"
       inputmode="numeric"
       pattern="[0-9]{10}"
+      aria-invalid="false"
       class="body h-[50px] border border-accent bg-primary px-5 text-white placeholder-white outline-none"
     />
 
@@ -85,6 +89,7 @@
         placeholder="Date"
         name="date"
         required
+        aria-invalid="false"
         autocomplete="off"
         onfocus="this.type = 'date'"
         onblur="if (!this.value) this.type = 'text';"
@@ -117,6 +122,7 @@
         placeholder="Time"
         name="time"
         required
+        aria-invalid="false"
         min="09:00"
         max="18:30"
         autocomplete="off"
@@ -151,6 +157,7 @@
         placeholder="Doctor"
         name="doctor"
         required
+        aria-invalid="false"
         oninput="document.getElementById('doctor-select').value = this.value"
         class="body absolute left-5 top-0 z-10 h-full w-[calc(100%-60px)] bg-transparent text-white placeholder-white outline-none"
       />
@@ -188,6 +195,7 @@
         placeholder="Department"
         name="department"
         required
+        aria-invalid="false"
         oninput="
           document.getElementById('department-select').value = this.value
         "
