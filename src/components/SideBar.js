@@ -60,7 +60,7 @@ export async function initSideBar(newsList) {
     </button>
   `;
 }
-
+//phân loại theo danh mục tin tức
 const categoryButtons = categories.querySelectorAll(".category-item");
 // đặt trạng thái mặc định mới vào là all
 const allButton = categories.querySelector(

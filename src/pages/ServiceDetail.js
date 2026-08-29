@@ -54,6 +54,23 @@ async function initMainContent() {
     return;
   }
 
+  // Cập nhật 4 thẻ Open Graph theo dịch vụ hiện tại
+  document
+    .querySelector('meta[property="og:title"]')
+    ?.setAttribute("content", `MEDDICAL | ${service.title}`);
+
+  document
+    .querySelector('meta[property="og:description"]')
+    ?.setAttribute("content", service.meta.description);
+
+  document
+    .querySelector('meta[property="og:type"]')
+    ?.setAttribute("content", "website");
+
+  document
+    .querySelector('meta[property="og:url"]')
+    ?.setAttribute("content", window.location.href);
+
   // Load subheader (based on current service)
   await loadSubHeader(id);
 

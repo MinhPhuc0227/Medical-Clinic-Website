@@ -35,6 +35,26 @@ if (!doctor) {
   throw new Error("Doctor not found");
 }
 
+// Cập nhật 4 thẻ Open Graph theo bác sĩ
+document
+  .querySelector('meta[property="og:title"]')
+  ?.setAttribute("content", `MEDDICAL | ${doctor.name}`);
+
+document
+  .querySelector('meta[property="og:description"]')
+  ?.setAttribute(
+    "content",
+    `${doctor.name} - ${doctor.specialty}. View doctor information and professional details at MEDDICAL.`,
+  );
+
+document
+  .querySelector('meta[property="og:type"]')
+  ?.setAttribute("content", "website");
+
+document
+  .querySelector('meta[property="og:url"]')
+  ?.setAttribute("content", window.location.href);
+
 // 3. Render dữ liệu bác sĩ vào DOM
 document.getElementById("doctor-image").src = doctor.image;
 document.getElementById("doctor-name").textContent = doctor.name;

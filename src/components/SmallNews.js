@@ -11,14 +11,17 @@ export function createSmallNews(news) {
 
       <!-- Image -->
       <div class="w-[130px] lg:w-[160px] h-full flex-shrink-0">
-        <img
-            src="${news.image}"
-            loading="lazy"
-            alt="${news.title}"
-            onerror="this.onerror=null; this.src='/han/News1.webp';"g
-          class="w-full h-full object-cover"
-        >
-      </div>
+  <img
+    src="${news.image}"
+    loading="lazy"
+    decoding="async"
+    width="160"
+    height="163"
+    alt="${news.title}"
+    onerror="this.onerror=null; this.src='/han/News1.webp';"
+    class="w-full h-full object-cover"
+  />
+</div>
 
       <!-- Content -->
       <div class="flex flex-col flex-1 mb-auto pl-[20px] pr-[32px] py-[16px] md:py-[20px]">

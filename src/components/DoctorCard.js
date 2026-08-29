@@ -6,7 +6,7 @@ export function createDoctorCard(doctor) {
                 src="${doctor.image}"
                 alt="${doctor.name}"
                 width="317"
-  height="350"
+                height="350"
                 class="w-full h-[281px] sm:h-[350px] object-cover"
             >
 

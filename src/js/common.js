@@ -88,12 +88,12 @@ function getCategory(title) {
 }
 
 export async function getNews() {
-  const API_KEY = "393286089051475a92bee89d2e60bea3";
-  const data = await fetchJson(
-    `https://newsapi.org/v2/top-headlines?category=health&language=en&apiKey=${API_KEY}`,
-  );
+  const data = await fetchJson("/api/news.js");
 
-  //lọc bài có đủ thành phần
+  if (!data || !Array.isArray(data.articles)) {
+    throw new Error("Invalid news data");
+  }
+
   const newsList = data.articles.filter(
     (article) =>
       article.urlToImage &&
@@ -101,6 +101,7 @@ export async function getNews() {
       article.description &&
       article.content,
   );
+
   const blockedDomains = [
     "marthastewart.com",
     "usatoday.com",
@@ -115,7 +116,7 @@ export async function getNews() {
     "medicalnewstoday.com",
     "medscape.com",
   ];
-  //lọc bỏ bài có nguồn chặn ảnh
+
   const newsData = newsList.map((item, index) => {
     const useDefaultImage =
       !item.urlToImage ||

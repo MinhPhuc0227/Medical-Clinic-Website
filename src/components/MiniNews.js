@@ -6,12 +6,14 @@ export function createMiniNews(news) {
     >  
   <div class="flex items-center gap-[10px] w-[274px] h-[60px]">
       <img
-   src="${news.image}"
-   loading="lazy"
+  src="${news.image}"
   onerror="this.onerror=null; this.src='/han/News1.webp';"
-        alt="${news.title}"
-        class="w-[60px] h-[60px] object-cover rounded-sm flex-shrink-0"
-      />
+  alt="${news.title}"
+  width="60"
+  height="60"
+  loading="lazy"
+  class="w-[60px] h-[60px] object-cover rounded-sm flex-shrink-0"
+/>
 
       <div class="flex flex-col justify-center">
         <p class="text-secondary small-2 leading-[14px] line-clamp-1">
