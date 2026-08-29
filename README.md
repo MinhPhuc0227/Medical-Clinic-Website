@@ -44,8 +44,6 @@ Website được phát triển theo hướng responsive, đảm bảo giao diệ
 
 ## 4. Danh sách thành viên và phân công
 
-## 4. Danh sách thành viên và phân công
-
 | STT | Thành viên | MSSV | Trang phụ trách | Chức năng JavaScript phụ trách |
 |:---:|---|:---:|---|---|
 | 1 | **Nguyễn Gia Hân** | 2354050034 | Doctors<br>Doctor Detail<br>News<br>News Detail | • Tìm kiếm bác sĩ theo tên và lọc theo chuyên khoa.<br>• Lọc, tìm kiếm và phân trang tin tức.<br>• Lấy dữ liệu News Card từ NewsAPI. |
