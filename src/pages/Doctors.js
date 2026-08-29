@@ -89,7 +89,7 @@ export async function initDoctorPage() {
     const currentDoctors = filteredDoctors.slice(start, end);
 
     track.innerHTML = currentDoctors
-      .map((doctor) => createDoctorCard(doctor))
+      .map((doctor) => createDoctorCard(doctor, index))
       .join("");
 
     updateDots();
@@ -126,7 +126,7 @@ export async function initDoctorPage() {
 
       dot.innerHTML = `
       <span class="
-        w-3 h-3 rounded-full
+        w-3 h-3 md:w-5 md:h-h rounded-full
         ${i === currentSlide ? "bg-primary" : "bg-accent"}
       "></span>
     `;

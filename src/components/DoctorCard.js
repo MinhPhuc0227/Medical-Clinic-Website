@@ -1,14 +1,17 @@
-export function createDoctorCard(doctor) {
+export function createDoctorCard(doctor, index = 0) {
   console.log(doctor.image);
   return `
         <div class="w-[254px] sm:w-[317px] sm:h-[538px] rounded-lg overflow-hidden shadow-md">
             <img
-                src="${doctor.image}"
-                alt="${doctor.name}"
-                width="317"
-                height="350"
-                class="w-full h-[281px] sm:h-[350px] object-cover"
-            >
+  src="${doctor.image}"
+  alt="${doctor.name}"
+  width="317"
+  height="350"
+  ${index === 0
+    ? 'fetchpriority="high" loading="eager"'
+    : 'loading="lazy" decoding="async"'}
+  class="w-full h-[281px] sm:h-[350px] object-cover"
+/>
 
             <div class="bg-accent py-[16px] sm:py-[24px] sm:h-[142px]  text-center text-primary">
                 <p class="body-2 text-[18px] sm:leading-[21px] sm:font-normal ">

@@ -36,7 +36,7 @@ export async function initDoctorSection() {
         const wrapper = document.createElement("div");
         wrapper.className =
           "shrink-0 w-[270px] transition-all duration-300 ease-in-out";
-        wrapper.innerHTML = createDoctorCard(doctor);
+        wrapper.innerHTML = createDoctorCard(doctor, index);
         track.appendChild(wrapper);
       });
 
@@ -58,7 +58,7 @@ export async function initDoctorSection() {
           const wrapper = document.createElement("div");
           wrapper.className = "shrink-0 w-[317px]";
 
-          wrapper.innerHTML = createDoctorCard(doctor);
+          wrapper.innerHTML = createDoctorCard(doctor, index);
 
           slide.appendChild(wrapper);
         });
